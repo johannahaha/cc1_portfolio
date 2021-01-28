@@ -2,19 +2,30 @@
   <Layout>
 
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
+    <section class = "home">
+      <h2>My name ist</h2>
+      <h1 class = "home_name">Johanna <span class="home_name--last">Hartmann</span></h1>
+      <h2>Creative Technologist</h2>
 
-    <h1>Johanna Hartmann</h1>
+      <p> 
+        all my great projects go here
+      </p>
 
-    <p> 
-      all my great projects go here
-    </p>
+      <ul> 
+        <li v-for="post in $page.posts.edges" :key="post.id">
+          <g-link :to="post.node.path"> {{post.node.title}}</g-link>
+        </li>
+      </ul>
 
-    <ul> 
-      <li v-for="post in $page.posts.edges" :key="post.id">
-        <g-link :to="post.node.path"> {{post.node.title}}</g-link>
-      </li>
-    </ul>
-
+      <div class="social-icons">
+        <a href = "#!">
+          <font-awesome :icon="['fab', 'github']"/>
+        </a>
+        <a href = "#!">
+          <font-awesome :icon="['fab', 'twitter']"/>
+        </a>
+      </div>
+      </section>
   </Layout>
 </template>
 
@@ -33,6 +44,7 @@ query Posts{
 </page-query>
 
 <script>
+
 export default {
   metaInfo: {
     title: 'Portfolio'

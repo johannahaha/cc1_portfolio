@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <div v-html="$page.post.content" class ="markdown-body">
+        <div v-html="$page.post.content" class ="home">
         </div>
     </Layout>
 </template>

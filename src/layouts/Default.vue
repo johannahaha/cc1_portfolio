@@ -1,16 +1,25 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
+  <div>
+    <header>
+      <!-- <strong>
         <g-link to="/">{{ $static.metaData.siteName }}</g-link>
-      </strong>
+      </strong> -->
+      <div class = "menu-btn">
+      <span class="menu-btn_burger"> </span>
+      </div>
       <nav class="nav">
-        <g-link class="nav__link" to="/">Portfolio</g-link>
-        <g-link class="nav__link" to="/cv/">CV</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
+        <ul class="menu-nav">
+          <li class="menu-nav_item"> 
+            <g-link class="menu-nav_link" to="/">Portfolio</g-link></li>
+          <li class="menu-nav_item"> 
+            <g-link class="menu-nav_link" to="/cv/">CV</g-link></li>
+          <li class="menu-nav_item"> 
+            <g-link class="menu-nav_link" to="/about/">About</g-link></li>
+        </ul>
       </nav>
     </header>
     <slot> </slot>
+    <footer> &copy; Copyright 2021</footer>
   </div>
 </template>
 
