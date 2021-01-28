@@ -1,0 +1,21 @@
+{
+  "name": "portfolio_website",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.6.4",
+    "eslint-plugin-gridsome": "^1.6.1",
+    "gridsome": "^0.7.0",
+    "gridsome-plugin-remark-youtube": "^1.0.1"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.1",
+    "style-resources-loader": "^1.4.1"
+  }
+}
