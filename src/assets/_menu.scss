@@ -5,8 +5,28 @@
     top: 1rem;
     height: 20px;
     width: 28px;
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
     cursor: pointer;
     @include transition-ease;
+  
+    &::hover {
+        background: transparent;
+        box-shadow: 0px 0px 0px transparent;
+        border: 0px solid transparent;
+        text-shadow: 0px 0px 0px transparent;
+    }
+    
+    &::active {
+        outline: none;
+        border: none;
+    }
+    
+    &::focus {
+        outline: 0;
+    }
 
     &_burger {
         position: absolute;
@@ -42,6 +62,79 @@
         &.open{
             transform: rotate(720deg);
             background: transparent;
+            color: red;
+
+            &::before{
+                transform: rotate(45deg) translate(5px, 8px);
+            }
+
+            &::after{
+                width: 28px;
+                transform: rotate(-45deg) translate(3px, -7px);
+            }
         }
+    }
+}
+
+.nav{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    opacity: 0.98;
+    visibility: hidden;
+
+    &.open {
+        visibility: visible;
+    }
+
+    .menu-nav{
+        display:flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        background: $primary-color;
+        list-style-type: none;
+        padding-right: 1rem;
+        transform: translateY(-100%);
+        @include transition-ease;
+
+        &.open {
+            transform: translateY(0);
+        }
+
+        &_item{
+            transform: translateX(100vw);
+            @include transition-ease;
+
+            &.open{
+                transform: translateX(0);
+            }
+
+            &.active > g-link{
+                color:$secondary-color;
+            }
+        }
+        &_link{
+            display: inline-block;
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding: 2rem 0;
+            font-weight: 300;
+            @include transition-ease;
+
+            &:hover{
+                color: $secondary-color;
+            }
+
+        }
+    }
+}
+
+@for $i from 1 through 3{
+    .menu-nav_item:nth-child(#{$i}){
+        transition-delay: ($i * 0.1s) + 0.15s;
     }
 }

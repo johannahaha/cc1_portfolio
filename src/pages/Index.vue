@@ -16,15 +16,6 @@
           <g-link :to="post.node.path"> {{post.node.title}}</g-link>
         </li>
       </ul>
-
-      <div class="social-icons">
-        <a href = "#!">
-          <font-awesome :icon="['fab', 'github']"/>
-        </a>
-        <a href = "#!">
-          <font-awesome :icon="['fab', 'twitter']"/>
-        </a>
-      </div>
       </section>
   </Layout>
 </template>

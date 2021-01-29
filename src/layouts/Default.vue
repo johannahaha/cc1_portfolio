@@ -1,25 +1,8 @@
 <template>
   <div>
-    <header>
-      <!-- <strong>
-        <g-link to="/">{{ $static.metaData.siteName }}</g-link>
-      </strong> -->
-      <div class = "menu-btn">
-      <span class="menu-btn_burger"> </span>
-      </div>
-      <nav class="nav">
-        <ul class="menu-nav">
-          <li class="menu-nav_item"> 
-            <g-link class="menu-nav_link" to="/">Portfolio</g-link></li>
-          <li class="menu-nav_item"> 
-            <g-link class="menu-nav_link" to="/cv/">CV</g-link></li>
-          <li class="menu-nav_item"> 
-            <g-link class="menu-nav_link" to="/about/">About</g-link></li>
-        </ul>
-      </nav>
-    </header>
+    <Header></Header>
     <slot> </slot>
-    <footer> &copy; Copyright 2021</footer>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -31,6 +14,17 @@ query{
 }
 </static-query>
 
+<script>
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+
+export default {
+  components: {
+    Header,
+    Footer
+  }
+}
+</script>
 <style>
 /*
 body {
