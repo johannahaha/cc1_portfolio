@@ -1,6 +1,7 @@
 ---
 title: ScenARy
 keywords: {AR, Unity, App Development}
+preview_img: /img/img2.jpg
 ---
 
 # ScenARy

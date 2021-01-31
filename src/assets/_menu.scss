@@ -34,7 +34,7 @@
         top: 0.5rem;
         width: 28px;
         height: 3px;
-        background: set-text-color($primary-color);
+        background: set-text-color($light-color);
         @include transition-ease;
 
         &::before {
@@ -43,7 +43,7 @@
             top: -8px;
             width: 28px;
             height: 3px;
-            background: set-text-color($primary-color);
+            background: set-text-color($light-color);
             @include transition-ease;
 
         }
@@ -54,7 +54,7 @@
             top: 8px;
             width: 20px;
             height: 3px;
-            background: set-text-color($primary-color);
+            background: set-text-color($light-color);
             @include transition-ease;
 
         }
@@ -62,7 +62,6 @@
         &.open{
             transform: rotate(720deg);
             background: transparent;
-            color: red;
 
             &::before{
                 transform: rotate(45deg) translate(5px, 8px);
@@ -95,7 +94,7 @@
         justify-content: center;
         height: 100vh;
         overflow: hidden;
-        background: $primary-color;
+        background: $light-color;
         list-style-type: none;
         padding-right: 1rem;
         transform: translateY(-100%);
@@ -114,19 +113,31 @@
             }
 
             &.active > g-link{
-                color:$secondary-color;
+                color:$highlight-color;
+            }
+
+            &:hover{
+
             }
         }
         &_link{
             display: inline-block;
             font-size: 2rem;
+            font-family:get-font-family(bold);
+            font-weight:get-font-weight(bold);
+            transition: background-size .4s ease;
+            background: linear-gradient(to bottom, transparent -80%, $highlight-color 0) center center/0% 75% no-repeat;
             text-transform: uppercase;
             padding: 2rem 0;
-            font-weight: 300;
+            font-weight: get-font-weight(medium);
             @include transition-ease;
 
             &:hover{
-                color: $secondary-color;
+                background-size: 100% 100%;
+            }
+
+            &::active{
+                background-size: 80% 100%;
             }
 
         }

@@ -29,7 +29,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'blog/**/*.md',
+        path: 'content/**/*.md',
         typeName: 'Post',
         remark: {
           // remark options
@@ -41,6 +41,10 @@ module.exports = {
       }
     }
   ],
+  // solution to g-image problem found here: https://github.com/gridsome/gridsome/issues/292
+  //chainWebpack: config => {
+  //  config.resolve.alias.set('@images', '@/assets/images')
+  //},
   transformers: {
     remark: {
       // global remark options

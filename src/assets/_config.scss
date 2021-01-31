@@ -1,10 +1,36 @@
 $primary-color: #272727;
 $secondary-color: #ff652f;
 
+$highlight-color:#DFA83A;
+$light-color:#F5F8FA;
+$dark-color:#04050D;
+
+$font-weigths:(
+    "light":100,
+    "regular": 200,
+    "medium":500,
+    "bold":900
+);
+
+$font-families:(
+    "light":neue-haas-unica,
+    "regular": neue-haas-unica,
+    "medium":le-monde-livre,
+    "bold":le-monde-livre
+);
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+@function get-font-weigth($weight-name){
+    @return map-get($font-weigths,$weight-name);
+}
+
+@function get-font-family($weight-name){
+    @return map-get($font-families,$weight-name);
 }
 
 @mixin transition-ease{

@@ -1,6 +1,8 @@
 <template>
     <Layout>
-        <div v-html="$page.post.content" class ="home">
+        <div>
+            <div v-html="$page.post.content" class ="post-content">
+        </div>
         </div>
     </Layout>
 </template>
@@ -10,7 +12,8 @@ query Post ($path: String!){
   post: post(path: $path){
     	title
         keywords
-    	content
+    	preview_img (width: 720)
+        content
     }
 }
 </page-query>

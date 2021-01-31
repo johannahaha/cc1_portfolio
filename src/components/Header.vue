@@ -23,9 +23,6 @@
           <li class="menu-nav_item"
             :class='{open:showMenu}' > 
             <g-link class="menu-nav_link" to="/cv/">CV</g-link></li>
-          <li class="menu-nav_item"
-          :class='{open:showMenu}' > 
-            <g-link class="menu-nav_link" to="/about/">About</g-link></li>
         </ul>
       </nav>
     </header>
