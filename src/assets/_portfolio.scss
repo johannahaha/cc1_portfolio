@@ -41,13 +41,13 @@
         }
 
         &::after{
-            content: '';
+            //content: '';
             position: absolute;
             top:100%;
             left: 0;
             height: 100%;
             width: 100%;
-            background: $highlight-color;
+            //background: $highlight-color;
             opacity: 0;
             @include transition-ease;
         }
@@ -83,4 +83,26 @@
 
     //     }
     // }
+}
+
+.post-content{
+    width: 90vw;
+    margin: 5rem auto 0 auto;
+
+    h1{
+        padding: 2rem 0;
+        font-family: get-font-family(bold);
+        font-weight: get-font-weight(bold);
+        font-size: 2rem;
+    }
+
+    h2{
+        font-family: get-font-family(medium);
+        font-weight: get-font-weight(medium);
+    }   
+
+    p{
+        padding: 2rem 0;
+        line-height: 1.5rem;
+    }
 }

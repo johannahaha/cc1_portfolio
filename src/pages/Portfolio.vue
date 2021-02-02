@@ -28,6 +28,7 @@ query Posts{
         title
         keywords
     	preview_img (width: 720)
+        path
       }
     }
   }   

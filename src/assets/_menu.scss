@@ -1,3 +1,10 @@
+.logo{
+    color:$highlight-color;
+    font-family: get-font-family(bold);
+    font-weight: get-font-weight(bold);
+    font-size: 1.5rem;
+}
+
 .menu-btn{
     position: absolute;
     z-index: 1;

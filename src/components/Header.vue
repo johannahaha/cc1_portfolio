@@ -1,8 +1,8 @@
 <template>
     <header>
-      <!-- <strong>
-        <g-link to="/">{{ $static.metaData.siteName }}</g-link>
-      </strong> -->
+      <strong>
+        <g-link to="/" class = "logo">{{ $static.metaData.siteName }}</g-link>
+      </strong>
       <div
         class = "menu-btn" 
         @click = "toggleMenu"
@@ -27,6 +27,15 @@
       </nav>
     </header>
 </template>
+
+
+<static-query>
+query{
+  metaData{
+    siteName
+  }
+}
+</static-query>
 
 <script>
 export default {
