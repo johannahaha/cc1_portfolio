@@ -32,7 +32,7 @@
         grid-template-columns: 1fr;
         grid-gap: 2rem;
 
-        &_job{
+        &_item{
             background: lighten($light-color,10%);
             padding: 0.5rem;
             border-bottom: 5px solid $highlight-color;
