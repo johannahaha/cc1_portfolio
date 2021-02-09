@@ -26,22 +26,35 @@
     }
     
     .jobs{
-        width: 60vw;
-        margin: 2rem auto 0 auto;
-        display:grid;
-        grid-template-columns: 1fr;
-        grid-gap: 2rem;
+        width: 95vw;
+        margin: 2rem auto 2rem auto;
+        padding: 2rem 0;
+        border-bottom: 1px solid $highlight-color;
+
+        h1{
+            font-weight: get-font-weight(bold);
+            font-family: get-font-family(bold);
+        }
+
 
         &_item{
-            background: lighten($light-color,10%);
             padding: 0.5rem;
-            border-bottom: 5px solid $highlight-color;
+            font-weight: get-font-weight(light);
+            font-family: get-font-family(light);
 
-            h2, h3{
-                margin:0.5rem 0;
+            &_year{
+                text-align: left;
+                margin: 1.5rem 1.5rem ;
+                font-size: 1.2rem;
+                width: 100%;
+                background: $highlight-color;
             }
-            h6{
-                margin: 0.3rem 0;
+
+            &_content{
+                padding-left: 2rem;
+                text-align: left;
+                margin: 1.5rem 1.5rem ;
+                font-size: 1.2rem;
             }
         }
     }

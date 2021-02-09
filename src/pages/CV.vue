@@ -7,25 +7,25 @@
           <p>this is what I did</p>
         </div>
       </div>
-      <h1>Education and Academic Career</h1>
       <div class="jobs">
+        <h1>Education and Academic Career</h1>
         <div class="jobs_item" v-for="edge in $page.jobsEducation.edges" :key="edge.node.id">
-            <h2 class="text-secondary">{{ edge.node.year }}</h2>
-            <h3>{{ edge.node.content }}</h3>
+            <h2 class="jobs_item_year">{{ edge.node.year }}</h2>
+            <h3 class="jobs_item_content">{{ edge.node.content }}</h3>
         </div>   
       </div>
-      <h1>Professional Experience</h1>
       <div class="jobs">
+        <h1>Professional Experience</h1>
         <div class="jobs_item" v-for="edge in $page.jobsPaid.edges" :key="edge.node.id">
-            <h2 class="text-secondary">{{ edge.node.year }}</h2>
-            <h3>{{ edge.node.content }}</h3>
+            <h2 class="jobs_item_year">{{ edge.node.year }}</h2>
+            <h3 class="jobs_item_content">{{ edge.node.content }}</h3>
         </div>   
       </div>
-      <h1>Voluntary Services</h1>
       <div class="jobs">
+        <h1>Voluntary Services</h1>
         <div class="jobs_item" v-for="edge in $page.jobsVoluntary.edges" :key="edge.node.id">
-            <h2 class="text-secondary">{{ edge.node.year }}</h2>
-            <h3>{{ edge.node.content }}</h3>
+            <h2 class="jobs_item_year">{{ edge.node.year }}</h2>
+            <h3 class="jobs_item_content">{{ edge.node.content }}</h3>
         </div>   
       </div>
     </section>

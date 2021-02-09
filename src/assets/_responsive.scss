@@ -29,6 +29,24 @@
         font-size: 1.5rem;
     }
 
+    .cv{
+        .jobs{
+            width: 70vw;
+
+            &_item{
+                &_year{
+                    margin: 0 2rem 0 0;
+                    text-align: left;
+                }
+                
+                &_content{
+                    margin: 0 0 0 2rem;
+                    padding-left: 2rem;
+                }
+            }
+        }
+    }
+
     .projects{
         &_bio-image{
             height:40vh;
@@ -68,6 +86,30 @@
 
         }
 
+    }
+
+    .cv{
+        .jobs{
+            width: 70vw;
+            h1{
+                margin: 2rem 0 2rem 0;
+            }
+
+            &_item{
+                display:grid;
+                grid-template-columns:25% 1fr;
+
+                &_year{
+                    text-align: right;
+                }
+
+                &_content{
+                    padding-left: 0;
+                }
+            }
+
+           
+        }
     }
 }
 

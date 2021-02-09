@@ -5,7 +5,7 @@
             </g-link>
             <div class="projects_item_details">
                 <h4>{{ post.title }}</h4>
-                <h5>{{ post.keywords }}</h5>
+                <h5>{{ post.tags }}</h5>
             </div>
             <!-- <div class="projects_btns">
                 <g-link :to="post.path" class="projects-button"> 

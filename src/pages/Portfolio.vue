@@ -26,7 +26,7 @@ query Posts{
       node{
         id
         title
-        keywords
+        tags
     	preview_img (width: 720)
         path
       }

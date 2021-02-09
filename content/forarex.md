@@ -1,6 +1,6 @@
 ---
 title: Forarex
-keywords: [Design, PR, Research]
+tags: [Design, PR, Research]
 preview_img: /img/img2.jpg
 ---
 

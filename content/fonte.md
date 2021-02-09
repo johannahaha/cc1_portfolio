@@ -1,6 +1,6 @@
 ---
 title: Fonte
-keywords: [Design, Brand Strategy]
+tags: [Design, Brand Strategy]
 preview_img: /img/img1.jpg
 ---
 
