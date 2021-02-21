@@ -1,8 +1,12 @@
-.logo{
+.logo_mobile{
     color:$highlight-color;
     font-family: get-font-family(bold);
     font-weight: get-font-weight(bold);
     font-size: 1.5rem;
+}
+
+.logo{
+    @extend .logo_mobile;
 }
 
 .menu-btn{
@@ -82,12 +86,16 @@
     }
 }
 
-.nav{
+.navbar{
+    left: 1rem;
     position: fixed;
+}
+
+.nav{
     top:0;
     left:0;
     width: 100vw;
-    opacity: 0.98;
+    opacity: 0.9;
     visibility: hidden;
 
     &.open {
@@ -144,6 +152,10 @@
             }
 
             &.active--exact.active{
+                background-size: 100% 50%;
+            }
+
+            &.active.active{
                 background-size: 100% 50%;
             }
 

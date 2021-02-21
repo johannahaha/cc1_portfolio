@@ -1,6 +1,6 @@
 ---
 title: ScenARy
-tags: {AR, Unity, App Development}
+tags: [AR, Unity, App Development]
 preview_img: /img/img2.jpg
 ---
 

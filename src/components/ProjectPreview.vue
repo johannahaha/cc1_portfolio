@@ -5,7 +5,7 @@
             </g-link>
             <div class="projects_item_details">
                 <h4>{{ post.title }}</h4>
-                <h5>{{ post.tags }}</h5>
+                <g-link v-for="tag in post.tags":key="tag.id":to="tag.path"> {{ tag.title }} </g-link>
             </div>
             <!-- <div class="projects_btns">
                 <g-link :to="post.path" class="projects-button"> 

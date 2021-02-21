@@ -11,7 +11,6 @@
 query Post ($path: String!){
   post: post(path: $path){
     	title
-        tags
     	preview_img (width: 720)
         content
     }

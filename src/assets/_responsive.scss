@@ -3,24 +3,32 @@
         visibility: hidden;
     }
 
+    .logo{
+        visibility: visible;
+    }
+
     .nav{
         visibility: visible;
+        transform: none;
+        padding-top: 3rem;
 
         .menu-nav{
-            display: block;
-            transform:translateY(0);
             height: 100%;
             background:transparent;
-            text-align: right;
+            transform: none;
+            align-items:flex-start;
+            justify-content:left;
 
             &_item{
                 display:inline;
                 padding-right: 1.5rem;
+                transform: none;
 
             }
 
             &_link{
                 font-size: 1.5rem;
+                padding: 1.2rem 0;
             }
         }
     }
@@ -32,16 +40,23 @@
     .cv{
         .jobs{
             width: 70vw;
+            @include section-not-mobile;
 
             &_item{
+                padding: 2rem 0;
+
                 &_year{
                     margin: 0 2rem 0 0;
                     text-align: left;
+                    font-size: 1.2rem;
                 }
                 
                 &_content{
                     margin: 0 0 0 2rem;
                     padding-left: 2rem;
+                    padding-top: 1rem;
+                    font-size: 1.2rem;
+
                 }
             }
         }
@@ -54,7 +69,7 @@
 
         &_items{
             //grid-template-columns: repeat(2,1fr);
-            margin: 10rem auto 0 auto;
+            @include section-not-mobile;
         }
 
         &_item{
@@ -73,8 +88,14 @@
             font-size: 3rem;
         }
     }
+    
     .post-content{
         width: 60vw;
+        @include section-not-mobile;
+    }
+
+    header{
+        background:none !important;
     }
 }
 
@@ -101,10 +122,12 @@
 
                 &_year{
                     text-align: right;
+                    margin: 0 2rem auto 0;
                 }
 
                 &_content{
                     padding-left: 0;
+                    padding-top: 0.5rem;
                 }
             }
 

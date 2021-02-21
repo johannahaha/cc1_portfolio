@@ -1,5 +1,9 @@
 .projects{
     padding-bottom: 2rem;
+
+    &_title{
+        @include section-title;
+    }
     
     &_items{
         width: 60vw;
@@ -13,13 +17,12 @@
     &_item{
         position: relative;
         overflow: hidden;
-        display:grid;
-        grid-template-rows: 70% 1fr;
+        display: grid;
+        //grid-template-rows: 70% 1fr;
         cursor: pointer;
 
         img{
             width:100%;
-
         }
 
         &_details{

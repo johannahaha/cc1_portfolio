@@ -25,18 +25,27 @@ function addStyleResource (rule) {
 
 module.exports = {
   siteName: "Johanna Hartmann",
+  templates: {
+    Post: '/portfolio/post/:title',
+    Tag: '/portfolio/tag/:id'
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'content/**/*.md',
         typeName: 'Post',
+        refs: {
+          tags: {
+            typeName: 'Tag',
+            create: true
+          }
+        },
         remark: {
           // remark options
           plugins: [
             ['gridsome-plugin-remark-youtube', {align:'auto'}]
           ]
-          
         }
       }
     }

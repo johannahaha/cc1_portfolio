@@ -13,6 +13,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 
 config.autoAddCss = false;
 
+
 export default function (Vue, { router, head, isClient }) {
   library.add(faGithub, faTwitter,faEye);
 
