@@ -14,13 +14,14 @@
 
 <page-query>
 query Posts{
-	posts: allPost{
+	posts: allPost(sortBy: "year"){
     edges{
       node{
         id
         title
-    	preview_img (width: 720)
+    	  preview_img (width: 1000)
         path
+        year
         tags{
           id
           title

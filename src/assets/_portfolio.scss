@@ -3,6 +3,10 @@
 
     &_title{
         @include section-title;
+
+        a{
+            z-index: 3;
+        }
     }
     
     &_items{
@@ -10,7 +14,7 @@
         margin: 5rem auto 0 auto;
         display:grid;
         grid-template-columns: 1fr;
-        grid-gap: 2rem;
+        grid-gap: 3rem;
 
     }
 
@@ -29,6 +33,9 @@
             width:100%;
             padding: 1rem;
             background: $highlight-color;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
 
             h4{
                 font-family: get-font-family(medium);
@@ -40,6 +47,23 @@
             h5{
                 font-size:0.75rem;
                 font-weight:get-font-weight(light);
+            }
+
+            &_tags{
+                flex-direction: row; 
+
+                a{
+                    font-weight:get-font-weight(light);
+                    margin-right: 0.5rem;
+                    margin-top: 0.5rem;
+                    padding: 0.1rem;
+                    z-index: 10;
+    
+                    &:hover{
+                        background-color: rgba($light-color, .3);
+                    }
+                }
+
             }
         }
 
@@ -107,5 +131,9 @@
     p{
         padding: 2rem 0;
         line-height: 1.5rem;
+    }
+
+    img{
+        width: 100%;
     }
 }

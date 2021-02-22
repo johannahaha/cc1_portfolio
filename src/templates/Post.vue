@@ -13,6 +13,7 @@ query Post ($path: String!){
     	title
     	preview_img (width: 720)
         content
+        year
     }
 }
 </page-query>

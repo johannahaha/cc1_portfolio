@@ -2,6 +2,7 @@
 title: ScenARy
 tags: [AR, Unity, App Development]
 preview_img: /img/img2.jpg
+year: 2018
 ---
 
 # ScenARy
@@ -16,5 +17,8 @@ With ScenARy, users can draw their own stage objects, scan real objects or selec
 Realisation of the drawing of own objects (frontend and backend), conversion of the drawing to Augmented Reality objects, C# programming, evaluation at the theatre, conception of the object library, scientific documentation.
 
 `youtube:https://youtu.be/fTFNuT1Fz-c`
+
+
+![Alternative text](/img/scenary03.jpg)
 
 

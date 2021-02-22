@@ -142,7 +142,7 @@
             font-weight:get-font-weight(bold);
             transition: background-size .4s ease;
             background: linear-gradient(to bottom, transparent -80%, $highlight-color 0) center center/0% 75% no-repeat;
-            text-transform: uppercase;
+            text-transform: lowercase;
             padding: 2rem 0;
             font-weight: get-font-weight(medium);
             @include transition-ease;
@@ -155,9 +155,9 @@
                 background-size: 100% 50%;
             }
 
-            &.active.active{
-                background-size: 100% 50%;
-            }
+            // &.active.active{
+            //     background-size: 100% 50%;
+            // }
 
         }
     }
