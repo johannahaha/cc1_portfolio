@@ -1,16 +1,38 @@
 .home{
-    height: 100%;
-    padding-top: 40vh;
-    overflow: hidden;
-    align-items: center;
-    text-align: center;
-    background: $light-color;
+    //height: 100%;
+    position: relative;
 
-    &_name{
-        font-size: 3rem;
-        font-family: get-font-family(bold);
-        font-weight: get-font-weight(bold);
-        padding-bottom: 1rem;
-        margin-top: 1rem;
+    &_title{
+        @include section-title;
     }
+
+    &_infos{
+        margin: 5rem auto 0 auto;
+        width: 60vw;
+        align-items: center;
+        text-align: left;
+        p{
+            padding-top: 2rem;
+            font-size: 1.3rem;
+            font-family: get-font-family(regular);
+            font-weight: get-font-weight(regular);
+        }
+    
+        &_name{
+            font-size: 3rem;
+            font-family: get-font-family(bold);
+            font-weight: get-font-weight(bold);
+            color: $light-color;
+        }
+
+    }
+
+}
+
+canvas {
+    height: 100vh;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    z-index: 0;
 }

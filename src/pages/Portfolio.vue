@@ -2,7 +2,7 @@
     <Layout>
     <section class="projects">
         <div class="projects_title">
-          <h2 class="text-secondary">Portfolio</h2>
+          <h2>Portfolio</h2>
           <p>all projects</p>
         </div>
         <div class="projects_items">

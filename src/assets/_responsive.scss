@@ -7,11 +7,19 @@
         visibility: visible;
     }
 
+    .navbar{
+        z-index: 3;
+        position: fixed;
+    }
+
+
     .nav{
         visibility: visible;
         transform: none;
         padding-top: 3rem;
         width: fit-content;
+        z-index: 3;
+        position: relative;
 
         .menu-nav{
             height: 100%;
@@ -64,9 +72,7 @@
     }
 
     .projects{
-        &_bio-image{
-            height:40vh;
-        }
+        z-index: 0;
 
         &_items{
             //grid-template-columns: repeat(2,1fr);
@@ -98,14 +104,27 @@
             font-size: 3rem;
         }
     }
+
+    .projects_title{
+        @include section-not-mobile;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+    }
     
     .post-content{
         width: 60vw;
+        margin: 5rem auto 0 auto;
         @include section-not-mobile;
     }
 
     header{
         background:none !important;
+        z-index: 3;
+        position: relative;
+    }
+
+    .home{
+        @include section-not-mobile;
     }
 }
 

@@ -1,9 +1,12 @@
 $primary-color: #272727;
 $secondary-color: #ff652f;
 
-$highlight-color:#DFA83A;
-$light-color:#F5F8FA;
-$dark-color:#04050D;
+//$highlight-color:#DFA83A;
+//$light-color:#F5F8FA;
+//$dark-color:#04050D;
+$dark-color: #0E2626;
+$light-color: white;
+$highlight-color: #D9A404;
 
 $font-weigths:(
     "light":100,
@@ -23,6 +26,7 @@ $font-families:(
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: $dark-color;
 }
 
 @function get-font-weight($weight-name){
@@ -39,10 +43,10 @@ $font-families:(
 
 @function set-text-color($color){
     @if(lightness($color) > 40%) {
-        @return #000;
+        @return $dark-color;
     }
     @else{
-        @return #fff;
+        @return $light-color;
     }
 }
 
@@ -69,9 +73,24 @@ $font-families:(
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    font-family: get-font-family(bold);
+    font-weight: get-font-family(bold);
+
+    a{
+        padding-bottom: 1rem;
+        font-family: get-font-family(regular);
+        font-weight: get-font-family(regular);
+    }
+
+    h2{
+        font-size:2rem;
+        color: $dark-color;
+    }
 
     p {
-        margin-bottom: 2rem;
+        padding-top: 1rem;
+        font-size: 1.5rem;
+        color: $highlight-color;
     }  
 }
 

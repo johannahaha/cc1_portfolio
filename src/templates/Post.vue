@@ -1,8 +1,10 @@
 <template>
     <Layout>
         <div>
-            <div v-html="$page.post.content" class ="post-content">
-        </div>
+            <div class="projects_title_post">
+                <g-link to="/portfolio/">Back to all projects</g-link>
+            </div>
+            <div v-html="$page.post.content" class ="post-content"> </div>
         </div>
     </Layout>
 </template>

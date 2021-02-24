@@ -1,5 +1,7 @@
 .projects{
     padding-bottom: 2rem;
+    z-index: 2;
+    position: relative;
 
     &_title{
         @include section-title;
@@ -15,6 +17,7 @@
         display:grid;
         grid-template-columns: 1fr;
         grid-gap: 3rem;
+        color: $dark-color;
 
     }
 
@@ -114,7 +117,7 @@
 
 .post-content{
     width: 90vw;
-    margin: 5rem auto 0 auto;
+    margin: 0 auto 0 auto;
 
     h1{
         padding: 2rem 0;
@@ -135,5 +138,14 @@
 
     img{
         width: 100%;
+    }
+}
+
+.projects_title_post{
+    @extend .projects_title;
+    height: 10vh;
+
+    a{
+        padding-bottom: 0;
     }
 }

@@ -1,5 +1,6 @@
 .cv{
     padding-bottom: 2rem;
+    z-index: 1;
 
     &_bio-image{
         @include section-title;

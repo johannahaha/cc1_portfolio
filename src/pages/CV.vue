@@ -3,12 +3,11 @@
     <section class="cv">
       <div class="cv_bio-image">
         <div class="cv_bio">
-          <h2 class="text-secondary">CV BIO</h2>
-          <p>this is what I did</p>
+          <h2 class="text-secondary">CV</h2>
         </div>
       </div>
       <div class="jobs">
-        <h1>Education and Academic Career</h1>
+        <h1>Academia</h1>
         <div class="jobs_item" v-for="edge in $page.jobsEducation.edges" :key="edge.node.id">
             <h2 class="jobs_item_year">{{ edge.node.year }}</h2>
             <h3 class="jobs_item_content">{{ edge.node.content }}</h3>

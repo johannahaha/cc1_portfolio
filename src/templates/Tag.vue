@@ -3,8 +3,8 @@
 
     <section class="projects">
         <div class="projects_title">
-          <g-link to="/portfolio/">Back to all Projects</g-link>
-          <h2 class="text-secondary">Portfolio</h2>
+          <g-link to="/portfolio/">Back to all projects</g-link>
+          <h2>Portfolio</h2>
           <p>{{ $page.tag.title }}</p>
         </div>
         <div class="projects_items">
