@@ -1,8 +1,8 @@
 <template>
     <!-- <div id="p5sketch"></div>   -->
-    <div>
+    <div v-if="$route.path == '/'">
         <ClientOnly>
-        <div id="canvas"></div>
+        <div id="canvas" ></div>
         <!-- <vue-p5 
             :additional-events="['windowresized']"
             @windowresized="windowresized"
@@ -27,6 +27,10 @@ export default {
         //     .catch()
         //"vue-p5": VueP5
     },
+    data: () => ({
+        sketch: null,
+        p5Canvas:null
+    }),
     // data: () => ({
     //     width: 300,
     //     height: 300,
@@ -36,12 +40,13 @@ export default {
     //     hello: "hello Johanna"
     // }),
     mounted() {
-        let sketch = function(s){
+        console.log("mounting canvas");
+        this.sketch = function(s){
             let width = 300;
             let height= 300;
             let t= 0;
-            let mouseXLast= 300;
-            let mouseYLast= 300;
+            let mouseXLast= 700;
+            let mouseYLast= 700;
             let hello= "hello Johanna";
             s.setup = () => {  
                 if (process.isClient){
@@ -56,11 +61,12 @@ export default {
 
                     console.log(hello);
                     t=0;
-                    width =  window.innerWidth,
-                    height = window.innerHeight,
-                    mouseXLast= window.innerWidth/2,
-                    mouseYLast= window.innerHeight/2,
+                    width =  window.innerWidth;
+                    height = window.innerHeight;
+                    mouseXLast= window.innerWidth/2;
+                    mouseYLast= window.innerHeight/2;
                     s.createCanvas(width,height);
+
                     
                     s.background(255,255,255);
                     let c = s.color(217,164,4,10)
@@ -77,7 +83,6 @@ export default {
 
             s.draw = () => { 
                 if (process.isClient){
-                    console.log("drawing");
                     // let x1 = this.width * s.noise(this.t + 10);
                     // let y1 = this.height * s.noise(this.t - 10);
                     // let x2 = this.width * s.noise(this.t + 20);
@@ -121,20 +126,35 @@ export default {
                         t=0;
                     }
                 }
-            },
-
-            s.windowresized = () => { 
-                if (process.isClient){
-                    s.resizeCanvas(window.innerWidth, window.innerHeight);
-                }
             }
-        //let myp5 = new P5(sketch, document.getElementById('p5sketch'));
+        }
+        let windowresized = () => { 
+            if (process.isClient){
+                s.resizeCanvas(window.innerWidth, window.innerHeight);
+            }
         }
         const P5 = require("p5");
-        new P5(sketch,'canvas');
-    // render(h) {
-    //     return h(VueP5, {on: this});
-    //}    
+        this.p5Canvas = new P5(this.sketch,"canvas");
+
+        this.onDestroyCanvas = function onDestroy(){
+            console.log("destroying canvas with p5");
+            this.p5Canvas.remove();
+        }
+
+        document.addEventListener('resize', () => {
+            console.log("resizing");
+            this.p5Canvas.resizeCanvas(window.innerWidth, window.innerHeight);
+        });
+        
+        
+    },
+    destroyed(){
+        console.log("destroy canvas",this.sketch);
+        //delete this.p5Canvas;
+        //delete this.sketch;
+        // const canv = document.querySelector('defaultCanvas0');
+        // canv && canv.remove();
+        this.onDestroyCanvas();
     }
 }
 </script>
