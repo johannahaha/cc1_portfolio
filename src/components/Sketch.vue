@@ -1,37 +1,47 @@
 <template>
     <!-- <div id="p5sketch"></div>   -->
+    <ClientOnly>
     <vue-p5 
         :additional-events="['windowresized']"
         @windowresized="windowresized"
         @setup="setup"
         @draw="draw">
     </vue-p5> 
+    </ClientOnly>
 </template>
 
 <script>
-import VueP5 from 'vue-p5';
 
 
 export default {
     components: {
-        "vue-p5": VueP5
+        VueP5: () =>
+            import ('vue-p5')
+            .then(m => m.VueP5)
+            .catch(),
+        //"vue-p5": VueP5
     },
     data: () => ({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: 300,
+        height: 300,
         t: 0,
-        mouseXLast: window.innerWidth/2,
-        mouseYLast: window.innerHeight/2,
+        mouseXLast: 300,
+        mouseYLast: 300,
 
     }),
     methods: {
         setup(s){
+            this.width =  window.innerWidth,
+            this.height = window.innerHeight,
+            this.mouseXLast= window.innerWidth/2,
+            this.mouseYLast= window.innerHeight/2,
             s.createCanvas(this.width,this.height);
             
             s.background(255,255,255);
             let c = s.color(217,164,4,10)
             s.stroke(c);
             s.noFill();
+            
 
             // document.addEventListener('resize', () => {
             //     console.log("resizing");
