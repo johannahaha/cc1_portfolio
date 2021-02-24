@@ -136,7 +136,7 @@ export default {
         const P5 = require("p5");
         this.p5Canvas = new P5(this.sketch,"canvas");
 
-        this.onDestroyCanvas = function onDestroy(){
+        this.onDestroyCanvas = function onDestroyCanvas(){
             console.log("destroying canvas with p5");
             this.p5Canvas.remove();
         }
@@ -150,10 +150,6 @@ export default {
     },
     destroyed(){
         console.log("destroy canvas",this.sketch);
-        //delete this.p5Canvas;
-        //delete this.sketch;
-        // const canv = document.querySelector('defaultCanvas0');
-        // canv && canv.remove();
         this.onDestroyCanvas();
     }
 }

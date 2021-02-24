@@ -5,7 +5,7 @@
         @click = "toggleMenu">
         <span class="menu-btn_burger"> </span>
         </div>
-        <div class="navbar">
+        <div class="navbar" ref="navbarRef">
                 <strong>
                     <g-link to="/" 
                         class = "logo"
@@ -50,7 +50,9 @@ export default {
     },
     methods:{
       toggleMenu(event){
-          event.target.classList.toggle('open')
+          event.target.classList.toggle('open');
+          console.log(this.$refs);
+          this.$refs.navbarRef.classList.toggle('open');
           this.showMenu = event.target.classList.contains('open')
       }
     }    
