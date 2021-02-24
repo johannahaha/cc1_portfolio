@@ -27,7 +27,7 @@ export default function (Vue, { router, head, isClient }) {
   });
 
   if (isClient) { 
-    const VueP5 = require("vue-p5.js").default;
+    const VueP5 = require("vue-p5").default;
     Vue.use(VueP5);
 }
 }
