@@ -27,12 +27,14 @@ export default {
         t: 0,
         mouseXLast: 300,
         mouseYLast: 300,
-
+        hello: "hello Johanna"
     }),
     methods: {
         setup(s){
 
             if (process.isClient){
+                console.log("doing setup");
+                console.log(this.hello);
                 this.t=0;
                 this.width =  window.innerWidth,
                 this.height = window.innerHeight,
@@ -55,6 +57,7 @@ export default {
 
         draw(s){
             if (process.isClient){
+                console.log("drawing");
                 let x1 = this.width * s.noise(this.t + 10);
                 let y1 = this.height * s.noise(this.t - 10);
                 let x2 = this.width * s.noise(this.t + 20);

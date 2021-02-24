@@ -25,4 +25,9 @@ export default function (Vue, { router, head, isClient }) {
     rel: 'stylesheet',
     href: 'https://use.typekit.net/mix2txx.css'
   });
+
+  if (isClient) { 
+    const VueP5 = require("vue-p5.js").default;
+    Vue.use(VueP5);
+}
 }
