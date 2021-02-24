@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import P5 from 'p5';
 import VueP5 from 'vue-p5';
 
 
