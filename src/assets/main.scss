@@ -11,7 +11,6 @@ body{
     height: 100vh;
     font-family: neue-haas-unica, sans-serif;
     font-weight: get-font-weight(regular);
-    //font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1;
 }
 
@@ -84,7 +83,7 @@ footer {
     right: 1rem;
     text-align: right;
     padding: 1rem;
-    color: set-text-color($primary-color);
+    color: set-text-color($dark-color);
 }
 
 #app{

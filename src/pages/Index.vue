@@ -1,7 +1,6 @@
 <template>
   <Layout>
     <Sketch></Sketch>
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <section class = "home">
       <div class="home_title"></div>
       <div class="home_infos">

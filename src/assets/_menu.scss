@@ -141,10 +141,6 @@
             &.active > g-link{
                 color:$highlight-color;
             }
-
-            &:hover{
-
-            }
         }
         &_link{
             display: inline-block;
@@ -165,10 +161,6 @@
             &.active--exact.active{
                 background-size: 100% 50%;
             }
-
-            // &.active.active{
-            //     background-size: 100% 50%;
-            // }
 
         }
     }

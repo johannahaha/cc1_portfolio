@@ -93,27 +93,6 @@
             }
         }
     }
-
-    // &_btns{
-    //     position: absolute;
-    //     top:0;
-    //     height: 100%;
-    //     width: 100%;
-    //     z-index: 1;
-    //     align-items: center;
-    //     text-align:center;
-    // }
-
-    // &btn{
-    //     opacity: 0;
-    //     color: set-text-color($highlight-color);
-    //     @include transition-ease;
-
-    //     &:hover{
-    //         color: set-text-color(set-text-color($highlight-color));
-
-    //     }
-    // }
 }
 
 .post-content{
