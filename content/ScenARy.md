@@ -1,9 +1,10 @@
 ---
 title: ScenARy
 tags: [AR, Unity, App Development]
-preview_img: /img/img2.jpg
+preview_img: /img/scenary01.jpeg
 year: 2018
 ---
+![scenary01](/img/scenary01.jpeg)
 
 # ScenARy
 
@@ -19,6 +20,6 @@ Realisation of the drawing of own objects (frontend and backend), conversion of 
 `youtube:https://youtu.be/fTFNuT1Fz-c`
 
 
-![Alternative text](/img/scenary03.jpg)
+![scenary03](/img/scenary03.jpg)
 
 
