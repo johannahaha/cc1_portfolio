@@ -32,7 +32,7 @@ export default {
                     mouseYLast= window.innerHeight/2;
                     s.createCanvas(width,height);
 
-                    
+                    //s.noiseSeed(40);
                     s.background(255,255,255);
                     let c = s.color(217,164,4,10)
                     s.stroke(c);
@@ -43,20 +43,20 @@ export default {
 
             s.draw = () => { 
                 if (process.isClient){
-                    let x1 = width * s.noise(t + 10);
-                    let y1 = height * s.noise(t - 10);
-                    let x2 = width * s.noise(t + 20);
-                    let y2 = height * s.noise(t - 20);
-                    let x3 = width * s.noise(t + 30);
-                    let y3 = height * s.noise(t - 30);
-                    let x4 = height* s.noise(t+100);
-                    let y4 = width* s.noise(t+100);
-                    let x5 = width * s.noise(mouseXLast-s.mouseX);
-                    let y5 = height * s.noise(mouseYLast-s.mouseY);
+                    let x1 = s.mouseX;
+                    let y1 = s.mouseY;
+                    let x2 = width * s.noise(t + 30);
+                    let y2 = height * s.noise(t - 30);
+                    let x3 = (height%width* s.noise(t-10));
+                    let y3 = (width%height* s.noise(t+10));
+                    let x4 = (width * s.noise(s.sin(t+s.PI))) % width;
+                    let y4 = (height * s.noise(s.sin(t+s.PI))) % height;
+                    let x5 = width * s.noise(t + 10);
+                    let y5 = height * s.noise(t - 10);
 
-                    s.bezier(s.mouseX,s.mouseY,x1, y1, x3, y3, x2, y2,x5,y5);
+                    s.bezier(x1, y1,x2, y2,x3,y3, x5, y5, x4, y4, x5, y5);
 
-                    t += 0.003;
+                    t += 0.002;
                     mouseXLast = s.mouseX;
                     mouseYLast = s.mouseY;
 
