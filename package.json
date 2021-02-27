@@ -13,8 +13,7 @@
     "eslint-plugin-gridsome": "^1.6.1",
     "gridsome": "^0.7.0",
     "gridsome-plugin-remark-youtube": "^1.0.1",
-    "p5": "^1.2.0",
-    "vue-p5": "^0.8.3"
+    "p5": "^1.2.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
