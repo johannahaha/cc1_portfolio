@@ -1,6 +1,6 @@
 ---
 title: ScenARy
-tags: [AR, Unity, App Development]
+tags: [AR, App Development]
 preview_img: /img/scenary01.jpeg
 year: 2018
 ---

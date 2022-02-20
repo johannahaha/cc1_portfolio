@@ -6,7 +6,7 @@
     },
     {
         "year": "2017 - 2020",
-        "content": "German Scholarship of University of Bremen",
+        "content": "German Scholarship (Deutschlandstipendium) of University of Bremen",
         "category": "education"
     },
     {
@@ -17,6 +17,11 @@
     {
         "year": "2016 - 2020",
         "content": "B. Sc. Digital Media, University of Bremen",
+        "category": "education"
+    },
+    {
+        "year": "2020",
+        "content": "DELFI Award: Best Bachelor Thesis of 2020 in the field of educational technologies",
         "category": "education"
     },
     {
@@ -40,12 +45,17 @@
         "category": "paid"
     },
     {
-        "year": "2020",
-        "content": "Seminar speaker at Informatica Feminale in Bremen with Ayla Satilsmis about 'Discrimination through Algorithms? - Ethical reflections on current challenges'",
+        "year": "2020 & 2021",
+        "content": "Lecturer / Lectureship at Informatica Feminale in Bremen with Ayla Satilsmis about 'Discrimination through Algorithms? - Ethical reflections on current challenges'",
         "category": "paid"
     },
     {
-        "year": "2021",
+        "year": "2021 & 2022",
+        "content": "Exhibition Managment and Curation of digital art exhibition 'Beyond the Frame' at International Student Film Festival Sehsüchte",
+        "category": "paid"
+    },
+    {
+        "year": "2021 - 2022",
         "content": "Research Assistent at FAST45 (Futures Art School Trends - 2045) at Filmuniversity Babelsberg Konrad Wolf",
         "category": "paid"
     },
@@ -61,7 +71,7 @@
     },
     {
         "year": "2017 - 2020",
-        "content": "PR and design managment for interdisciplinary Student Research Project FORAREX. Participation at European Research Project REXUS/BEXUS",
+        "content": "PR, science communication and design managment for interdisciplinary Student Research Project FORAREX. Participation at European Research Project REXUS/BEXUS",
         "category": "voluntary"
     }
 ]

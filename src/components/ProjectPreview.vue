@@ -1,24 +1,51 @@
 <template>
     <div class="projects_item">
-            <g-image :src="post.preview_img" class="projects_item-preview-img" alt="post.title" @click="open(post.path)"/>
-            <div class="projects_item_details">
-                <h4>{{ post.title }}</h4>
-                <div class="projects_item_details_tags">
-                    <g-link v-for="tag in post.tags":key="tag.id":to="tag.path"> {{ tag.title }} </g-link>
-                </div>
+        <g-image
+            :src="post.preview_img"
+            class="projects_item-preview-img"
+            alt="post.title"
+            @click="open(post.path)"
+            @mouseover="showDetails = true"
+            @mouseleave="showDetails = false"
+            :style="{opacity: imgOpacity}"
+        />
+        <div
+            class="projects_item_details"
+            v-show="showDetails"
+            @mouseover="showDetails = true"
+            @mouseleave="showDetails = false"
+            @click="open(post.path)"
+        >
+            <h4>{{ post.title }}</h4>
+            <div class="projects_item_details_tags">
+                <g-link v-for="tag in post.tags" :key="tag.id" :to="tag.path">
+                    {{ tag.title }}
+                </g-link>
             </div>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-    props: { 
-        post: {}
-    },    
-    methods: {
-        open: function(path){
-            window.location.href = path;
+    computed:{
+        imgOpacity: function(){
+            if(this.showDetails) return 0.25
+            else return 1.0
         }
-    }
+    },
+    props: {
+        post: {},
+    },
+    data: function () {
+        return {
+            showDetails: false,
+        };
+    },
+    methods: {
+        open: function (path) {
+            window.location.href = path;
+        },
+    },
 };
 </script>

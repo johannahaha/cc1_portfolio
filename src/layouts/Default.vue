@@ -2,15 +2,18 @@
   <div>
     <Header></Header>
     <slot> </slot>
+    <Social></Social>
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
+import Social from "@/components/Social.vue";
 
 export default {
   components: {
-    Header
+    Header,
+    Social
   }
 }
 </script>

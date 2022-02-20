@@ -25,6 +25,10 @@ function addStyleResource (rule) {
 
 module.exports = {
   siteName: "Johanna Hartmann",
+  metadata:{
+      github: "https://github.com/johannahaha",
+      linkedin: "https://github.com/johannahaha"
+  },
   templates: {
     Post: '/portfolio/post/:title',
     Tag: '/portfolio/tag/:id'
