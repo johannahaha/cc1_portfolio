@@ -9,7 +9,7 @@ year: 2018
 
 # struggles in a woman's life
 
-My work takes up the meaning of traditional Thai weaving patterns on women's skirts. The patterns symbolize a woman's life and the obstacles that make it up. The installation artistically explores the interaction of symbolism with external influences and circumstances. It was exhibited at Chiang Mai Design Week 2019 at TCDC Design Center.
+My work takes up the meaning of traditional Thai weaving patterns on women's skirts. The patterns symbolize a woman's life and the obstacles that make it up. The installation artistically explores the interaction of symbolism with external influences and circumstances, such as wind and sun. It was exhibited at Chiang Mai Design Week 2019 at TCDC Design Center.
 
 
 ![distance02](/img/craftproduct02.jpg)

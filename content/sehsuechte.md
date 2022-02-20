@@ -1,5 +1,5 @@
 ---
-title: Exhibition Managment Sehsuechte
+title: Exhibition Management Sehsuechte
 tags: [Web,Data]
 preview_img: /img/sehsuechte/exhibition3_ae.jpg
 year: 2021
@@ -9,9 +9,9 @@ year: 2021
 
 The Exhibition "Beyond the Frame" is part of the International Student Film Festival Sehsuechte. In 2021, Sehsuechte had its 50 year anniversary.
 
-The exhibition aims to present new form of storytelling, interactive media, installations, immersive experiences and digital art.
+The exhibition aims to present new forms of storytelling, interactive media, installations, immersive experiences, and digital art.
 
-I was part of the Exhibition Managment Team. We curated the art pieces and organized the exhibition and exhibition space.
+I was part of the Exhibition Management Team. We curated the art pieces and organized the exhibition and exhibition space.
 
 Here you can see some impressions of the exhibition.
 
