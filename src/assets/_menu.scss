@@ -139,7 +139,7 @@
             }
 
             &.active > g-link{
-                color:$highlight-color;
+                color:$light-color;
             }
         }
         &_link{
@@ -149,6 +149,7 @@
             font-weight:get-font-weight(bold);
             transition: background-size .4s ease;
             background: linear-gradient(to bottom, transparent -80%, $highlight-color 0) center center/0% 75% no-repeat;
+            color: $light-color;
             text-transform: lowercase;
             padding: 2rem 0;
             font-weight: get-font-weight(medium);

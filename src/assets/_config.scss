@@ -1,6 +1,8 @@
-$dark-color: #0E2626;
+//$dark-color: #0E2626;
+$dark-color: black;
 $light-color: white;
-$highlight-color: #D9A404;
+$highlight-color: black;
+//$highlight-color: #D9A404;
 
 $font-weigths:(
     "light":100,
@@ -12,8 +14,8 @@ $font-weigths:(
 $font-families:(
     "light":neue-haas-unica,
     "regular": neue-haas-unica,
-    "medium":le-monde-livre,
-    "bold":le-monde-livre
+    "medium":neue-haas-unica,
+    "bold":neue-haas-unica
 );
 
 * {
