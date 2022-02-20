@@ -33,6 +33,10 @@ module.exports = {
     Post: '/portfolio/post/:title',
     Tag: '/portfolio/tag/:id'
   },
+  icon: {
+    favicon: './src/favicon.png',
+    touchicon: './src/favicon.png'
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',

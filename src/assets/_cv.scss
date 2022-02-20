@@ -41,7 +41,9 @@
                 background: $highlight-color;
                 color:$light-color;
                 padding: 0.5rem;
-                width: 10vw;
+                width:30vw;
+                font-weight: get-font-weight(light);
+                font-family: get-font-family(light);
             }
 
             &_content{

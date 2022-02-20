@@ -2,7 +2,7 @@
     <Layout>
     <section class="projects">
         <div class="projects_title">
-          <h2>Portfolio</h2>
+          <h1>Portfolio</h1>
           <p>all projects</p>
         </div>
         <div class="projects_items">
@@ -39,7 +39,10 @@ import ProjectPreview from "@/components/ProjectPreview.vue"
 export default {
     components:{
         ProjectPreview
-    }
+    },
+    metaInfo: {
+      title: 'Portfolio'
+    },
     
 }
 </script>

@@ -13,7 +13,7 @@
     }
     
     &_items{
-        width: 60vw;
+        width: 90vw;
         margin: 5rem auto 0 auto;
         display:flex;
         flex-direction: column;
@@ -32,6 +32,7 @@
         //overflow: hidden;
         //display: grid;
         //grid-template-rows: 70% 2fr;
+        padding-bottom:2vh;
         cursor: pointer;
 
         img{
@@ -55,23 +56,24 @@
             h4{
                 font-family: get-font-family(medium);
                 font-weight: get-font-weight(medium);
-                font-size: 1.5rem;
+                font-size: 1rem;
                 margin: 0.25rem 0;
             }
 
-            h5{
-                font-size:0.75rem;
+            p{
                 font-weight:get-font-weight(light);
+                font-family: get-font-family(light);
+                margin: 0.25rem 0;
             }
 
             &_tags{
                 flex-direction: row; 
 
                 a{
+                    font-family: get-font-family(light);
                     font-weight:get-font-weight(light);
-                    margin-right: 0.5rem;
+                    margin-right: 1rem;
                     margin-top: 0.5rem;
-                    padding: 0.1rem;
                     z-index: 10;
     
                     &:hover{
@@ -120,11 +122,12 @@
     h2{
         font-family: get-font-family(medium);
         font-weight: get-font-weight(medium);
+        padding: 2rem 0;
     }   
 
     p{
-        padding: 2rem 0;
         line-height: 1.5rem;
+        padding-bottom: 1rem;
     }
 
     img{

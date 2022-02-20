@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- <v-vanta id="vanta-background" effect="fog" :options=options></v-vanta> -->
     <Header></Header>
     <slot> </slot>
     <Social></Social>
@@ -9,12 +10,32 @@
 <script>
 import Header from "@/components/Header.vue";
 import Social from "@/components/Social.vue";
+//import VVanta from 'vue-vanta';
 
 export default {
   components: {
     Header,
-    Social
-  }
+    Social,
+    //VVanta
+  },
+    data () {
+      return {
+        // options: {
+        //     mouseControls: true,
+        //     touchControls: true,
+        //     gyroControls: false,
+        //     minHeight: 200.00,
+        //     minWidth: 200.00,
+        //     highlightColor: 0xf5cf6f,
+        //     midtoneColor: 0x8040e8,
+        //     lowlightColor: 0x5782ed,
+        //     baseColor: 0xffffff,
+        //     blurFactor: 0.71,
+        //     speed: 0.40,
+        //     zoom: 0.20
+        // }
+      }
+    }
 }
 </script>
 <style>

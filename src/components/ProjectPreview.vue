@@ -22,6 +22,7 @@
                     {{ tag.title }}
                 </g-link>
             </div>
+            <p>{{ post.year }}</p>
         </div>
     </div>
 </template>

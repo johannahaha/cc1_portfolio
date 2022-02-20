@@ -3,7 +3,7 @@
     <section class="cv">
       <div class="cv_bio-image">
         <div class="cv_bio">
-          <h2 class="text-secondary">CV</h2>
+          <h1>CV</h1>
         </div>
       </div>
       <div class="jobs">

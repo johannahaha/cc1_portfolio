@@ -43,6 +43,7 @@ Here is a link to the [visual documentation](https://www.youtube.com/watch?v=EYr
 I implemented it in OpenFrameworks and Python.
 
 The first step is to use the GUI to specify the location from which the air pollution should be determined. 
+
 ![gui_location.jpeg](/img/airpollution/gui_location.jpeg)
 
 From this location the app determines the current air pollution via an API.
