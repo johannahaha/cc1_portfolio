@@ -1,7 +1,6 @@
 .logo_mobile{
     color:$highlight-color;
-    font-family: get-font-family(bold);
-    font-weight: get-font-weight(bold);
+    @include font(bold);
     font-size: 1.5rem;
 }
 
@@ -145,14 +144,14 @@
         &_link{
             display: inline-block;
             font-size: 2rem;
-            font-family:get-font-family(bold);
-            font-weight:get-font-weight(bold);
+            
+            @include font(light);
+
             transition: background-size .4s ease;
             background: linear-gradient(to bottom, transparent -80%, $highlight-color 0) center center/0% 75% no-repeat;
             color: $dark-color;
             text-transform: lowercase;
             padding: 2rem 0;
-            font-weight: get-font-weight(medium);
             @include transition-ease;
 
             &:hover{

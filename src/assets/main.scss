@@ -9,18 +9,18 @@ body{
     background: $light-color;
     color:set-text-color($light-color);
     height: 100vh;
-    font-family: Aileron, neue-haas-unica, sans-serif;
+    font-family: Archivo, neue-haas-unica, sans-serif;
     font-weight: get-font-weight(regular);
     line-height: 1;
     overflow-x: hidden;
 }
 
 h1 {
-    font-weight:get-font-weight(bold);
+    @include font(bold);
 }
 
 h2,h3{
-    font-weight:get-font-weight(regular);
+    @include font(medium);
 }
 
 a{

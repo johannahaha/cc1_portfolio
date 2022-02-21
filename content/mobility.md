@@ -1,6 +1,6 @@
 ---
 title: Mobility in Knots - Mapping Cities Making Cities
-tags: [Creative Coding,Web,Data]
+tags: [Web,Data]
 preview_img: /img/mobility/mobility01.png
 year: 2021
 ---

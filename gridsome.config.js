@@ -27,7 +27,8 @@ module.exports = {
   siteName: "Johanna Hartmann",
   metadata:{
       github: "https://github.com/johannahaha",
-      linkedin: "https://github.com/johannahaha"
+      linkedin: "https://www.linkedin.com/in/johanna-hartmann-0482941ba/",
+      mail:"mailto:johanna.hartmann@filmuniversitaet.de"
   },
   templates: {
     Post: '/portfolio/post/:title',

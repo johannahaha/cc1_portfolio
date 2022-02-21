@@ -1,6 +1,6 @@
 ---
 title: Instaviz
-tags: [Web,Data]
+tags: [Design,Data]
 preview_img: /img/instaviz_preview.png
 year: 2021
 ---

@@ -1,6 +1,6 @@
 ---
 title: Stories about Algorithm Ethics - the BAMF Case
-tags: [Web,Data]
+tags: [Web,Data,Design]
 preview_img: /img/bamf/preview.png
 year: 2021
 ---

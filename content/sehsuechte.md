@@ -1,6 +1,6 @@
 ---
 title: Exhibition Management Sehsuechte
-tags: [Web,Data]
+tags: [Exhibition]
 preview_img: /img/sehsuechte/exhibition3_ae.jpg
 year: 2021
 ---

@@ -5,17 +5,31 @@ $highlight-color: black;
 //$highlight-color: #D9A404;
 
 $font-weigths:(
-    "light":300,
+    "light":100,
     "regular":400,
-    "medium":500,
+    "medium":700,
     "bold":900
 );
 
 $font-families:(
-    "light":aileron,
-    "regular": aileron,
-    "medium":aileron,
-    "bold":aileron
+    "light":"Aileron",
+    "regular":"Aileron",
+    "medium":"Aileron",
+    "bold":"Archivo Black"
+);
+
+$variable-font-families:(
+    "light":"ArchivoVariable",
+    "regular":"ArchivoVariable",
+    "medium":"ArchivoVariable",
+    "bold":"Archivo Black"
+);
+
+$variable-font-weights:(
+    "light":"wght" 100,
+    "regular": "wght" 300,
+    "medium":"wght" 700,
+    "bold": "wght" 900
 );
 
 * {
@@ -31,6 +45,14 @@ $font-families:(
 
 @function get-font-family($weight-name){
     @return map-get($font-families,$weight-name);
+}
+
+@function get-variable-font-family($weight-name){
+    @return map-get($variable-font-families,$weight-name);
+}
+
+@function get-variable-font-settings($weight-name){
+    @return map-get($variable-font-weights,$weight-name);
 }
 
 @mixin transition-ease{
@@ -62,6 +84,16 @@ $font-families:(
     }
 }
 
+@mixin font($weight){
+    font-family:get-font-family($weight);
+    font-weight:get-font-weight($weight);
+
+    @supports (font-variation-settings: normal) {
+        font-family:get-variable-font-family($weight);
+        font-variation-settings:get-variable-font-settings($weight);
+    }
+}
+
 @mixin section-title{
     height: 20vh;
     width: 100%;
@@ -69,13 +101,11 @@ $font-families:(
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    font-family: get-font-family(bold);
-    font-weight: get-font-family(bold);
+    @include font(bold);
 
     a{
         padding-bottom: 1rem;
-        font-family: get-font-family(regular);
-        font-weight: get-font-family(regular);
+        @include font(regular);
     }
 
     h2{
@@ -91,5 +121,5 @@ $font-families:(
 }
 
 @mixin section-not-mobile{
-    margin: 0 auto 0 15rem;
+    margin: 0 auto 0 15vw;
 }

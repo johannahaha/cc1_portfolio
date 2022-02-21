@@ -2,13 +2,21 @@
     padding-bottom: 2rem;
     z-index: 2;
     position: relative;
-    margin: 5rem auto 0 auto;
+    margin: 3vh auto 0 auto;
 
     &_title{
         @include section-title;
 
+        h1 {
+            font-size:1.5rem;
+        }
+
         a{
             z-index: 3;
+        }
+
+        p{
+            @include font(light);
         }
     }
     
@@ -54,24 +62,23 @@
             flex-direction: column;
 
             h4{
-                font-family: get-font-family(medium);
-                font-weight: get-font-weight(medium);
+                @include font(medium);
                 font-size: 1rem;
                 margin: 0.25rem 0;
             }
 
             p{
-                font-weight:get-font-weight(light);
-                font-family: get-font-family(light);
+                @include font(light);
                 margin: 0.25rem 0;
             }
 
             &_tags{
                 flex-direction: row; 
+                display:flex;
 
-                a{
-                    font-family: get-font-family(light);
-                    font-weight:get-font-weight(light);
+                div{
+                    @include font(light);
+                    position:relative;
                     margin-right: 1rem;
                     margin-top: 0.5rem;
                     z-index: 10;
@@ -114,24 +121,28 @@
 
     h1{
         padding: 2rem 0;
-        font-family: get-font-family(bold);
-        font-weight: get-font-weight(bold);
+        @include font(bold);
         font-size: 2rem;
     }
 
     h2{
-        font-family: get-font-family(medium);
-        font-weight: get-font-weight(medium);
+        @include font(medium);
         padding: 2rem 0;
     }   
 
     p{
+        @include font(regular);
         line-height: 1.5rem;
         padding-bottom: 1rem;
+        font-size:1rem;
     }
 
     img{
         width: 100%;
+    }
+
+    a{
+        text-decoration: underline;
     }
 }
 

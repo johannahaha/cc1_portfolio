@@ -7,11 +7,7 @@ year: 2020
 
 # Bachelor Thesis: Cluster Analysis and Characterisation of Students in Virtual Learning Environments
 
-Awarded as the Best Bachelor Thesis 2020 in the field of educational technologies by Educational Technologies Division of the German Informatics Society.
-
-https://fg-bildungstechnologien.gi.de/nachwuchsfoerderung/beste-abschlussarbeit/
-
-Full Text (german): https://fg-bildungstechnologien.gi.de/fileadmin/FG/WI-ELE/beste_abschlussarbeit/2020_BestBA_Hartmann_Johanna.pdf
+Awarded as the [Best Bachelor Thesis 2020](https://fg-bildungstechnologien.gi.de/nachwuchsfoerderung/beste-abschlussarbeit/) in the field of educational technologies by Educational Technologies Division of the German Informatics Society.
 
 ## Abstract
 
@@ -21,3 +17,7 @@ This work examines what can be said about students in these clusters and how the
 
 Then, the student data is linked to demographic information. This is followed by statistical analysis and a more detailed interpretation to answer the research question. In the characterization, it can be seen that the study performance is reflected in the clusters and the clusters can be divided into successful and less successful. In particular, the module structure shapes the interaction patterns in the virtual learning environment.
 In addition, demographic characteristics differ between clusters, so interaction patterns and clusters cannot be considered independent of these characteristics. Among other things, this reveals a gap in interaction patterns and study performance between students from different social contexts, which raises ethical questions.
+
+
+Full Text (german): https://fg-bildungstechnologien.gi.de/fileadmin/FG/WI-ELE/beste_abschlussarbeit/2020_BestBA_Hartmann_Johanna.pdf
+

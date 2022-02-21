@@ -10,6 +10,7 @@
     .navbar{
         z-index: 3;
         position: fixed;
+        width:15vw;
     }
 
 
@@ -44,6 +45,8 @@
 
 
     .cv{
+
+
         .jobs{
             width: 70vw;
             @include section-not-mobile;
@@ -121,9 +124,12 @@
     }
 
     .projects_title{
-        @include section-not-mobile;
-        align-items: flex-start;
+        align-items: center;
         margin-bottom: 2rem;
+
+        h1{
+            font-size:2rem;
+        }   
     }
     
     .post-content{
@@ -184,5 +190,9 @@
 @include media-xl{
     .projects_bio-image{
         height: 50vh;
+    }
+
+    .post-content{
+        width: 50vw;
     }
 }

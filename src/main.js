@@ -11,6 +11,12 @@ import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
+import "@fontsource/aileron"
+import "@fontsource/archivo-black"
+
+import "@fontsource/archivo/400.css"
+import "@fontsource/archivo/variable.css";
+
 config.autoAddCss = false;
 
 

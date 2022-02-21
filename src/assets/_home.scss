@@ -1,6 +1,8 @@
 .home{
     //height: 100%;
     position: relative;
+    width:100vw;
+    height: 100vh;
 
     &_title{
         @include section-title;
@@ -14,14 +16,12 @@
         p{
             padding-top: 2rem;
             font-size: 1.3rem;
-            font-family: get-font-family(regular);
-            font-weight: get-font-weight(regular);
+            @include font(regular);
         }
     
         &_name{
             font-size: 3rem;
-            font-family: get-font-family(bold);
-            font-weight: get-font-weight(bold);
+            @include font(bold);
             color: $light-color;
         }
 

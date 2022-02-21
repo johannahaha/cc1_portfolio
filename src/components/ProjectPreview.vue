@@ -18,9 +18,12 @@
         >
             <h4>{{ post.title }}</h4>
             <div class="projects_item_details_tags">
-                <g-link v-for="tag in post.tags" :key="tag.id" :to="tag.path">
+                <div v-for="tag in post.tags" :key="tag.id" @click.stop="open(tag.path)">
                     {{ tag.title }}
-                </g-link>
+                </div>
+                <!-- <g-link v-for="tag in post.tags" :key="tag.id" :to="tag.path" @click.stop="open(tag.path)">
+                    {{ tag.title }}
+                </g-link> -->
             </div>
             <p>{{ post.year }}</p>
         </div>
@@ -45,6 +48,7 @@ export default {
     },
     methods: {
         open: function (path) {
+            console.log(path)
             window.location.href = path;
         },
     },
