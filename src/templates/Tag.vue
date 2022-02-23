@@ -4,7 +4,7 @@
     <section class="projects">
         <div class="projects_title">
           <g-link to="/portfolio/">Back to all projects</g-link>
-          <h2>Portfolio</h2>
+          <h1>Portfolio</h1>
           <p>{{ $page.tag.title }}</p>
         </div>
         <div class="projects_items">

@@ -72,6 +72,7 @@
         }
     }
 
+
     .projects{
         z-index: 0;
 
@@ -146,7 +147,35 @@
     }
 
     .home{
-        @include section-not-mobile;
+
+        &_infos{
+            margin:0;
+            .skill_section{
+                @include section-not-mobile;
+                .skills{
+                    width: 70vw;
+        
+                    &_item{
+                        padding: 2rem 0;
+        
+                        &_title{
+                            margin: 0 2rem 0 0;
+                            text-align: left;
+                            font-size: 1.2rem;
+                            width: 30vw;
+                        }
+                        
+                        &_content{
+                            margin: 0 0 0 2rem;
+                            padding-left: 2rem;
+                            //padding-top: 1rem;
+                            font-size: 1.2rem;
+        
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -178,12 +207,48 @@
 
                 &_content{
                     padding-left: 0;
-                    padding-top: 0.5rem;
                 }
             }
 
            
         }
+    }
+
+    .home{
+        &_infos{
+            .skill_section{
+                .skills{
+                    width: 70vw;
+                    margin:0;
+
+                    h1{
+                        margin: 2rem 0 2rem 0;
+                    }
+        
+                    &_item{
+                        display:grid;
+                        grid-template-columns:25% 1fr;
+                        align-items:center;
+        
+                        &_title{
+                            text-align: right;
+                            margin: 0 2rem auto 0;
+                            width: 80%
+                        }
+        
+                        &_content{
+                            padding-left: 0;
+                            //padding: 0.5rem;
+                            //padding-top: 0.5rem;
+                        }
+                    }
+        
+                   
+                }   
+            }
+
+        }
+
     }
 }
 

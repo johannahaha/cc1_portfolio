@@ -2,6 +2,8 @@
     color:$highlight-color;
     @include font(bold);
     font-size: 1.5rem;
+    //position: relative;
+    
 }
 
 .logo{
@@ -88,7 +90,7 @@
 
 .navbar{
     left: 1rem;
-    position: fixed;
+    //position: fixed;
     z-index: 0;
 
     &.open {

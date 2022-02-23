@@ -5,10 +5,12 @@ preview_img: /img/mobility/mobility01.png
 year: 2021
 ---
 
-Hallo 
+# Mapping Cities - Making Cities
+## Mobility in Knots
 
-https://frosty-lovelace-e243b4.netlify.app
+This project is still in progress. 
 
-Hallo
+You can see the current state here: https://frosty-lovelace-e243b4.netlify.app
+
 
 ![mobility01](/img/mobility/mobility01.png)
