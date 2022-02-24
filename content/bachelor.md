@@ -1,7 +1,7 @@
 ---
 title: Bachelor Thesis
 tags: [Research,Data]
-preview_img: /img/distance01.jpg
+preview_img: /img/bachelor_preview.png
 year: 2020
 ---
 
@@ -20,4 +20,7 @@ In addition, demographic characteristics differ between clusters, so interaction
 
 
 Full Text (german): https://fg-bildungstechnologien.gi.de/fileadmin/FG/WI-ELE/beste_abschlussarbeit/2020_BestBA_Hartmann_Johanna.pdf
+
+![bachelor01.png](bachelor01.png)
+![bachelor02.png](bachelor02.png)
 

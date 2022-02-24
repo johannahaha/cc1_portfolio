@@ -10,32 +10,32 @@
                     <div class="skills">
                         <h1>Creative Technologies - Digital Media</h1>
 						<div class="skills_item">
-                            <h2 class="skills_item_title">Contact</h2>
+                            <h2 class="skills_item_title">contact</h2>
                             <h3 class="skills_item_content">johanna.hartmann@filmuniversitaet.de
                             </h3>
                         </div>
 						<div class="skills_item">
-                            <h2 class="skills_item_title">Topics Of Interest</h2>
+                            <h2 class="skills_item_title">topics of interest</h2>
                             <h3 class="skills_item_content">
-                                Human Computer Interaction, Critical Data
-                                Studies, Data Visualization, Algorithmic Bias,
-                                Impact of Technology, Web Storytelling
+                                human computer interaction, critical data
+                                studies, data visualization, algorithmic bias,
+                                impact of technology, web storytelling, creative coding
                             </h3>
                         </div>
                         <div class="skills_item">
-                            <h2 class="skills_item_title">Coding</h2>
+                            <h2 class="skills_item_title">coding</h2>
                             <h3 class="skills_item_content">
-                                Javascript, Python, C++, Unity
+                                python, javascript, c++, unity
                             </h3>
                         </div>
                         <div class="skills_item">
-                            <h2 class="skills_item_title">Web Development</h2>
+                            <h2 class="skills_item_title">web development</h2>
                             <h3 class="skills_item_content">
-                                Three.js, Vue.js, Gridsome, d3, GSAP, Scrollama
+                                three.js, vue.js, gridsome, d3, gsap, Scrollama, scss
                             </h3>
                         </div>
                         <div class="skills_item">
-                            <h2 class="skills_item_title">Languages</h2>
+                            <h2 class="skills_item_title">languages</h2>
                             <h3 class="skills_item_content">
                                 German (Native), English (C1), Spanish (B1)
                             </h3>

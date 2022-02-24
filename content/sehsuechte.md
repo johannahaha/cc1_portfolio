@@ -19,7 +19,7 @@ Here you can see some impressions of the exhibition.
 credits photography: Anna Eschenbacher, artwork: Remnants by Safe Space Collective
 
 ![sehsuechte02](/img/sehsuechte/exhibition2_fl.jpg)
-credits photography: F Lorenz, artwork: Montage Class by Marlis Roth
+credits photography: Frederik Lorenz, artwork: Montage Class by Marlis Roth
 
 ![sehsuechte03](/img/sehsuechte/exhibition3_ae.jpg)
 credits photography: Anna Eschenbacher
@@ -28,10 +28,7 @@ credits photography: Anna Eschenbacher
 credits photography: Anna Eschenbacher, artwork: Melting Consciousness by Tian Wu
 
 ![sehsuechte06](/img/sehsuechte/exhibition6_fl.jpg)
-credits photography: F Lorenz
+credits photography: Frederik Lorenz
 
 ![sehsuechte07](/img/sehsuechte/exhibition7_ae.jpg)
 credits photography: Anna Eschenbacher, artwork: Hi Auntie Stop La Hi Hi Powerful Face by Hou Lam
-
-![sehsuechte05](/img/sehsuechte/exhibition5_fl.jpg)
-credits photography: F Lorenz, artwork: Melting Consciousness by Tian Wu
