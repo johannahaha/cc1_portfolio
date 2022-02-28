@@ -1,6 +1,6 @@
 ---
 title: Dozy Dough
-tags: [Design, Brand Strategy]
+tags: [Communication Design]
 preview_img: /img/dozydough01.jpg
 year: 2018
 ---

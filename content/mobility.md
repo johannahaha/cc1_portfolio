@@ -1,16 +1,20 @@
 ---
-title: Mobility in Knots - Mapping Cities Making Cities
-tags: [Web,Data]
-preview_img: /img/mobility/mobility01.png
-year: 2021
+title: Our Mobility in Knots - Mapping Cities Making Cities
+tags: [Web,Data,UI Design,Coding]
+preview_img: /img/mobility/mobility02.png
+year: 2022
 ---
 
 # Mapping Cities - Making Cities
 ## Mobility in Knots
 
-This project is still in progress. 
+This project is still in progress
+. 
+I will add a more detailed description once we finish the project.
+This project I developed together with Helmut Büttner and Sascha Höver as part of the Mapping Cities – Making Cities by Prof. Dr. Marian Dörk at University of Applied Sciences Potsdam, Winter semester 2021/22. Our data and project partner was the MaaS L.a.b.s. of the University of Applied Sciences Potsdam. 
+You can see the current state of the project here: https://ourmobilityinknots.netlify.app
 
-You can see the current state here: https://frosty-lovelace-e243b4.netlify.app
+For the implementation, I used Python and Networks to process the data, and Vue.js, D3, and Scrollama to create the website. The codebase is in this git repo: https://github.com/johannahaha/website_mapping_maas
 
 
-![mobility01](/img/mobility/mobility01.png)
+![mobility01](/img/mobility/mobility02.png)

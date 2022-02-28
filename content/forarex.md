@@ -1,6 +1,6 @@
 ---
 title: Forarex
-tags: [Design, PR, Research]
+tags: [Design,PR,Research]
 preview_img: /img/forarex01.jpg
 year: 2019
 ---

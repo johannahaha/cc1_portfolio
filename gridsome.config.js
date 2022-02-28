@@ -36,7 +36,8 @@ module.exports = {
   },
   icon: {
     favicon: './src/favicon.png',
-    touchicon: './src/favicon.png'
+    touchicon: './src/favicon.png',
+    maskicon: 'favicon.svg'
   },
   plugins: [
     {

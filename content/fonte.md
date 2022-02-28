@@ -1,6 +1,6 @@
 ---
 title: Fonte
-tags: [Design, Brand Strategy]
+tags: [Communication Design]
 preview_img: /img/fonte01.jpg
 year: 2018
 ---

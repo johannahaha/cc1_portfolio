@@ -3,7 +3,7 @@
         <!-- <Sketch></Sketch> -->
         <section class="home">
             <div class="home_title">                 
-                <h1 class="home_infos_name">Johanna Hartmann</h1>
+                <h1 class="home_infos_name" >Johanna Hartmann</h1>
             </div>
             <div class="home_infos">
                 <div class="skill_section">
@@ -17,9 +17,9 @@
 						<div class="skills_item">
                             <h2 class="skills_item_title">topics of interest</h2>
                             <h3 class="skills_item_content">
-                                human computer interaction, critical data
+                                human-computer interaction, critical data
                                 studies, data visualization, algorithmic bias,
-                                impact of technology, web storytelling, creative coding
+                                the impact of technology, web storytelling, creative coding
                             </h3>
                         </div>
                         <div class="skills_item">
@@ -31,7 +31,7 @@
                         <div class="skills_item">
                             <h2 class="skills_item_title">web development</h2>
                             <h3 class="skills_item_content">
-                                three.js, vue.js, gridsome, d3, gsap, Scrollama, scss
+                                three.js, vue.js, gridsome, d3, gsap, scrollama, scss
                             </h3>
                         </div>
                         <div class="skills_item">
@@ -56,7 +56,7 @@ export default {
     },
     components: {
         Sketch,
-    },
+    }
 };
 </script>
 

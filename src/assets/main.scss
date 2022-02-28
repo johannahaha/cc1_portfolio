@@ -5,6 +5,10 @@
 @import 'portfolio';
 @import 'responsive';
 
+html,body{
+    overflow-x: hidden;
+}   
+
 body{
     background: $light-color;
     color:set-text-color($light-color);
@@ -12,7 +16,7 @@ body{
     font-family: Archivo, neue-haas-unica, sans-serif;
     font-weight: get-font-weight(regular);
     line-height: 1;
-    overflow-x: hidden;
+    position: relative;
 }
 
 h1 {

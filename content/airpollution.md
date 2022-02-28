@@ -1,6 +1,6 @@
 ---
 title: Air Pollution Light Bulb
-tags: [Creative Coding,Data]
+tags: [Creative Coding,Data,Coding]
 preview_img: /img/airpollution/aqi1.png
 year: 2021
 ---
@@ -9,9 +9,9 @@ year: 2021
 
 ## Abstract
 
-Do you actually know the quality of the air you breath in? Air Pollution is invisible. And it is always around us in Berlin. This project makes the invisible visible and colors the light around you according to the quality of the air. How does it work? With a smart light bulb you connect to the app. 
+Do you know the quality of the air you breathe? Air Pollution is invisible. And it is always around us in Berlin. This project makes the invisible visible and colors the light around you according to the quality of the air. How does it work? With a smart light bulb, you connect to the app. 
 
-This project was the small-scale project of the class "creative coding 2" with OpenFrameworks with the topic of Interfaces.
+This project was the small-scale project of the class "Creative Coding 2" with OpenFrameworks with the topic of Interfaces.
 
 ## Project description
 
@@ -54,6 +54,6 @@ This value is then converted to a color for the background and a color for the l
 
 ![color_mapper.jpeg](/img/airpollution/color_mapper.jpeg)
 
-The lamp is controlled with the Pytradfri library. This library controlling IKEA gateways and their associated devices with Python. Thus the color of the lamp is passed as an argument into a Python script.
+The lamp is controlled with the Pytradfri library. This library controls IKEA gateways and their associated devices with Python. Thus the color of the lamp is passed as an argument into a Python script..
 
 ![color_setting.jpeg](/img/airpollution/color_setting.jpeg)

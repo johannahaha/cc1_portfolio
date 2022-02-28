@@ -1,6 +1,6 @@
 ---
 title: Experimentations with Shaders
-tags: [Creative Coding, Shaders]
+tags: [Creative Coding,Shaders]
 preview_img: /img/procedural/preview.png
 year: 2021
 ---

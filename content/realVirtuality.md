@@ -1,6 +1,6 @@
 ---
 title: realVirtuality
-tags: [VR, Film, Exhibition]
+tags: [Film, Exhibition]
 preview_img: /img/realvirtuality.jpg
 year: 2017
 ---
