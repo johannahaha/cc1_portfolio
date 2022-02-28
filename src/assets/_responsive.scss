@@ -1,4 +1,9 @@
 @include media-md{
+
+    #app{
+        background-attachment: fixed;
+    }
+    
     .menu-btn{
         visibility: hidden;
     }
