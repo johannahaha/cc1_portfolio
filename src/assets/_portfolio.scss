@@ -6,6 +6,7 @@
 
     &_title{
         @include page-title;
+        color:$dark-blue
 
         h1 {
             font-size:1.5rem;
@@ -30,7 +31,7 @@
         margin: 5rem auto 0 auto;
         display:flex;
         flex-direction: column;
-        flex-wrap:wrap;
+        flex-wrap:start;
         align-content: space-around;
         justify-content: space-around;
         // display:grid;
@@ -52,6 +53,12 @@
             width:100%;
             height: 100%;
             object-fit: cover;
+            -webkit-filter: grayscale(1);
+
+            &:hover {
+                -webkit-filter: grayscale(0);
+                filter: none;
+              }
         }
 
         &_details{
@@ -61,7 +68,7 @@
             top: 0;
             left: 0;
             padding: 1rem;
-            //background: $highlight-color;
+            //background: $dark-blue;
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -69,7 +76,8 @@
             h4{
                 @include font(medium);
                 font-size: 1rem;
-                margin: 0.25rem 0;
+                margin: 1rem 0;
+                color:$dark-blue;
             }
 
             p{
@@ -103,7 +111,7 @@
             left: 0;
             height: 100%;
             width: 100%;
-            //background: $highlight-color;
+            //background: $dark-blue;
             opacity: 0;
             @include transition-ease;
         }

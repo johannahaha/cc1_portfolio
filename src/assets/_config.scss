@@ -1,7 +1,8 @@
 //$dark-color: #0E2626;
 $dark-color: black;
-$light-color: white;
-$highlight-color: black;
+$light-color: #F2F2F2;
+$dark-blue: #396273;
+$light-blue: #84A9BF;
 //$highlight-color: #D9A404;
 
 $font-weigths:(
@@ -15,7 +16,7 @@ $font-families:(
     "light":"Aileron",
     "regular":"Aileron",
     "medium":"Aileron",
-    "bold":"Archivo Black"
+    "bold":"LeMondeLivreStd Bold"
 );
 
 $variable-font-families:(
@@ -125,7 +126,7 @@ $variable-font-weights:(
     p {
         padding-top: 1rem;
         font-size: 1.5rem;
-        color: $highlight-color;
+        color: $dark-blue;
     }  
 }
 

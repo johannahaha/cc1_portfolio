@@ -6,14 +6,14 @@
             alt="post.title"
             @click="open(post.path)"
             @mouseover="showDetails = true"
-            @mouseleave="showDetails = false"
+            @mouseleave="showDetails = true"
             :style="{opacity: imgOpacity}"
         />
         <div
             class="projects_item_details"
             v-show="showDetails"
             @mouseover="showDetails = true"
-            @mouseleave="showDetails = false"
+            @mouseleave="showDetails = true"
             @click="open(post.path)"
         >
             <h4>{{ post.title }}</h4>
@@ -34,7 +34,7 @@
 export default {
     computed:{
         imgOpacity: function(){
-            if(this.showDetails) return 0.25
+            if(this.showDetails) return 0.5
             else return 1.0
         }
     },
@@ -43,7 +43,7 @@ export default {
     },
     data: function () {
         return {
-            showDetails: false,
+            showDetails: true,
         };
     },
     methods: {

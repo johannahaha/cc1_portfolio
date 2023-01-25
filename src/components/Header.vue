@@ -23,9 +23,9 @@
                             v-bind:active-class="$route.path!== '/portfolio/**' ? '/portfolio/' : '' "
                             :class='{open:showMenu}' > 
                             <g-link class="menu-nav_link" to="/portfolio/">Portfolio</g-link></li>
-                        <li class="menu-nav_item"
+                        <!-- <li class="menu-nav_item"
                             :class='{open:showMenu}' > 
-                            <g-link class="menu-nav_link" to="/cv/">CV</g-link></li>
+                            <g-link class="menu-nav_link" to="/cv/">CV</g-link></li> -->
                     </ul>
                 </nav>
         </div>

@@ -1,5 +1,5 @@
 .logo_mobile{
-    color:$highlight-color;
+    color:$dark-blue;
     @include font(bold);
     font-size: 1.5rem;
     //position: relative;
@@ -151,7 +151,7 @@
             @include font(light);
 
             transition: background-size .4s ease;
-            background: linear-gradient(to bottom, transparent -80%, $highlight-color 0) center center/0% 75% no-repeat;
+            background: linear-gradient(to bottom, transparent -80%, $dark-blue 0) center center/0% 75% no-repeat;
             color: $dark-color;
             text-transform: lowercase;
             padding: 2rem 0;

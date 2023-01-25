@@ -1,10 +1,10 @@
 <template>
     <Layout>
     <section class="projects">
-        <div class="projects_title">
+        <!-- <div class="projects_title">
           <h1>Portfolio</h1>
           <p>all projects</p>
-        </div>
+        </div> -->
         <div class="projects_items">
             <ProjectPreview v-for="edge in $page.posts.edges" :key="edge.node.title" :post="edge.node"/>
         </div>
