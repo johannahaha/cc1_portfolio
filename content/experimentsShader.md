@@ -3,6 +3,9 @@ title: Experimentations with Shaders
 tags: [Creative Coding,Shaders]
 preview_img: /img/procedural/preview.png
 year: 2021
+phrase: Shader programming with GLSL
+location: Potsdam, Germany
+link: &nbsp
 ---
 
 # Shaders: Experiments with Fragments Shaders.

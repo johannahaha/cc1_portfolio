@@ -1,7 +1,7 @@
 .logo_mobile{
     color:$dark-blue;
     @include font(bold);
-    font-size: 1.5rem;
+    font-size: 2rem;
     //position: relative;
     
 }
@@ -158,13 +158,17 @@
             @include transition-ease;
 
             &:hover{
-                background-size: 100% 50%;
-                color:$light-color;
+                // background-size: 100% 50%;
+                // color:$light-color;
+                text-decoration:underline;
             }
 
             &.active--exact.active{
-                background-size: 100% 50%;
-                color:$light-color;
+                text-decoration:underline;
+                @include font(medium);
+
+                // background-size: 100% 50%;
+                // color:$light-color;
             }
 
         }

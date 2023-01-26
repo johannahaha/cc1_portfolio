@@ -3,6 +3,10 @@ title: "struggles in a woman's life"
 tags: [Exhibition]
 preview_img: /img/craftproduct01.jpg
 year: 2018
+location: Bangkok, Thailand
+phrase: Art installations with textiles
+link: &nbsp
+
 ---
 
 ![craftproduct](/img/craftproduct01.jpg)

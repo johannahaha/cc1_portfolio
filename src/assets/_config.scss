@@ -1,8 +1,9 @@
 //$dark-color: #0E2626;
 $dark-color: black;
-$light-color: #F2F2F2;
-$dark-blue: #396273;
-$light-blue: #84A9BF;
+$light-color: #Fff;
+//$dark-blue: #295773;
+$dark-blue:#073BC0;
+$light-blue: #75A3BF;
 //$highlight-color: #D9A404;
 
 $font-weigths:(
@@ -13,10 +14,10 @@ $font-weigths:(
 );
 
 $font-families:(
-    "light":"Aileron",
-    "regular":"Aileron",
-    "medium":"Aileron",
-    "bold":"LeMondeLivreStd Bold"
+    "light":"neue-haas-unica",
+    "regular":"neue-haas-unica",
+    "medium":"neue-haas-unica",
+    "bold":"libre-caslon"
 );
 
 $variable-font-families:(
@@ -28,7 +29,7 @@ $variable-font-families:(
 
 $variable-font-weights:(
     "light":"wght" 100,
-    "regular": "wght" 300,
+    "regular": "wght" 400,
     "medium":"wght" 700,
     "bold": "wght" 900
 );
@@ -37,7 +38,6 @@ $variable-font-weights:(
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: $dark-color;
 }
 
 @function get-font-weight($weight-name){
@@ -89,10 +89,10 @@ $variable-font-weights:(
     font-family:get-font-family($weight);
     font-weight:get-font-weight($weight);
 
-    @supports (font-variation-settings: normal) {
-        font-family:get-variable-font-family($weight);
-        font-variation-settings:get-variable-font-settings($weight);
-    }
+    // @supports (font-variation-settings: normal) {
+    //     font-family:get-variable-font-family($weight);
+    //     font-variation-settings:get-variable-font-settings($weight);
+    // }
 }
 
 @mixin page-title{

@@ -17,15 +17,15 @@
             @click="open(post.path)"
         >
             <h4>{{ post.title }}</h4>
-            <div class="projects_item_details_tags">
-                <div v-for="tag in post.tags" :key="tag.id" @click.stop="open(tag.path)">
-                    {{ tag.title }}
+            <div class="projects_item_details_infos">
+                <p>{{ post.year }}</p>
+                <p>{{ post.phrase }}</p>
+                <div class="projects_item_details_tags">
+                    <div class="tag" v-for="tag in post.tags" :key="tag.id" @click.stop="open(tag.path)">
+                        {{ tag.title }}
+                    </div>
                 </div>
-                <!-- <g-link v-for="tag in post.tags" :key="tag.id" :to="tag.path" @click.stop="open(tag.path)">
-                    {{ tag.title }}
-                </g-link> -->
             </div>
-            <p>{{ post.year }}</p>
         </div>
     </div>
 </template>

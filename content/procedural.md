@@ -3,6 +3,9 @@ title: Procedural Generation and Simulation - Exploration and Experimentation
 tags: [Creative Coding,Shaders]
 preview_img: /img/procedural/noise.png
 year: 2021
+phrase: Exploration and experimentation in Houdini
+location: Potsdam, Germany
+link: &nbsp
 ---
 
 # Procedural Generation & Simulation in Houdini

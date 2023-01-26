@@ -3,6 +3,9 @@ title: Fonte
 tags: [Communication Design]
 preview_img: /img/fonte01.jpg
 year: 2018
+phrase: Brand strategy and corporate identity project
+location: Bangkok, Thailand
+link: &nbsp
 ---
 
 ![Fonte01.jpg](/img/fonte01.jpg)

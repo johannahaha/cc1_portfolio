@@ -3,6 +3,10 @@ title: ScenARy
 tags: [App Development, Coding, UI Design]
 preview_img: /img/scenary01.jpeg
 year: 2018
+location: Bremen, Germany
+phrase: Previsualisation app of sceneries for theaters with AR 
+link: https://youtu.be/fTFNuT1Fz-c
+
 ---
 ![scenary01](/img/scenary01.jpeg)
 

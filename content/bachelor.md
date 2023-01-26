@@ -3,6 +3,9 @@ title: Bachelor Thesis
 tags: [Research,Data,Coding]
 preview_img: /img/bachelor_preview.png
 year: 2020
+phrase: Cluster analysis of student click data
+location: Bremen, Germany
+link: &nbsp
 ---
 
 # Bachelor Thesis: Cluster Analysis and Characterisation of Students in Virtual Learning Environments

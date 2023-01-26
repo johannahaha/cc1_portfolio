@@ -3,6 +3,10 @@ title: Instaviz - Inequality in the Climate Crisis
 tags: [Communication Design,Data]
 preview_img: /img/instaviz/instaviz_preview.png
 year: 2021
+phrase: Climate crisis visualisations for klima.taz on Instagram
+location: Berlin, Germany
+link: https://www.instagram.com/klima.taz
+
 ---
 
 # Instaviz: Inequality in the Climate Crisis

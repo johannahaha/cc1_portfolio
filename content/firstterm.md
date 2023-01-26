@@ -3,6 +3,9 @@ title: Stories about Algorithm Ethics - the BAMF Case
 tags: [Web,Data,UI Design,Coding]
 preview_img: /img/bamf/preview.png
 year: 2021
+location: Potsdam, Germany
+phrase: Interactive web visualisation of a case of algorithmic bias 
+link: https://www.stories-algorithmethics.de
 ---
 
 # Stories about Algorithm Ethics: The BAMF Case

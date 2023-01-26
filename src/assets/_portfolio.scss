@@ -67,14 +67,14 @@
             position: absolute;
             top: 0;
             left: 0;
-            padding: 1rem;
+            padding: 5%;
             //background: $dark-blue;
             display: flex;
             justify-content: center;
             flex-direction: column;
 
             h4{
-                @include font(medium);
+                @include font(bold);
                 font-size: 1rem;
                 margin: 1rem 0;
                 color:$dark-blue;
@@ -82,7 +82,7 @@
 
             p{
                 @include font(light);
-                margin: 0.25rem 0;
+                margin: 0.5rem 0;
             }
 
             &_tags{
@@ -90,10 +90,10 @@
                 display:flex;
 
                 div{
-                    @include font(light);
+                    @include font(bold);
                     position:relative;
-                    margin-right: 1rem;
-                    margin-top: 0.5rem;
+                    margin-right: 1.5rem;
+                    margin-top: 5%;
                     z-index: 10;
     
                     &:hover{
@@ -128,20 +128,7 @@
     }
 }
 
-.post-content{
-    width: 90vw;
-    margin: 0 auto 0 auto;
-
-    h1{
-        padding: 2rem 0;
-        @include font(bold);
-        font-size: 2rem;
-    }
-
-    h2{
-        @include font(medium);
-        padding: 2rem 0;
-    }   
+.post{
 
     p{
         @include font(regular);
@@ -150,13 +137,54 @@
         font-size:1rem;
     }
 
-    img{
-        max-width: 100%;
-        height:auto;
-    }
+    &-overview{
 
-    a{
-        text-decoration: underline;
+        &-link{
+            display: inline-flex;
+            padding-bottom:1rem;
+
+            p,svg{
+                color:$dark-blue;
+                padding:0;
+                @include font(medium);
+            }
+
+            p{
+                padding-left:0.5rem;
+            }
+        }
+
+        &-phrase{
+            padding-top:1rem;
+        }
+
+    }
+    &-content{
+        width: 90vw;
+        margin: 0 auto 0 auto;
+    
+        h1{
+            padding: 2rem 0;
+            @include font(bold);
+            font-size: 2rem;
+            color:$dark-blue;
+        }
+    
+        h2{
+            @include font(medium);
+            font-size: 1.5rem;
+            padding: 2rem 0;
+        }   
+    
+    
+        img{
+            max-width: 100%;
+            height:auto;
+        }
+    
+        a{
+            text-decoration: underline;
+        }
     }
 }
 

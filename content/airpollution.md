@@ -3,6 +3,10 @@ title: Air Pollution Light Bulb
 tags: [Creative Coding,Data,Coding]
 preview_img: /img/airpollution/aqi1.png
 year: 2021
+phrase: Visualizing real-time air pollution with a smart home light bulb
+location: Berlin, Germany
+link: https://www.youtube.com/watch?v=EYrlpDQTe8c
+
 ---
 
 # Air Pollution in Berlin: Make the invisible visible

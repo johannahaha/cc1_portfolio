@@ -22,6 +22,8 @@ query Posts{
     	  preview_img (width: 1000)
         path
         year
+        phrase
+        location
         tags{
           id
           title

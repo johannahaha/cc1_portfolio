@@ -3,6 +3,10 @@ title: Forarex
 tags: [Design,PR,Research]
 preview_img: /img/forarex01.jpg
 year: 2019
+phrase: Science communication and PR for research rocket experiment
+link: www.forarex.de
+location: Bremen,Germany
+
 ---
 
 
