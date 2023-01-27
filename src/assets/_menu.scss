@@ -137,9 +137,9 @@
             transform: translateX(0);
          }
 
-         &.active > g-link {
-            color: $light-color;
-         }
+         //  &.active > g-link {
+         //     color: $light-color;
+         //  }
       }
       &_link {
          display: inline-block;
@@ -161,12 +161,20 @@
             text-decoration: underline;
          }
 
+         &.manual-active,
          &.active--exact.active {
             text-decoration: underline;
             @include font(medium);
+         }
 
-            // background-size: 100% 50%;
-            // color:$light-color;
+         &_subpage {
+            text-transform: lowercase;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            display: inline-block;
+            margin-left: 0.5rem;
+            text-decoration: underline;
+            @include font(regular);
          }
       }
    }
