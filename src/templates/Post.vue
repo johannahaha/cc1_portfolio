@@ -46,6 +46,9 @@
           :key="edge.node.title"
           :post="edge.node"
         >
+          <div class="recent-projects-project-title">
+            {{ edge.node.title }}
+          </div>
           <g-image
             :src="edge.node.preview_img"
             class="recent-projects-project-preview-img"
@@ -53,9 +56,6 @@
             @click="open(edge.node.path)"
             :style="{ opacity: 0.5 }"
           />
-          <div class="recent-projects-project-title">
-            {{ edge.node.title }}
-          </div>
         </div>
       </div>
     </div>
@@ -78,7 +78,7 @@ query Post ($path: String!){
           path
         }
     }
-    posts: allPost(sortBy: "year", limit:5){
+    posts: allPost(sortBy: "year", limit:10){
         edges{
             node{
             id
