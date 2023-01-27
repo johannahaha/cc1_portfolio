@@ -1,278 +1,228 @@
 @include media-md {
-  #app {
-    background-attachment: fixed;
-  }
+   #app {
+      background-attachment: fixed;
+   }
 
-  .menu-btn {
-    visibility: hidden;
-  }
+   .menu-btn {
+      visibility: hidden;
+   }
 
-  .logo {
-    visibility: visible;
-  }
+   .logo {
+      visibility: visible;
+   }
 
-  .navbar {
-    z-index: 3;
-    position: fixed;
-    width: 15vw;
-  }
+   .navbar {
+      z-index: 3;
+      position: fixed;
+      width: 15vw;
+   }
 
-  .nav {
-    visibility: visible;
-    transform: none;
-    padding-top: 3rem;
-    width: fit-content;
-    z-index: 3;
-    position: relative;
-
-    .menu-nav {
-      height: 100%;
-      background: transparent;
+   .nav {
+      visibility: visible;
       transform: none;
-      align-items: flex-start;
-      justify-content: left;
+      padding-top: 3rem;
+      width: fit-content;
+      z-index: 3;
+      position: relative;
 
-      &_item {
-        display: inline;
-        padding-right: 1.5rem;
-        transform: none;
+      .menu-nav {
+         height: 100%;
+         background: transparent;
+         transform: none;
+         align-items: flex-start;
+         justify-content: left;
+
+         &_item {
+            display: inline;
+            padding-right: 1.5rem;
+            transform: none;
+         }
+
+         &_link {
+            font-size: 1.5rem;
+            padding: 1.2rem 0;
+         }
       }
+   }
 
-      &_link {
-        font-size: 1.5rem;
-        padding: 1.2rem 0;
-      }
-    }
-  }
+   .cv {
+      .jobs {
+         width: 70vw;
+         @include section-not-mobile;
 
-  .cv {
-    .jobs {
-      width: 70vw;
-      @include section-not-mobile;
-
-      &_item {
-        padding: 2rem 0;
-
-        &_year {
-          margin: 0 2rem 0 0;
-          text-align: left;
-          font-size: 1.2rem;
-          width: 10vw;
-        }
-
-        &_content {
-          margin: 0 0 0 2rem;
-          padding-left: 2rem;
-          font-size: 1.2rem;
-        }
-      }
-    }
-  }
-
-  .projects {
-    z-index: 0;
-
-    &_items {
-      //grid-template-columns: repeat(2,1fr);
-      flex-direction: column;
-      justify-content: start;
-      width: 80vw;
-      @include section-not-mobile;
-    }
-
-    &_item {
-      // display: grid;
-      // grid-template-columns: 60% 1fr;
-      // grid-template-rows: none;
-      width: 100%;
-      margin-right: 3%;
-      padding-bottom: 5%;
-      padding-top: 5%;
-      border-bottom: solid 1px;
-
-      &::after {
-        width: 45%;
-      }
-
-      img {
-        width: 44%;
-      }
-
-      &_link {
-        margin: 0;
-        padding: 0;
-      }
-
-      &_details {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-left: 35%;
-        width: 66%;
-
-        h4 {
-          font-size: 1.7rem;
-          margin-top: 10%;
-        }
-
-        &_infos {
-          margin-left: 10%;
-        }
-
-        a {
-          margin-right: 1rem;
-        }
-      }
-    }
-
-    .text-secondary {
-      font-size: 3rem;
-    }
-  }
-
-  .projects_title {
-    align-items: center;
-    margin-bottom: 2rem;
-
-    h1 {
-      font-size: 2rem;
-    }
-  }
-
-  .outer-post {
-    margin-left: 15vw;
-    .post {
-      display: flex;
-      flex-direction: row;
-
-      &-overview {
-        width: 30vw;
-        padding: 2rem;
-        margin-left: 5vw;
-        margin-top: 5vw;
-        position: sticky;
-        align-self: flex-start;
-        top: 0;
-
-        border-bottom: solid 1px;
-        border-top: solid 1px;
-      }
-
-      &-content {
-        width: 50vw;
-        font-size: 1.2rem;
-        //@include section-not-mobile;
-      }
-    }
-  }
-
-  header {
-    background: none !important;
-    z-index: 3;
-    position: relative;
-  }
-
-  .home {
-    &_infos {
-      margin: 0;
-      .skill_section {
-        @include section-not-mobile;
-        .skills {
-          width: 70vw;
-
-          &_item {
+         &_item {
             padding: 2rem 0;
 
-            &_title {
-              margin: 0 2rem 0 0;
-              text-align: left;
-              font-size: 1.2rem;
-              width: 30vw;
+            &_year {
+               margin: 0 2rem 0 0;
+               text-align: left;
+               font-size: 1.2rem;
+               width: 10vw;
             }
 
             &_content {
-              margin: 0 0 0 2rem;
-              padding-left: 2rem;
-              //padding-top: 1rem;
-              font-size: 1.2rem;
+               margin: 0 0 0 2rem;
+               padding-left: 2rem;
+               font-size: 1.2rem;
             }
-          }
-        }
+         }
       }
-    }
-  }
+   }
+
+   .projects {
+      z-index: 0;
+
+      &_items {
+         //grid-template-columns: repeat(2,1fr);
+         flex-direction: column;
+         justify-content: start;
+         width: 80vw;
+         @include section-not-mobile;
+      }
+
+      &_item {
+         // display: grid;
+         // grid-template-columns: 60% 1fr;
+         // grid-template-rows: none;
+         width: 100%;
+         margin-right: 3%;
+         padding-bottom: 5%;
+         padding-top: 5%;
+         border-bottom: solid 1px;
+
+         &::after {
+            width: 45%;
+         }
+
+         img {
+            width: 44%;
+         }
+
+         &_link {
+            margin: 0;
+            padding: 0;
+         }
+
+         &_details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 35%;
+            width: 66%;
+
+            h4 {
+               font-size: 1.7rem;
+               margin-top: 10%;
+            }
+
+            &_infos {
+               margin-left: 10%;
+            }
+
+            a {
+               margin-right: 1rem;
+            }
+         }
+      }
+
+      .text-secondary {
+         font-size: 3rem;
+      }
+   }
+
+   .projects_title {
+      align-items: center;
+      margin-bottom: 2rem;
+
+      h1 {
+         font-size: 2rem;
+      }
+   }
+
+   .outer-post {
+      margin-left: 15vw;
+      .post {
+         display: flex;
+         flex-direction: row;
+
+         &-overview {
+            width: 30vw;
+            padding: 2rem;
+            margin-left: 5vw;
+            margin-top: 5vw;
+            position: sticky;
+            align-self: flex-start;
+            top: 0;
+
+            border-bottom: solid 1px;
+            border-top: solid 1px;
+         }
+
+         &-content {
+            width: 50vw;
+            font-size: 1.2rem;
+            //@include section-not-mobile;
+         }
+      }
+   }
+
+   header {
+      background: none !important;
+      z-index: 3;
+      position: relative;
+   }
+
+   .home {
+      &_infos {
+         margin: 0;
+
+         @include section-not-mobile;
+      }
+   }
 }
 
 @include media-lg {
-  .projects {
-    &_items {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-
-  .cv {
-    .jobs {
-      width: 70vw;
-      h1 {
-        margin: 2rem 0 2rem 0;
+   .projects {
+      &_items {
+         grid-template-columns: repeat(1, 1fr);
       }
+   }
 
-      &_item {
-        display: grid;
-        grid-template-columns: 25% 1fr;
-
-        &_year {
-          text-align: right;
-          margin: 0 2rem auto 0;
-        }
-
-        &_content {
-          padding-left: 0;
-        }
-      }
-    }
-  }
-
-  .home {
-    &_infos {
-      .skill_section {
-        .skills {
-          width: 70vw;
-          margin: 0;
-
-          h1 {
+   .cv {
+      .jobs {
+         width: 70vw;
+         h1 {
             margin: 2rem 0 2rem 0;
-          }
+         }
 
-          &_item {
+         &_item {
             display: grid;
             grid-template-columns: 25% 1fr;
-            align-items: center;
 
-            &_title {
-              text-align: right;
-              margin: 0 2rem auto 0;
-              width: 80%;
+            &_year {
+               text-align: right;
+               margin: 0 2rem auto 0;
             }
 
             &_content {
-              padding-left: 0;
-              //padding: 0.5rem;
-              //padding-top: 0.5rem;
+               padding-left: 0;
             }
-          }
-        }
+         }
       }
-    }
-  }
+   }
+
+   .home {
+      &_infos {
+      }
+   }
 }
 
 @include media-xl {
-  .projects_bio-image {
-    height: 50vh;
-  }
+   .projects_bio-image {
+      height: 50vh;
+   }
 
-  .post-content {
-    width: 50vw;
-  }
+   .post-content {
+      width: 50vw;
+   }
 }
