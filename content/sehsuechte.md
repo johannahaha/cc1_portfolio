@@ -1,12 +1,11 @@
 ---
-title: Exhibition Management Sehsuechte
+title: Exhibition Management
 tags: [Exhibition]
 preview_img: /img/sehsuechte/exhibition3_ae.jpg
 year: 2022
 location: Potsdam, Germany
-phrase: Exhibition managment of media art exhibition at film festival
+phrase: Exhibition managment of media art exhibition at international student film festival Sehsüchte
 link: https://sehsuechte.de/en/
-
 ---
 
 # Exhibition Management and Curation at Sehsuechte Film Festival

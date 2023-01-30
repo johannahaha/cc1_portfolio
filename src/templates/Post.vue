@@ -39,7 +39,10 @@
                </div>
             </div>
          </div>
-         <RecentProjects :posts="$page.posts" />
+         <RecentProjects
+            :posts="$page.posts"
+            :currentOpenPost="$page.post.title"
+         />
       </div>
    </Layout>
 </template>

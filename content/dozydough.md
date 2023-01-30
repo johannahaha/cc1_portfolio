@@ -8,8 +8,6 @@ location: Bangkok, Thailand
 link: &nbsp
 ---
 
-![dozy dough](/img/dozydough01.jpg)
-
 # Dozy Dough
 
 I developed the brand together with three students

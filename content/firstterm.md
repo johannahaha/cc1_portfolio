@@ -1,21 +1,19 @@
 ---
-title: Stories about Algorithm Ethics - the BAMF Case
-tags: [Web,Data,UI Design,Coding]
+title: Stories about Algorithm Ethics
+tags: [Web, Data, UI Design, Coding]
 preview_img: /img/bamf/preview.png
 year: 2021
 location: Potsdam, Germany
-phrase: Interactive web visualisation of a case of algorithmic bias 
+phrase: Interactive web visualisation of a case of algorithmic bias
 link: https://www.stories-algorithmethics.de
 ---
 
 # Stories about Algorithm Ethics: The BAMF Case
 
-![bamf_preview](/img/bamf/preview.png)
-
 https://www.stories-algorithmethics.de
 
 This project is a website, that is an interactive visualization of a case of algorithmic bias in Germany. I did this project as the final project of the first term of my master's study program.
-The case is the Arabic dialect recognition algorithm for refugees, which is part of the identity management system of the BAMF and used to verify region of origin for refugees (Biselli, 2018; Bundesamt für Migration und Flüchtlinge, 2019; Bundesamt für Migration und Flüchtlinge, 2020, Chiusi et al. 2020). The decision for the case was made in an intensive research process. I chose this particular case because it is a case of a machine learning algorithm used by the German government, which has been used nationwide in Germany for three years (Bundestag-Drucksache 19/6647, 2018). Moreover, the BAMF announced briefly that there are planning a pilot project for using this algorithm in the EU. 
+The case is the Arabic dialect recognition algorithm for refugees, which is part of the identity management system of the BAMF and used to verify region of origin for refugees (Biselli, 2018; Bundesamt für Migration und Flüchtlinge, 2019; Bundesamt für Migration und Flüchtlinge, 2020, Chiusi et al. 2020). The decision for the case was made in an intensive research process. I chose this particular case because it is a case of a machine learning algorithm used by the German government, which has been used nationwide in Germany for three years (Bundestag-Drucksache 19/6647, 2018). Moreover, the BAMF announced briefly that there are planning a pilot project for using this algorithm in the EU.
 
 `youtube: https://youtu.be/gkxiXipAsgY`
 
@@ -23,7 +21,7 @@ The project was exhibited at "Beyond the Frame" at the 50th International Studen
 
 ## Implementation
 
-I used vue and three.js to create the website. 
+I used vue and three.js to create the website.
 
 You can find the source code and the documentation [here](https://github.com/johannahaha/stories_about_algorithm_ethics) on my github.
 
@@ -36,9 +34,6 @@ You can find the source code and the documentation [here](https://github.com/joh
 ## References
 
 You can find to total list of references on the project website. For this text, I included the following references:
-
-
-
 
 Chiusi, Fabio; Sarah Fischer, Sarah; Kayser-Bril, Nicolas; Spielkamp, Matthias. (2020). Automating Society Report 2020. Algorithm Watch. https://automatingsociety.algorithmwatch.org/
 

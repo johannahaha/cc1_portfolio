@@ -6,10 +6,14 @@
          :key="edge.node.title"
          :post="edge.node"
       >
-         <div class="recent-projects-project-title">
+         <div
+            class="recent-projects-project-title"
+            v-if="currentOpenPost !== edge.node.title"
+         >
             {{ edge.node.title }}
          </div>
          <g-image
+            v-if="currentOpenPost !== edge.node.title"
             :src="edge.node.preview_img"
             class="recent-projects-project-preview-img"
             alt="post.title"
@@ -24,6 +28,7 @@
 export default {
    props: {
       posts: {},
+      currentOpenPost: "",
    },
    methods: {
       open: function (path) {

@@ -6,10 +6,7 @@ year: 2017
 location: Bremen, Germany
 phrase: VR installation with robotics
 link: &nbsp
-
 ---
-
-![realvirtuality](/img/realvirtuality.jpg)
 
 Where do reality end and virtuality begin? Is there such a boundary at all?
 

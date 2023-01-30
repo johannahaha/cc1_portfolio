@@ -8,8 +8,6 @@ location: Bangkok, Thailand
 link: &nbsp
 ---
 
-![Fonte01.jpg](/img/fonte01.jpg)
-
 # Fonté
 
 I implemented this communication design work together with two students. The goal was to develop a brand identity and design manual for a chocolate fondue cafe. In this project, we developed a brand strategy, logo, and concept of colors and patterns that communicated the identity of the café.
