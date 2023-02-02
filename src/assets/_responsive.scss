@@ -19,29 +19,21 @@
    }
 
    .nav {
-      visibility: visible;
-      transform: none;
-      padding-top: 3rem;
-      width: fit-content;
-      z-index: 3;
-      position: relative;
-
+      width: 100%;
       .menu-nav {
-         height: 100%;
-         background: transparent;
-         transform: none;
          align-items: flex-start;
          justify-content: left;
+         padding-top: 0.5rem;
+         display: inline-block;
 
-         &_item {
-            //display: inline;
-            padding-right: 1.5rem;
-            transform: none;
+         &-main,
+         &-sub {
+            display: inline-block;
          }
 
          &_link {
             font-size: 1.5rem;
-            padding: 1.2rem 0;
+            padding: 2rem 0;
          }
       }
    }
@@ -142,6 +134,7 @@
 
    .outer-post {
       margin-left: 15vw;
+      margin-top: 0;
       .post {
          display: flex;
          flex-direction: row;

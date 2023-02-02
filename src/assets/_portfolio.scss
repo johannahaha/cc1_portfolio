@@ -127,6 +127,9 @@
 .outer-post {
    display: flex;
    flex-direction: column;
+   position: relative;
+   margin-top: 5rem;
+
    .post {
       p {
          @include font(regular);
