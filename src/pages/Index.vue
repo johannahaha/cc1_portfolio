@@ -11,13 +11,13 @@
                <div class="about">
                   <g-image src="/img/portraet_bw.jpg" id="portraet"></g-image>
                   <p>
-                     In my final project, I interpret noodles in a new way. You
-                     recognize them, but I alienated the materials and
-                     properties. I chose an everyday object, which I interpreted
-                     in a new and abstract way and created procedurally - a
-                     pasta plate. The components are spaghetti that rolls up, a
-                     plate that bends as soon as more stuff lands on it,
-                     tomatoes, and a grainy sauce that falls from the sky.
+                     I am currently studying Creative Technologies (MA) at the
+                     Filmuniversty Babelsberg Konrad Wolf. I have a Bachelor of
+                     Science in Digital Media, at University of Bremen. My main
+                     topic of interests are data visualisation, creative web
+                     development and the role of algorithms and tech for
+                     society. At the moment, I am working at UCLAB of FH Potsdam
+                     on a climate journalism research project.
                   </p>
                </div>
             </div>
