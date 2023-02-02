@@ -210,8 +210,8 @@
       padding: 1rem;
 
       &-project {
-         width: 30vw;
-         height: 100%;
+         max-width: 30vw;
+         height: calc(30vw / 1.5);
       }
    }
 }
