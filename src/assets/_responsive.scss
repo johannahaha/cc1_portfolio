@@ -1,6 +1,7 @@
 @include media-md {
    #app {
       background-attachment: fixed;
+      background-color: gainsboro;
    }
 
    .menu-btn {
@@ -177,11 +178,34 @@
          margin: 0;
 
          @include section-not-mobile;
+
+         &-section {
+            p {
+               width: 50%;
+            }
+
+            .about {
+               img {
+                  width: 30%;
+                  display: inline-block;
+               }
+            }
+
+            .tags {
+               width: 70%;
+               .tag {
+                  margin: 1rem;
+               }
+            }
+         }
       }
    }
 }
 
 @include media-lg {
+   #app {
+      background-color: cyan;
+   }
    .projects {
       &_items {
          grid-template-columns: repeat(1, 1fr);
@@ -213,6 +237,13 @@
 
    .home {
       &_infos {
+         &-section {
+            .about {
+               img {
+                  width: 10%;
+               }
+            }
+         }
       }
    }
 }

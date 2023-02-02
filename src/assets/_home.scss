@@ -35,7 +35,7 @@
             display: inline-flex;
 
             img {
-               width: 10%;
+               display: none;
                object-fit: cover;
                margin-right: 2rem;
             }
@@ -44,12 +44,11 @@
          .tags {
             display: flex;
             flex-wrap: wrap;
-            width: 70%;
 
             .tag {
                @include font(bold);
                position: relative;
-               margin: 1rem;
+               margin: 0.7rem;
                z-index: 10;
                cursor: pointer;
 
@@ -66,7 +65,6 @@
          }
 
          p {
-            width: 50%;
             @include font(regular);
             line-height: 1.5rem;
             padding-bottom: 1rem;
