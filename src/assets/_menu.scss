@@ -175,6 +175,14 @@
             margin-left: 0.5rem;
             text-decoration: underline;
             @include font(regular);
+
+            &.portfolio {
+               text-decoration: none;
+
+               &.manual-active {
+                  text-decoration: underline;
+               }
+            }
          }
       }
    }

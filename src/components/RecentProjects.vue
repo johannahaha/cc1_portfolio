@@ -2,18 +2,14 @@
    <div class="recent-projects">
       <div
          class="recent-projects-project"
-         v-for="edge in posts.edges"
+         v-for="edge in this.filteredPosts"
          :key="edge.node.title"
          :post="edge.node"
       >
-         <div
-            class="recent-projects-project-title"
-            v-if="currentOpenPost !== edge.node.title"
-         >
+         <div class="recent-projects-project-title">
             {{ edge.node.title }}
          </div>
          <g-image
-            v-if="currentOpenPost !== edge.node.title"
             :src="edge.node.preview_img"
             class="recent-projects-project-preview-img"
             alt="post.title"
@@ -29,6 +25,13 @@ export default {
    props: {
       posts: {},
       currentOpenPost: "",
+   },
+   computed: {
+      filteredPosts: function () {
+         return this.posts.edges.filter(
+            (edge) => edge.node.title !== this.currentOpenPost
+         );
+      },
    },
    methods: {
       open: function (path) {

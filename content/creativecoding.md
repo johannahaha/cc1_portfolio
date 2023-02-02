@@ -1,6 +1,6 @@
 ---
 title: Creative Coding
-tags: [Creative Coding]
+tags: [Creative Coding, Web Development]
 preview_img: /img/creative_coding/hope05.png
 year: 2020
 phrase: Creative coding exercises and sketches
@@ -32,11 +32,11 @@ In the class Creative Coding in the first term of my master we started by using 
 
 ## Web GL
 
-This class was also the first time I used three.js and WebGL by doing this Christmas Tree (it was december...). 
+This class was also the first time I used three.js and WebGL by doing this Christmas Tree (it was december...).
 
 ![christmas.png](/img/creative_coding/christmas.png)
 
-In the class Theoretical Background of Audio and Graphics I experimented with generating meshes from vertices, faces and normals. 
+In the class Theoretical Background of Audio and Graphics I experimented with generating meshes from vertices, faces and normals.
 
 ![/img/creative_coding/origamiclouds.png](/img/creative_coding/origamiclouds.png)
 

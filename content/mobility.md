@@ -1,6 +1,6 @@
 ---
 title: Our Mobility in Knots
-tags: [Web, Data, UI Design, Coding]
+tags: [Web Development, Data Visualisation, UI Design, Coding]
 preview_img: /img/mobility/mobility02.png
 year: 2022
 phrase: Visualising mobility networks - Mapping Cities, Making Cities

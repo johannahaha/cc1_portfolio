@@ -66,11 +66,11 @@ query Post ($path: String!){
     posts: allPost(sortBy: "year", limit:10){
         edges{
             node{
-            id
-            title
-            preview_img (width: 1000)
-            path
-            year
+               id
+               title
+               preview_img (width: 1000)
+               path
+               year
             }
         }
     }   

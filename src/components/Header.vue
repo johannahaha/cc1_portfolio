@@ -31,23 +31,54 @@
                      >Portfolio</g-link
                   >
                </li>
-               <li
-                  class="menu-nav_item"
-                  :class="{ open: showMenu }"
-                  v-for="edge in $page.posts.edges"
-                  :key="edge.node.title"
-                  :post="edge.node"
-               >
+               <li class="menu-nav_item" :class="{ open: showMenu }">
                   <g-link
-                     class="menu-nav_link_subpage"
-                     v-if="$route.path === edge.node.path"
-                     v-bind:active-class="
-                        $route.path === edge.node.path ? 'manual-active' : ''
-                     "
+                     class="menu-nav_link_subpage portfolio"
                      to="/portfolio/"
-                     >{{ edge.node.title }}</g-link
+                     :class="[
+                        $route.path == '/portfolio/' ? 'manual-active' : '',
+                     ]"
+                     >all projects</g-link
                   >
                </li>
+               <div v-if="$static.posts !== undefined">
+                  <li
+                     class="menu-nav_item"
+                     :class="{ open: showMenu }"
+                     v-for="edge in $static.posts.edges"
+                     :key="edge.node.title"
+                     :post="edge.node"
+                  >
+                     <g-link
+                        class="menu-nav_link_subpage"
+                        v-if="$route.path === edge.node.path"
+                        v-bind:active-class="
+                           $route.path === edge.node.path ? 'manual-active' : ''
+                        "
+                        to="/portfolio/"
+                        >{{ edge.node.title }}</g-link
+                     >
+                  </li>
+               </div>
+               <div v-if="$static.tags !== undefined">
+                  <li
+                     class="menu-nav_item"
+                     :class="{ open: showMenu }"
+                     v-for="edge in $static.tags.edges"
+                     :key="edge.node.title"
+                     :post="edge.node"
+                  >
+                     <g-link
+                        class="menu-nav_link_subpage"
+                        v-if="$route.path === edge.node.path"
+                        v-bind:active-class="
+                           $route.path === edge.node.path ? 'manual-active' : ''
+                        "
+                        to="/portfolio/"
+                        >{{ edge.node.title }} projects</g-link
+                     >
+                  </li>
+               </div>
                <!-- <li class="menu-nav_item"
                             :class='{open:showMenu}' > 
                             <g-link class="menu-nav_link" to="/cv/">CV</g-link></li> -->
@@ -68,9 +99,19 @@ query{
       node{
         id
         path
+        title
       }
     }
-  }   
+  } 
+   tags:allTag(sortBy:"title",order:ASC){
+      edges{
+         node{
+            id
+            title
+            path  
+         }
+      }
+      }   
 }
 </static-query>
 
