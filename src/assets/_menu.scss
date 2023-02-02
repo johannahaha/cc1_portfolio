@@ -1,178 +1,87 @@
-.logo_mobile{
-    color:$highlight-color;
-    @include font(bold);
-    font-size: 1.5rem;
-    //position: relative;
-    
+.logo_mobile {
+   @include font(bold);
+   @include gradient-font;
+   font-size: 2rem;
+   //position: relative;
 }
 
-.logo{
-    @extend .logo_mobile;
+.logo {
+   @extend .logo_mobile;
 }
 
-.menu-btn{
-    position: absolute;
-    z-index: 4;
-    right: 1rem;
-    top: 1rem;
-    height: 20px;
-    width: 28px;
-    background: transparent;
-    box-shadow: 0px 0px 0px transparent;
-    border: 0px solid transparent;
-    border-color: $dark-color;
-    text-shadow: 0px 0px 0px transparent;
-    cursor: pointer;
-    @include transition-ease;
-  
-    &::hover {
-        background: transparent;
-        box-shadow: 0px 0px 0px transparent;
-        border: 0px solid transparent;
-        text-shadow: 0px 0px 0px transparent;
-    }
-    
-    &::active {
-        outline: none;
-        border: none;
-    }
-    
-    &::focus {
-        outline: 0;
-    }
+.nav {
+   width: 100vw;
+   transform: none;
 
-    &_burger {
-        position: absolute;
-        right: 0; 
-        top: 0.5rem;
-        width: 28px;
-        height: 3px;
-        background: set-text-color($light-color);
-        @include transition-ease;
+   .menu-nav {
+      height: 100%;
+      width: 100%;
+      background: transparent;
+      transform: none;
+      display: flex;
+      flex-direction: column;
+      padding: 0 1rem;
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: -8px;
-            width: 28px;
-            height: 3px;
-            background: set-text-color($light-color);
-            @include transition-ease;
+      &-main {
+         display: flex;
+         flex-direction: row;
+         justify-content: flex-end;
+      }
 
-        }
+      &-sub {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+      }
 
-        &::after{
-            content: '';
-            position: absolute;
-            top: 8px;
-            width: 20px;
-            height: 3px;
-            background: set-text-color($light-color);
-            @include transition-ease;
+      &_item {
+         //display: inline;
+         padding-right: 1rem;
+         transform: none;
+         list-style-type: none;
+      }
+      &_link {
+         display: inline-block;
+         font-size: 1.2rem;
+         padding: 0.3rem 0;
+         text-transform: lowercase;
 
-        }
+         @include font(light);
+         color: $dark-color;
 
-        &.open{
-            transform: rotate(720deg);
-            background: transparent;
+         &:hover {
+            text-decoration: underline;
+         }
 
-            &::before{
-                transform: rotate(45deg) translate(5px, 8px);
-            }
+         &.manual-active,
+         &.active--exact.active {
+            text-decoration: underline;
+            @include font(medium);
+         }
 
-            &::after{
-                width: 28px;
-                transform: rotate(-45deg) translate(3px, -7px);
-            }
-        }
-    }
-}
-
-.navbar{
-    left: 1rem;
-    //position: fixed;
-    z-index: 0;
-
-    &.open {
-        z-index:3;
-        position: relative;
-    }
-}
-
-.nav{
-    top:0;
-    left:0;
-    width: 100vw;
-    opacity: 0.9;
-    visibility: hidden;
-    position: relative;
-    z-index: 0;
-
-    &.open {
-        visibility: visible;
-        z-index: 2;
-    }
-
-    .menu-nav{
-        display:flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        overflow: hidden;
-        background: $light-color;
-        list-style-type: none;
-        padding-right: 1rem;
-        transform: translateY(-100%);
-        z-index: 0;
-        @include transition-ease;
-
-        &.open {
-            transform: translateY(0);
-            z-index: 1;
-        }
-
-        &_item{
-            transform: translateX(100vw);
-            @include transition-ease;
-
-            &.open{
-                transform: translateX(0);
-            }
-
-            &.active > g-link{
-                color:$light-color;
-            }
-        }
-        &_link{
-            display: inline-block;
-            font-size: 2rem;
-            
-            @include font(light);
-
-            transition: background-size .4s ease;
-            background: linear-gradient(to bottom, transparent -80%, $highlight-color 0) center center/0% 75% no-repeat;
-            color: $dark-color;
+         &_subpage {
             text-transform: lowercase;
-            padding: 2rem 0;
-            @include transition-ease;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            display: inline-block;
+            margin-left: 0.5rem;
+            text-decoration: underline;
+            @include font(regular);
 
-            &:hover{
-                background-size: 100% 50%;
-                color:$light-color;
+            &.portfolio {
+               text-decoration: none;
+
+               &.manual-active {
+                  text-decoration: underline;
+               }
             }
-
-            &.active--exact.active{
-                background-size: 100% 50%;
-                color:$light-color;
-            }
-
-        }
-    }
+         }
+      }
+   }
 }
 
-@for $i from 1 through 3{
-    .menu-nav_item:nth-child(#{$i}){
-        transition-delay: ($i * 0.1s) + 0.15s;
-    }
+@for $i from 1 through 3 {
+   .menu-nav_item:nth-child(#{$i}) {
+      transition-delay: ($i * 0.1s) + 0.15s;
+   }
 }

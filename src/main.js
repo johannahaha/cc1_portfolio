@@ -17,7 +17,13 @@ import "@fontsource/archivo-black"
 import "@fontsource/archivo/400.css"
 import "@fontsource/archivo/variable.css";
 
-config.autoAddCss = false;
+import "@fontsource/koh-santepheap/700.css";
+import "@fontsource/koh-santepheap/900.css";
+
+
+import "@fontsource/koh-santepheap"
+
+config.autoAddCss = false; 
 
 
 export default function (Vue, { router, head, isClient }) {

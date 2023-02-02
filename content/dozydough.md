@@ -3,9 +3,10 @@ title: Dozy Dough
 tags: [Communication Design]
 preview_img: /img/dozydough01.jpg
 year: 2018
+phrase: Brand strategy and corporate identity of donut shjop
+location: Bangkok, Thailand
+link: &nbsp
 ---
-
-![dozy dough](/img/dozydough01.jpg)
 
 # Dozy Dough
 

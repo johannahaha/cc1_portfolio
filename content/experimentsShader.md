@@ -1,11 +1,15 @@
 ---
 title: Experimentations with Shaders
-tags: [Creative Coding,Shaders]
+tags: [Creative Coding, Shader]
 preview_img: /img/procedural/preview.png
 year: 2021
+phrase: Shader programming with GLSL
+location: Potsdam, Germany
+link: &nbsp
 ---
 
 # Shaders: Experiments with Fragments Shaders.
+
 ## Fragment Shader: Islamic Pattern
 
 In our course procedural generation and simulation, we had the task to create different fragment shaders with concepts of Islamic patterns. Here are my results.
@@ -22,4 +26,3 @@ We also had a workshop about Shader Programming, where we experimented with Sphe
 
 ![procedural16](/img/procedural/shader01.gif)
 ![procedural17](/img/procedural/shader02.gif)
-

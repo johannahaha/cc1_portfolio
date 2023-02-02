@@ -1,8 +1,11 @@
 ---
-title: Instaviz - Inequality in the Climate Crisis
-tags: [Communication Design,Data]
+title: Instaviz
+tags: [Communication Design, Science Communication, Data Visualisation]
 preview_img: /img/instaviz/instaviz_preview.png
 year: 2021
+phrase: Climate crisis visualisations for klima.taz on Instagram
+location: Berlin, Germany
+link: https://www.instagram.com/klima.taz
 ---
 
 # Instaviz: Inequality in the Climate Crisis
@@ -16,7 +19,7 @@ I worked in a team together with Anna Eschenbacher and Lutricia Valentin. We inv
 ![instaviz01](/img/instaviz/instaviz01.png)
 ![instaviz02](/img/instaviz/instaviz02.png)
 
-Caption: 
+Caption:
 The study analyzed the energy footprint for countries worldwide for different categories, such as Vehicle Fuel, Food, or Recreational Items. They also looked at the difference between income groups both nationally and globally. Their findings show large inequalities in the energy food prints and higher energy food prints for different world regions. Europe is a region with a higher energy footprint. 🇪🇺
 
 One example of that is the expenditure on Electricity and Heating. Since in some countries in the EU heating functions with electricity, we took both categories together. Except for Malta, every EU country has a higher expenditure and therefore consumption on heating and electricity than the global average. On the graph, the size of the bulb is the expenditure on heating and electricity per person. The length of the string refers to the population - you can tell that we cheated a bit here for the global population of course. 💡
@@ -50,7 +53,7 @@ Source: Young people’s voices on climate anxiety, government betrayal and mora
 
 If you experienced climate anxiety, you can find resources here: www.commonslibrary.org/resources-to-cope-with-climate-anxiety-and-grief/ (link in bio) 😔
 
-#climateanxiety #climatecrisis #climatejustice #climatechange #inequality 
+#climateanxiety #climatecrisis #climatejustice #climatechange #inequality
 
 ## Redesign for Klimataz
 
@@ -59,4 +62,3 @@ If you experienced climate anxiety, you can find resources here: www.commonslib
 ![instaviz_taz1](/img/instaviz/instaviz_taz1.png)
 ![instaviz_taz2](/img/instaviz/instaviz_taz2.png)
 ![instaviz_taz3](/img/instaviz/instaviz_taz3.png)
-
