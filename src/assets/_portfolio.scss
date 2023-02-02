@@ -25,32 +25,27 @@
    }
 
    &_items {
-      width: 90vw;
-      margin: 5rem auto 0 auto;
+      width: 100vw;
       display: flex;
       flex-direction: column;
       flex-wrap: start;
+      margin: 5rem auto 0 auto;
       align-content: space-around;
       justify-content: space-around;
-      // display:grid;
-      // grid-template-columns: 2fr;
-      // grid-gap: 3rem;
       color: $dark-color;
    }
 
    &_item {
       position: relative;
-      //overflow: hidden;
-      //display: grid;
-      //grid-template-rows: 70% 2fr;
-      padding-bottom: 2vh;
       cursor: pointer;
+      border-bottom: solid 1px;
+      padding: 5% 1rem;
 
       img {
-         width: 100%;
-         height: 100%;
+         width: 80%;
          object-fit: cover;
          -webkit-filter: grayscale(1);
+         margin-left: 1rem;
 
          &:hover {
             -webkit-filter: grayscale(0);
@@ -61,9 +56,7 @@
       &_details {
          width: 100%;
          height: 100%;
-         position: absolute;
-         top: 0;
-         left: 0;
+         //position: relative;
          padding: 5%;
          //background: $dark-blue;
          display: flex;
@@ -72,9 +65,13 @@
 
          h4 {
             @include font(bold);
-            font-size: 1rem;
-            margin: 1rem 0;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-left: -1rem;
             color: $dark-blue;
+            position: absolute;
+            width: 60%;
+            top: 0;
          }
 
          p {
@@ -131,6 +128,8 @@
    margin-top: 5rem;
 
    .post {
+      display: flex;
+      flex-direction: column-reverse;
       p {
          @include font(regular);
          line-height: 1.5rem;
@@ -139,9 +138,13 @@
       }
 
       &-overview {
+         border-bottom: solid 1px;
+         border-top: solid 1px;
+         padding: 1rem;
+         width: 100vw;
+
          &-link {
             display: inline-flex;
-            padding-bottom: 1rem;
 
             p,
             svg {
@@ -155,23 +158,25 @@
             }
          }
 
-         &-phrase {
-            padding-top: 1rem;
-         }
-
          .tag {
             cursor: pointer;
+            margin-top: 1rem;
+         }
+
+         p {
+            padding-bottom: 0;
          }
       }
       &-content {
-         width: 90vw;
+         width: 100vw;
+         padding: 1rem;
 
          h1 {
             padding: 2rem 0;
             @include font(bold);
             @include gradient-font;
-            font-size: 2rem;
             color: $dark-blue;
+            font-size: 1.5rem;
          }
 
          h2 {
