@@ -6,7 +6,9 @@
 
    &_title {
       @include page-title;
-      color: $dark-blue h1 {
+      color: $dark-blue;
+
+      h1 {
          font-size: 1.5rem;
          padding-bottom: 1rem;
       }
@@ -82,6 +84,7 @@
          &_tags {
             flex-direction: row;
             display: flex;
+            flex-wrap: wrap;
 
             div {
                @include font(bold);
@@ -94,28 +97,6 @@
                   background-color: rgba($light-color, 0.3);
                }
             }
-         }
-      }
-
-      &::after {
-         //content: '';
-         position: absolute;
-         top: 100%;
-         left: 0;
-         height: 100%;
-         width: 100%;
-         //background: $dark-blue;
-         opacity: 0;
-         @include transition-ease;
-      }
-      .projects_btn {
-         opacity: 1;
-      }
-
-      &:hover {
-         &::after {
-            top: 0;
-            opacity: 0.9;
          }
       }
    }
@@ -199,33 +180,32 @@
 
 .recent-projects {
    display: inline-flex;
-   overflow-x: scroll;
+   //overflow-x: scroll;
    margin: 2rem 0;
    border-bottom: solid 1px;
    border-top: solid 1px;
-   padding: 2rem;
+   //padding: 1rem;
    position: relative;
+   height: max-content;
 
    &-project {
-      min-width: 30vw;
-      width: 30vw;
-      height: 100%;
-      height: calc(30vw / 2.5);
+      width: 12rem;
+      height: 16rem;
+      padding: 1rem;
       position: relative;
 
       &-preview-img {
-         width: 20vw;
-         height: 100%;
-         object-fit: cover;
          z-index: 1;
-         position: absolute;
-         top: 0;
          margin-left: 1rem;
          cursor: pointer;
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         -webkit-filter: grayscale(1);
       }
 
       &-title {
-         margin-top: 1rem;
+         margin-top: 2rem;
          position: absolute;
          top: 0;
          width: 20vw;

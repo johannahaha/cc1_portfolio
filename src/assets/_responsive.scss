@@ -84,6 +84,7 @@
 
          img {
             width: 44%;
+            margin-left: 0;
          }
 
          &_link {
@@ -104,6 +105,7 @@
                font-size: 1.7rem;
                margin-top: 10%;
                position: relative;
+               width: 100%;
             }
 
             &_infos {
@@ -201,6 +203,15 @@
                }
             }
          }
+      }
+   }
+
+   .recent-projects {
+      padding: 1rem;
+
+      &-project {
+         width: 30vw;
+         height: 100%;
       }
    }
 }
