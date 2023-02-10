@@ -7,6 +7,8 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@fontsource/archivo": "^4.5.3",
+    "@fontsource/archivo-black": "^4.5.2",
     "@fontsource/libre-caslon-text": "^4.5.8",
     "@fontsource/open-sans": "^4.5.14",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
