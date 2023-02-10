@@ -1,7 +1,6 @@
 @include media-md {
    #app {
       background-attachment: fixed;
-      background-color: gainsboro;
    }
 
    .menu-btn {
@@ -217,9 +216,6 @@
 }
 
 @include media-lg {
-   #app {
-      background-color: cyan;
-   }
    .projects {
       &_items {
          grid-template-columns: repeat(1, 1fr);
