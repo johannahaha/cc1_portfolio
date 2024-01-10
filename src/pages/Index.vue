@@ -13,7 +13,7 @@
                   <div>
                      <p>
                         I am currently studying Creative Technologies (MA) at
-                        the Filmuniversty Babelsberg Konrad Wolf. I have a
+                        the Filmuniversity Babelsberg Konrad Wolf. I have a
                         Bachelor of Science in Digital Media, at University of
                         Bremen. My main topic of interests are data
                         visualization, creative web development and the role of

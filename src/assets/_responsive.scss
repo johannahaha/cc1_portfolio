@@ -1,6 +1,7 @@
 @include media-md {
    #app {
       background-attachment: fixed;
+      background-color: rosybrown;
    }
 
    .menu-btn {
@@ -9,12 +10,13 @@
 
    .logo {
       visibility: visible;
+      font-size: 1.5rem;
    }
 
    .navbar {
       z-index: 3;
       position: fixed;
-      width: 15vw;
+      width: 20vw;
    }
 
    .nav {
@@ -31,7 +33,6 @@
          }
 
          &_link {
-            font-size: 1.5rem;
             padding: 2rem 0;
          }
       }
@@ -64,23 +65,29 @@
    .projects {
       z-index: 0;
 
+      &_filter {
+         padding-left: 0;
+      }
+
       &_items {
          //grid-template-columns: repeat(2,1fr);
          flex-direction: column;
          justify-content: start;
-         width: 85vw;
+         width: 80vw;
+         margin-left: 0;
+         padding: 0 0 0 2.5vw;
       }
 
       &_item {
          width: 100%;
-         padding: 5% 0;
-         margin-left: 1rem;
+         display: flex;
 
          h4 {
             font-size: 1.7rem;
             margin-top: 10%;
             position: relative;
             width: 100%;
+            padding-right: 2.5vw;
          }
 
          &::after {
@@ -88,8 +95,10 @@
          }
 
          img {
-            width: 44%;
             margin-left: 0;
+            flex-basis: 0px;
+            flex-grow: 1;
+            flex-shrink: 1;
          }
 
          &_link {
@@ -98,17 +107,14 @@
          }
 
          &_details {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            margin-left: 35%;
-            width: 66%;
-            position: absolute;
+            padding-bottom: 0;
+            padding-right: 2.5vw;
+            //position: absolute;
             top: 0;
-
-            &_infos {
-               margin-left: 10%;
-            }
+            margin-left: 1rem;
+            flex-basis: 0px;
+            flex-grow: 1;
+            flex-shrink: 1;
 
             a {
                margin-right: 1rem;
@@ -131,16 +137,15 @@
    }
 
    .outer-post {
-      margin-left: 15vw;
+      margin-left: 20vw;
       margin-top: 0;
       .post {
          display: flex;
          flex-direction: row;
          &-overview {
             width: 30vw;
+            margin-top: 1rem;
             padding: 2rem;
-            margin-left: 5vw;
-            margin-top: 5vw;
             position: sticky;
             align-self: flex-start;
             top: 0;
@@ -163,7 +168,8 @@
             font-size: 1.2rem;
 
             h1 {
-               font-size: 2rem;
+               font-size: 1.5rem;
+               line-height: 2rem;
             }
             //@include section-not-mobile;
          }
@@ -181,17 +187,22 @@
          margin: 0;
 
          @include section-not-mobile;
+         margin-left: 20vw;
 
          &-section {
-            p {
-               width: 50%;
+            .projects-section-title {
+               padding-left: 0;
             }
-
             .about {
+               padding-right: 2.5vw;
                display: inline-flex;
                img {
                   width: 100%;
                   display: inline-block;
+               }
+
+               p {
+                  width: 50%;
                }
             }
 
@@ -216,6 +227,9 @@
 }
 
 @include media-lg {
+   #app {
+      background-color: gold;
+   }
    .projects {
       &_items {
          grid-template-columns: repeat(1, 1fr);
@@ -259,6 +273,9 @@
 }
 
 @include media-xl {
+   #app {
+      background-color: fuchsia;
+   }
    .projects_bio-image {
       height: 50vh;
    }
