@@ -1,5 +1,6 @@
 <template>
    <div class="recent-projects">
+      <FilterMenu />
       <div
          class="recent-projects-project"
          v-for="edge in this.filteredPosts"
@@ -21,7 +22,11 @@
 </template>
 
 <script>
+import FilterMenu from "./FilterMenu.vue";
 export default {
+   components: {
+      FilterMenu,
+   },
    props: {
       posts: {},
       currentOpenPost: "",
