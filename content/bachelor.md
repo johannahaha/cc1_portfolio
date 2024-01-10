@@ -1,6 +1,6 @@
 ---
 title: Bachelor Thesis
-tags: [Research, Data Visualization, Coding]
+tags: [research, datavis, coding]
 preview_img: /img/bachelor_preview.png
 year: 2020
 phrase: Cluster analysis of student click data

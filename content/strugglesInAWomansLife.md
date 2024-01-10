@@ -1,6 +1,6 @@
 ---
 title: "struggles in a woman's life"
-tags: [Exhibition]
+tags: [exhibition]
 preview_img: /img/craftproduct01.jpg
 year: 2018
 location: Bangkok, Thailand

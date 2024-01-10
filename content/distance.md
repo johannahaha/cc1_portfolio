@@ -1,6 +1,6 @@
 ---
 title: distance
-tags: [Exhibition]
+tags: [exhibition]
 preview_img: /img/distance01.jpg
 year: 2019
 phrase: Visualizing real-time air pollution with a smart home light bulb

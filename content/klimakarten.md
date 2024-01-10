@@ -1,6 +1,6 @@
 ---
 title: Klimakarten
-tags: [Research, Data Visualization, Coding, Design]
+tags: [research, datavis, web, coding, design]
 preview_img: /img/klimakarten/klimakarten03.jpg
 year: 2023
 phrase: Data Visualization design for constructive journalims

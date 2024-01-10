@@ -1,6 +1,6 @@
 ---
 title: Experimentations with Shaders
-tags: [Coding]
+tags: [coding]
 preview_img: /img/procedural/preview.png
 year: 2021
 phrase: Shader programming with GLSL

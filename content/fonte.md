@@ -1,6 +1,6 @@
 ---
 title: Fonte
-tags: [Design]
+tags: [design]
 preview_img: /img/fonte01.jpg
 year: 2018
 phrase: Brand strategy and corporate identity project

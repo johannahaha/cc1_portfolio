@@ -1,6 +1,6 @@
 ---
 title: realVirtuality
-tags: [Exhibition]
+tags: [exhibition]
 preview_img: /img/realvirtuality.jpg
 year: 2017
 location: Bremen, Germany

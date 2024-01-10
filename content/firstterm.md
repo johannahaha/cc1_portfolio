@@ -1,6 +1,6 @@
 ---
 title: Stories about Algorithm Ethics
-tags: [Web Development, Data Visualization, Design, Coding]
+tags: [web, datavis, design, coding]
 preview_img: /img/bamf/preview.png
 year: 2021
 location: Potsdam, Germany
