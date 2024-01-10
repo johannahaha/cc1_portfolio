@@ -104,18 +104,6 @@
             flex-direction: row;
             display: flex;
             flex-wrap: wrap;
-
-            div {
-               @include font(bold);
-               position: relative;
-               margin-right: 1.5rem;
-               margin-top: 5%;
-               z-index: 10;
-
-               &:hover {
-                  background-color: rgba($light-color, 0.3);
-               }
-            }
          }
       }
    }
@@ -143,6 +131,12 @@
          padding: 1rem;
          width: 100vw;
 
+         &-tags {
+            flex-direction: row;
+            display: flex;
+            flex-wrap: wrap;
+         }
+
          &-link {
             display: inline-flex;
 
@@ -158,8 +152,13 @@
             }
          }
 
+         &-phrase {
+            padding-top: 1rem;
+            text-transform: lowercase;
+         }
+
          .tag {
-            cursor: pointer;
+            margin-right: 0.2rem;
             margin-top: 1rem;
          }
 

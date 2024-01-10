@@ -12,10 +12,12 @@
                   <g-image src="/img/portraet_bw.jpg" id="portraet"></g-image>
                   <div>
                      <p>
-                        I am currently studying Creative Technologies (MA) at
-                        the Filmuniversity Babelsberg Konrad Wolf. I have a
-                        Bachelor of Science in Digital Media, at University of
-                        Bremen. My main topic of interests are data
+                        Hi, I am a freelance Creative Technologist and Data
+                        Visualization Designer & Developer based in Berlin.
+                        Currently, I am studying Creative Technologies (M. A.)
+                        at the Filmuniversity Babelsberg Konrad Wolf. I have a
+                        Bachelor in Digital Media (B. Sc.), at University of
+                        Bremen. My main topics of interests are data
                         visualization, creative web development and the role of
                         algorithms and tech for society.
                      </p>

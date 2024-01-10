@@ -165,6 +165,15 @@
             align-self: flex-start;
             top: 0;
 
+            &-tags {
+               row-gap: 0.5rem;
+               padding-top: 1rem;
+            }
+
+            .tag {
+               margin-top: 0;
+            }
+
             &-link {
                padding-bottom: 1rem;
             }
@@ -206,7 +215,7 @@
          margin-left: 20vw;
 
          &-section {
-            .projects-section-title {
+            &-title {
                padding-left: 0;
             }
             .about {
@@ -228,6 +237,10 @@
                   margin: 1rem;
                }
             }
+         }
+
+         #social {
+            display: none;
          }
       }
    }

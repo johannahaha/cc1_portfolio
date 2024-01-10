@@ -27,9 +27,17 @@
                <p>{{ $page.post.year }}</p>
                <p>{{ $page.post.location }}</p>
                <p class="post-overview-phrase">{{ $page.post.phrase }}</p>
-               <div class="projects_item_details_tags">
-                  <div class="tag" v-for="tag in $page.post.tags" :key="tag.id">
-                     {{ tag.title }}
+               <div class="post-overview-tags">
+                  <div class="tag">skills:</div>
+                  <div
+                     class="tag"
+                     v-for="(tag, index) in $page.post.tags"
+                     :key="tag.id"
+                  >
+                     <div v-if="index == $page.post.tags.length - 1">
+                        {{ tag.title }}
+                     </div>
+                     <div v-else>{{ tag.title }},</div>
                   </div>
                </div>
             </div>
