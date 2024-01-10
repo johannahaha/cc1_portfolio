@@ -4,6 +4,23 @@
    position: relative;
    margin: 3vh auto 0 auto;
 
+   &_filter {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      border-bottom: solid 1px;
+      .tag {
+         padding: 0.5rem;
+         transform: none;
+         list-style-type: none;
+         cursor: pointer;
+      }
+      .selected {
+         font-weight: bold;
+      }
+   }
+
    &_title {
       @include page-title;
       color: $dark-blue;
@@ -31,7 +48,7 @@
       display: flex;
       flex-direction: column;
       flex-wrap: start;
-      margin: 5rem auto 0 auto;
+      margin: 0 auto 0 auto;
       align-content: space-around;
       justify-content: space-around;
       color: $dark-color;

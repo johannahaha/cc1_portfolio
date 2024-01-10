@@ -36,7 +36,7 @@
                      >
                   </div>
                </div>
-               <div class="menu-nav-sub">
+               <!-- <div class="menu-nav-sub">
                   <div class="menu-nav_item" :class="{ open: showMenu }">
                      <g-link
                         class="menu-nav_link_subpage portfolio"
@@ -89,7 +89,7 @@
                         >
                      </div>
                   </div>
-               </div>
+               </div> -->
                <!-- <div class="menu-nav_item"
                             :class='{open:showMenu}' > 
                             <g-link class="menu-nav_link" to="/cv/">CV</g-link></div> -->

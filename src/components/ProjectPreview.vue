@@ -21,12 +21,7 @@
             <p>{{ post.year }}</p>
             <p>{{ post.phrase }}</p>
             <div class="projects_item_details_tags">
-               <div
-                  class="tag"
-                  v-for="tag in post.tags"
-                  :key="tag.id"
-                  @click.stop="open(tag.path)"
-               >
+               <div class="tag" v-for="tag in post.tags" :key="tag.id">
                   {{ tag.title }}
                </div>
             </div>
