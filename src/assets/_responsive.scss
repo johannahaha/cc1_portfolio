@@ -64,21 +64,24 @@
    .projects {
       z-index: 0;
 
-      &_filter {
-         @include section-not-mobile;
-      }
-
       &_items {
          //grid-template-columns: repeat(2,1fr);
          flex-direction: column;
          justify-content: start;
          width: 85vw;
-         @include section-not-mobile;
       }
 
       &_item {
          width: 100%;
          padding: 5% 0;
+         margin-left: 1rem;
+
+         h4 {
+            font-size: 1.7rem;
+            margin-top: 10%;
+            position: relative;
+            width: 100%;
+         }
 
          &::after {
             width: 45%;
@@ -102,13 +105,6 @@
             width: 66%;
             position: absolute;
             top: 0;
-
-            h4 {
-               font-size: 1.7rem;
-               margin-top: 10%;
-               position: relative;
-               width: 100%;
-            }
 
             &_infos {
                margin-left: 10%;
@@ -192,8 +188,9 @@
             }
 
             .about {
+               display: inline-flex;
                img {
-                  width: 30%;
+                  width: 100%;
                   display: inline-block;
                }
             }
@@ -253,7 +250,7 @@
          &-section {
             .about {
                img {
-                  width: 10%;
+                  width: 50%;
                }
             }
          }

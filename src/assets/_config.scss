@@ -1,6 +1,7 @@
 //$dark-color: #0E2626;
 $dark-color: black;
-$light-color: #fff;
+//$light-color: #fff;
+$light-color: #fbf9f6;
 //$dark-blue: #295773;
 $dark-blue: #073bc0;
 $light-blue: #75a3bf;
@@ -17,7 +18,7 @@ $font-families: (
    "light": "neue-haas-unica",
    "regular": "neue-haas-unica",
    "medium": "neue-haas-unica",
-   "bold": "libre-caslon",
+   "bold": "neue-haas-unica",
 );
 
 $variable-font-families: (
@@ -96,9 +97,10 @@ $variable-font-weights: (
 
 @mixin gradient-font {
    //background: -webkit-linear-gradient($dark-blue, $light-blue);
-   background: -webkit-radial-gradient(0.3rem, $dark-blue, $light-blue);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
+   // background: -webkit-radial-gradient(0.3rem, $dark-blue, $light-blue);
+   // -webkit-background-clip: text;
+   // -webkit-text-fill-color: transparent;
+   color: #073bc0;
 }
 
 @mixin page-title {

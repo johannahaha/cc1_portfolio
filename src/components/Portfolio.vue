@@ -1,70 +1,36 @@
 <template>
-   <Layout>
-      <section class="projects">
-         <!-- <div class="projects_title">
+   <section class="projects">
+      <!-- <div class="projects_title">
           <h1>Portfolio</h1>
           <p>all projects</p>
         </div> -->
-         <div class="projects_filter">
-            <div
-               class="tag"
-               :class="`${this.post_filter === 'all' ? 'selected' : ''}`"
-               @click.stop="set_filter('all')"
-            >
-               all
-            </div>
-            <div
-               class="tag"
-               v-for="edge in $page.tags.edges"
-               :key="edge.node.id"
-               :class="`${post_filter === edge.node.title ? 'selected' : ''}`"
-               @click.stop="set_filter(edge.node.title)"
-            >
-               {{ edge.node.title }}
-            </div>
+      <div class="projects_filter">
+         <div
+            class="tag"
+            :class="`${this.post_filter === 'all' ? 'selected' : ''}`"
+            @click.stop="set_filter('all')"
+         >
+            all
          </div>
-         <div class="projects_items">
-            <ProjectPreview
-               v-for="edge in getFilteredPosts"
-               :key="edge.node.title"
-               :post="edge.node"
-            />
+         <div
+            class="tag"
+            v-for="edge in $page.tags.edges"
+            :key="edge.node.id"
+            :class="`${post_filter === edge.node.title ? 'selected' : ''}`"
+            @click.stop="set_filter(edge.node.title)"
+         >
+            {{ edge.node.title }}
          </div>
-      </section>
-   </Layout>
+      </div>
+      <div class="projects_items">
+         <ProjectPreview
+            v-for="edge in getFilteredPosts"
+            :key="edge.node.title"
+            :post="edge.node"
+         />
+      </div>
+   </section>
 </template>
-
-<page-query>
-query Posts{
-	posts: allPost(sortBy: "year"){
-    edges{
-      node{
-        id
-        title
-    	  preview_img (width: 1000)
-        path
-        year
-        phrase
-        location
-        tags{
-          id
-          title
-          path
-        }
-      }
-    }
-  }
-  tags:allTag(sortBy:"title",order:ASC){
-        edges{
-            node{
-                id
-                title
-                path  
-            }
-        }
-    }      
-}
-</page-query>
 
 <script>
 import ProjectPreview from "@/components/ProjectPreview.vue";
