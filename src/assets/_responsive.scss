@@ -17,6 +17,21 @@
       z-index: 3;
       position: fixed;
       width: 20vw;
+      height: 100vh;
+
+      #social {
+         display: inline;
+         position: absolute;
+         bottom: 0;
+         padding-left: 1rem;
+         a,
+         span,
+         svg,
+         path {
+            cursor: pointer;
+            color: $dark-blue;
+         }
+      }
    }
 
    .nav {
@@ -155,6 +170,7 @@
             }
 
             p {
+               text-transform: lowercase;
                padding-bottom: 1rem;
             }
 
@@ -230,6 +246,11 @@
    #app {
       background-color: gold;
    }
+
+   .logo {
+      font-size: 2rem;
+   }
+
    .projects {
       &_items {
          grid-template-columns: repeat(1, 1fr);

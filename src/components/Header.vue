@@ -95,6 +95,7 @@
                             <g-link class="menu-nav_link" to="/cv/">CV</g-link></div> -->
             </div>
          </nav>
+         <Social></Social>
       </div>
    </header>
 </template>
@@ -129,7 +130,12 @@ query{
 
 
 <script>
+import Social from "./Social.vue";
+
 export default {
+   components: {
+      Social,
+   },
    data: function () {
       return {
          showMenu: false,

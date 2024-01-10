@@ -9,6 +9,12 @@
    @extend .logo_mobile;
 }
 
+.navbar {
+   #social {
+      display: none;
+   }
+}
+
 .nav {
    width: 100vw;
    transform: none;
