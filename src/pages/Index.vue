@@ -14,10 +14,9 @@
                      I am currently studying Creative Technologies (MA) at the
                      Filmuniversty Babelsberg Konrad Wolf. I have a Bachelor of
                      Science in Digital Media, at University of Bremen. My main
-                     topic of interests are data visualisation, creative web
+                     topic of interests are data visualization, creative web
                      development and the role of algorithms and tech for
-                     society. At the moment, I am working at UCLAB of FH Potsdam
-                     on a climate journalism research project.
+                     society.
                   </p>
                </div>
             </div>

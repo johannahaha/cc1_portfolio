@@ -1,6 +1,6 @@
 ---
 title: Air Pollution Light Bulb
-tags: [Creative Coding, Data Visualisation, Coding]
+tags: [Data Visualization, Coding]
 preview_img: /img/airpollution/aqi1.png
 year: 2021
 phrase: Visualizing real-time air pollution with a smart home light bulb

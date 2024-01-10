@@ -1,6 +1,6 @@
 ---
 title: Forarex
-tags: [Design, Science Communication, Research]
+tags: [Design, Research]
 preview_img: /img/forarex01.jpg
 year: 2019
 phrase: Science communication and PR for research rocket experiment

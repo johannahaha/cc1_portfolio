@@ -1,6 +1,6 @@
 ---
 title: Creative Coding
-tags: [Creative Coding, Web Development]
+tags: [Coding, Web Development]
 preview_img: /img/creative_coding/hope05.png
 year: 2020
 phrase: Creative coding exercises and sketches

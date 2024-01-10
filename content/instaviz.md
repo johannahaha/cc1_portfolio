@@ -1,6 +1,6 @@
 ---
 title: Instaviz
-tags: [Design, Science Communication, Data Visualisation]
+tags: [Design, Data Visualization]
 preview_img: /img/instaviz/instaviz_preview.png
 year: 2021
 phrase: Climate crisis visualisations for klima.taz on Instagram
