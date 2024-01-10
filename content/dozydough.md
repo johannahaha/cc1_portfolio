@@ -1,6 +1,6 @@
 ---
 title: Dozy Dough
-tags: [Communication Design]
+tags: [Design]
 preview_img: /img/dozydough01.jpg
 year: 2018
 phrase: Brand strategy and corporate identity of donut shjop
