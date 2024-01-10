@@ -20,11 +20,6 @@
          <div class="projects_item_details_infos">
             <p>{{ post.year }}</p>
             <p>{{ post.phrase }}</p>
-            <div class="projects_item_details_tags">
-               <div class="tag" v-for="tag in post.tags" :key="tag.id">
-                  {{ tag.title }}
-               </div>
-            </div>
          </div>
       </div>
    </div>

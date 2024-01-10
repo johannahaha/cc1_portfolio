@@ -21,6 +21,10 @@
                </div>
             </div>
             <div class="home_infos-section">
+               <h4 class="home_infos-section-title">contact</h4>
+               <p>Mail: johanna7270@googlemail.com</p>
+            </div>
+            <div class="home_infos-section">
                <h4 class="home_infos-section-title">skills</h4>
                <div class="tags">
                   <div
@@ -36,10 +40,6 @@
             <div class="home_infos-section">
                <h4 class="home_infos-section-title">latest projects</h4>
                <RecentProjects :posts="$page.posts" />
-            </div>
-            <div class="home_infos-section">
-               <h4 class="home_infos-section-title">contact</h4>
-               <p>Mail: johanna7270@googlemail.com</p>
             </div>
          </div>
       </section>

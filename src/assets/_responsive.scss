@@ -64,17 +64,20 @@
    .projects {
       z-index: 0;
 
+      &_filter {
+         @include section-not-mobile;
+      }
+
       &_items {
          //grid-template-columns: repeat(2,1fr);
          flex-direction: column;
          justify-content: start;
-         width: 80vw;
+         width: 85vw;
          @include section-not-mobile;
       }
 
       &_item {
          width: 100%;
-         margin-right: 3%;
          padding: 5% 0;
 
          &::after {

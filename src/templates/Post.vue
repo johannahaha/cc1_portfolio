@@ -28,12 +28,7 @@
                <p>{{ $page.post.location }}</p>
                <p class="post-overview-phrase">{{ $page.post.phrase }}</p>
                <div class="projects_item_details_tags">
-                  <div
-                     class="tag"
-                     v-for="tag in $page.post.tags"
-                     :key="tag.id"
-                     @click.stop="open(tag.path)"
-                  >
+                  <div class="tag" v-for="tag in $page.post.tags" :key="tag.id">
                      {{ tag.title }}
                   </div>
                </div>
