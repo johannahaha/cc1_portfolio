@@ -1,27 +1,21 @@
 <template>
-    <div id="social">
-        <a
-            :href="$static.metadata.github"
-            target="_blank"
-            title="Github"
-        >
-            <GithubIcon class="icon-md md:icon-lg" :size="32"/>
-        </a>
-        <a
-            :href="$static.metadata.linkedin"
-            target="_blank"
-            title="Github"
-        >
-            <LinkedinIcon class="icon-md md:icon-lg" :size="32"/>
-        </a>
-        <a
-            :href="$static.metadata.mail"
-            target="_blank"
-            title="Mail"
-        >
-            <EmailIcon class="icon-md md:icon-lg" :size="32"/>
-        </a>
-    </div>
+   <div id="social">
+      <div class="icon">
+         <a :href="$static.metadata.github" target="_blank" title="Github">
+            <font-awesome :icon="['fab', 'github']" size="lg" />
+         </a>
+      </div>
+      <div class="icon">
+         <a :href="$static.metadata.linkedin" target="_blank" title="Github">
+            <font-awesome :icon="['fab', 'linkedin']" size="lg" />
+         </a>
+      </div>
+      <div class="icon">
+         <a :href="$static.metadata.mail" target="_blank" title="Mail">
+            <font-awesome :icon="['fas', 'envelope']" size="lg" />
+         </a>
+      </div>
+   </div>
 </template>
 
 <static-query>
@@ -35,15 +29,4 @@ query {
 </static-query>
 
 <script>
-import GithubIcon from "vue-material-design-icons/Github";
-import LinkedinIcon from "vue-material-design-icons/Linkedin";
-import EmailIcon from "vue-material-design-icons/Email";
-
-export default {
-    components: {
-        GithubIcon,
-        LinkedinIcon,
-        EmailIcon
-    },
-};
 </script>

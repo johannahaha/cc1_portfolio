@@ -23,6 +23,19 @@
       align-items: center;
       text-align: left;
 
+      #social {
+         text-align: right;
+         padding: 2.5vw;
+         padding-top: 2rem;
+         display: flex;
+         flex-direction: row;
+         justify-content: flex-end;
+
+         .icon {
+            padding-left: 2rem;
+         }
+      }
+
       &-section {
          margin-top: 2rem;
          &-title {

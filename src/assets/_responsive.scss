@@ -20,16 +20,21 @@
       height: 100vh;
 
       #social {
-         display: inline;
+         text-align: right;
          position: absolute;
          bottom: 0;
-         padding-left: 1rem;
-         a,
-         span,
-         svg,
-         path {
+         padding: 1rem 0 2rem 1rem;
+         display: flex;
+         flex-direction: row;
+         justify-content: flex-start;
+
+         .icon {
+            padding-right: 1rem;
             cursor: pointer;
-            color: $dark-blue;
+
+            svg {
+               color: $dark-blue;
+            }
          }
       }
    }
