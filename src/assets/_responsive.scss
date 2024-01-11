@@ -166,6 +166,7 @@
             width: 30vw;
             margin-top: 1rem;
             padding: 2rem;
+            padding-bottom: 0;
             position: sticky;
             align-self: flex-start;
             top: 0;
@@ -186,6 +187,26 @@
             p {
                text-transform: lowercase;
                padding-bottom: 1rem;
+            }
+
+            .recent-projects {
+               padding: 2rem 0 0 0;
+               border-bottom: none;
+               width: 30vw;
+               overflow: hidden;
+               margin-left: -2rem;
+
+               @include recent-project-vertical;
+               &-project {
+                  //    max-width: 30vw;
+                  //    height: calc(30vw / 1.5);
+                  padding: 0.5rem;
+                  margin: 0;
+
+                  &-title {
+                     display: none;
+                  }
+               }
             }
          }
 
@@ -246,13 +267,12 @@
       }
    }
 
-   .recent-projects {
-      padding: 1rem;
+   #recents-below-post {
+      display: none;
+   }
 
-      &-project {
-         max-width: 30vw;
-         height: calc(30vw / 1.5);
-      }
+   #recents-below-overview {
+      display: flex;
    }
 }
 

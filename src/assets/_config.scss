@@ -138,6 +138,57 @@ $variable-font-weights: (
    }
 }
 
+@mixin recent-project-vertical {
+   display: flex;
+   justify-content: space-between;
+
+   &-project {
+      width: 50%;
+      max-width: 50%;
+      //height: calc(#{width} * 0.4 * 8);
+      padding: 1rem;
+      position: relative;
+      flex: 0 0 100%;
+
+      &:after {
+         //https://stackoverflow.com/questions/12121090/responsively-change-div-size-keeping-aspect-ratio/12121309#12121309
+         padding-top: 56.25%;
+         /* 16:9 ratio */
+         display: block;
+         content: "";
+      }
+
+      &-preview-img {
+         z-index: 1;
+         cursor: pointer;
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         -webkit-filter: grayscale(1);
+      }
+
+      &-title {
+         margin-top: 2rem;
+         position: absolute;
+         top: 0;
+         width: 20vw;
+         @include font(bold);
+         font-size: 1rem;
+         white-space: normal;
+         color: $dark-blue;
+         z-index: 2;
+      }
+
+      .angle {
+         position: absolute;
+         z-index: 2;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+      }
+   }
+}
+
 @mixin section-not-mobile {
    margin: 0 0 0 15vw;
 }

@@ -113,7 +113,6 @@
    display: flex;
    flex-direction: column;
    position: relative;
-   margin-top: 5rem;
 
    .post {
       display: flex;
@@ -196,52 +195,18 @@
    }
 }
 
+#recents-below-overview {
+   display: none;
+}
+
 .recent-projects {
-   display: flex;
    margin: 2rem 0;
+   width: 100%;
+   position: relative;
    border-bottom: solid 1px;
    border-top: solid 1px;
-   position: relative;
-   justify-content: space-between;
-   width: 100%;
 
-   &-project {
-      width: 50%;
-      max-width: 50%;
-      //height: calc(#{width} * 0.4 * 8);
-      padding: 1rem;
-      position: relative;
-      flex: 0 0 100%;
-
-      &:after {
-         //https://stackoverflow.com/questions/12121090/responsively-change-div-size-keeping-aspect-ratio/12121309#12121309
-         padding-top: 56.25%;
-         /* 16:9 ratio */
-         display: block;
-         content: "";
-      }
-
-      &-preview-img {
-         z-index: 1;
-         cursor: pointer;
-         height: 100%;
-         width: 100%;
-         object-fit: cover;
-         -webkit-filter: grayscale(1);
-      }
-
-      &-title {
-         margin-top: 2rem;
-         position: absolute;
-         top: 0;
-         width: 20vw;
-         @include font(bold);
-         font-size: 1rem;
-         white-space: normal;
-         color: $dark-blue;
-         z-index: 2;
-      }
-   }
+   @include recent-project-vertical;
 }
 
 .projects_title_post {

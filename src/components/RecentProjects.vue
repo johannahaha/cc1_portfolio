@@ -3,10 +3,22 @@
       <!-- <FilterMenu /> -->
       <div
          class="recent-projects-project"
-         v-for="edge in this.filteredPosts"
+         v-for="(edge, index) in this.filteredPosts"
          :key="edge.node.title"
          :post="edge.node"
       >
+         <font-awesome
+            v-if="index == 0"
+            class="angle"
+            :icon="['fas', 'angle-left']"
+            size="1x"
+         />
+         <font-awesome
+            v-if="index != 0"
+            class="angle"
+            :icon="['fas', 'angle-right']"
+            size="1x"
+         />
          <div class="recent-projects-project-title">
             {{ edge.node.title }}
          </div>

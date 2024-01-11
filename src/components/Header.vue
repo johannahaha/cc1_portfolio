@@ -31,7 +31,7 @@
                               ? 'manual-active'
                               : ''
                         "
-                        to="/portfolio/"
+                        to="/portfolio/post/klimakarten"
                         >Portfolio</g-link
                      >
                   </div>
