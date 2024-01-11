@@ -165,28 +165,40 @@
          &-overview {
             width: 30vw;
             margin-top: 1rem;
-            padding: 2rem;
-            padding-bottom: 0;
+            padding: 0;
             position: sticky;
             align-self: flex-start;
             top: 0;
 
-            &-tags {
-               row-gap: 0.5rem;
-               padding-top: 1rem;
+            &-text {
+               padding: 1rem;
+               &-tags {
+                  row-gap: 0.5rem;
+                  padding-top: 1rem;
+               }
+
+               .tag {
+                  margin-top: 0;
+               }
+
+               &-link {
+                  padding-bottom: 1rem;
+               }
+
+               p {
+                  text-transform: lowercase;
+                  padding-bottom: 1rem;
+               }
             }
 
-            .tag {
-               margin-top: 0;
+            .overview-title-this {
+               display: inline;
+               padding-bottom: 0.5rem;
             }
 
-            &-link {
-               padding-bottom: 1rem;
-            }
-
-            p {
-               text-transform: lowercase;
-               padding-bottom: 1rem;
+            .overview-title-other {
+               padding-top: 3rem;
+               padding-bottom: 0.5rem;
             }
 
             .recent-projects {
@@ -194,7 +206,7 @@
                border-bottom: none;
                width: 30vw;
                overflow: hidden;
-               margin-left: -2rem;
+               margin-top: 0;
 
                @include recent-project-vertical;
                &-project {
@@ -272,7 +284,7 @@
    }
 
    #recents-below-overview {
-      display: flex;
+      display: inline;
    }
 }
 

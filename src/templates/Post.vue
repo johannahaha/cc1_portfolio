@@ -13,7 +13,8 @@
             <div v-html="$page.post.content"></div>
          </div>
          <div class="post-overview">
-            <div>
+            <h4 class="overview-title-this">this project</h4>
+            <div class="post-overview-text">
                <a
                   v-if="$page.post.link !== ''"
                   class="post-overview-link"
@@ -26,8 +27,8 @@
                </a>
                <p>{{ $page.post.year }}</p>
                <p>{{ $page.post.location }}</p>
-               <p class="post-overview-phrase">{{ $page.post.phrase }}</p>
-               <div class="post-overview-tags">
+               <p class="post-overview-text-phrase">{{ $page.post.phrase }}</p>
+               <div class="post-overview-text-tags">
                   <div class="tag">skills:</div>
                   <div
                      class="tag"

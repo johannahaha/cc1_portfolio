@@ -126,43 +126,49 @@
 
       &-overview {
          border-bottom: solid 1px;
-         border-top: solid 1px;
          padding: 1rem;
          width: 100vw;
 
-         &-tags {
-            flex-direction: row;
-            display: flex;
-            flex-wrap: wrap;
+         .overview-title-this {
+            display: none;
          }
 
-         &-link {
-            display: inline-flex;
+         &-text {
+            border-top: solid 1px;
+            &-tags {
+               flex-direction: row;
+               display: flex;
+               flex-wrap: wrap;
+            }
 
-            p,
-            svg {
-               color: $dark-blue;
-               padding: 0;
-               @include font(medium);
+            &-link {
+               display: inline-flex;
+
+               p,
+               svg {
+                  color: $dark-blue;
+                  padding: 0;
+                  @include font(medium);
+               }
+
+               p {
+                  padding-left: 0.5rem;
+               }
+            }
+
+            &-phrase {
+               padding-top: 1rem;
+               text-transform: lowercase;
+            }
+
+            .tag {
+               margin-right: 0.2rem;
+               margin-top: 1rem;
             }
 
             p {
-               padding-left: 0.5rem;
+               padding-bottom: 0;
             }
-         }
-
-         &-phrase {
-            padding-top: 1rem;
-            text-transform: lowercase;
-         }
-
-         .tag {
-            margin-right: 0.2rem;
-            margin-top: 1rem;
-         }
-
-         p {
-            padding-bottom: 0;
          }
       }
       &-content {
