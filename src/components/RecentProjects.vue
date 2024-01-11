@@ -10,7 +10,7 @@
             :post="edge.node"
          >
             <font-awesome
-               v-if="index == 0"
+               v-if="index == 0 && !isFirstProject"
                class="angle"
                :icon="['fas', 'angle-left']"
                size="1x"
@@ -21,10 +21,14 @@
                :icon="['fas', 'angle-right']"
                size="1x"
             />
-            <div class="recent-projects-project-title">
+            <div
+               class="recent-projects-project-title"
+               v-if="(index != 0) | !isFirstProject"
+            >
                {{ edge.node.title }}
             </div>
             <g-image
+               v-if="(index != 0) | !isFirstProject"
                :src="edge.node.preview_img"
                class="recent-projects-project-preview-img"
                alt="post.title"
@@ -47,11 +51,48 @@ export default {
       currentOpenPost: "",
    },
    computed: {
+      currentPost: function () {
+         return this.posts.edges
+            .map((edge) => edge.node.title)
+            .indexOf(this.currentOpenPost);
+      },
+      isFirstProject: function () {
+         console.log(this.currentPost);
+         if (this.currentPost == 0) return true;
+         else return false;
+      },
       filteredPosts: function () {
+         //edge cases
+         let lastPost = this.currentPost - 1;
+         if (
+            (lastPost < 0) |
+            (lastPost >= this.posts.edges.length - 1) |
+            (lastPost == undefined)
+         )
+            lastPost = this.posts.edges.length - 1;
+
+         let nextPost = this.currentPost + 1;
+         if (
+            (nextPost < 0) |
+            (nextPost >= this.posts.edges.length - 1) |
+            (nextPost == undefined)
+         )
+            nextPost = 0;
+
+         let indices = [lastPost, nextPost];
+         console.log(indices);
+
+         let filteredNew = indices.map((index) => this.posts.edges[index]);
+
+         console.log(filteredNew);
+
+         //get indexes of post before and after
          let filtered = this.posts.edges.filter(
             (edge) => edge.node.title !== this.currentOpenPost
          );
-         return filtered.slice(0, 2);
+
+         console.log(filtered);
+         return filteredNew;
       },
    },
    methods: {

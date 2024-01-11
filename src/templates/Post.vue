@@ -73,7 +73,7 @@ query Post ($path: String!){
           path
         }
     }
-    posts: allPost(sortBy: "year", limit:10){
+    posts: allPost(sortBy: "year"){
         edges{
             node{
                id
