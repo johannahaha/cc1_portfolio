@@ -9,10 +9,10 @@
       </div>
       <div
          class="tag"
-         v-for="edge in $page.tags.edges"
-         :key="edge.node.id"
-         :class="`${this.post_filter === edge.node.title ? 'selected' : ''}`"
-         @click.stop="$emit('filterUpdated', check_filter(edge.node.title))"
+         v-for="tag in this.tags"
+         :key="tag"
+         :class="`${this.post_filter === tag ? 'selected' : ''}`"
+         @click.stop="$emit('filterUpdated', check_filter(tag))"
       >
          {{ edge.node.title }}
       </div>
@@ -21,6 +21,14 @@
 
 <script>
 export default {
+   async setup() {
+      const { posts } = await useAsyncData("home", () => queryContent().find());
+      const { tags } = await useAsyncData("home", () =>
+         queryContent().only("id").find()
+      );
+      console.log(tags);
+      return { posts, tags };
+   },
    props: {
       post_filter: String,
    },

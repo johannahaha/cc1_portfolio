@@ -5,11 +5,13 @@
           <p>all projects</p>
         </div> -->
       <div class="projects_items">
-         <ProjectPreview
-            v-for="edge in filteredPosts"
-            :key="edge.node.title"
-            :post="edge.node"
-         />
+         <ContentList path="/" v-slot="{ list }">
+            <ProjectPreview
+               v-for="article in list"
+               :key="article._path"
+               :post="article"
+            />
+         </ContentList>
       </div>
    </section>
 </template>
