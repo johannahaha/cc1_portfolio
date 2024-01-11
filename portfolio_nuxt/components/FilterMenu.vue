@@ -11,7 +11,7 @@
          class="tag"
          v-for="edge in $page.tags.edges"
          :key="edge.node.id"
-         :class="`${post_filter === edge.node.title ? 'selected' : ''}`"
+         :class="`${this.post_filter === edge.node.title ? 'selected' : ''}`"
          @click.stop="$emit('filterUpdated', check_filter(edge.node.title))"
       >
          {{ edge.node.title }}
@@ -30,9 +30,10 @@ export default {
          title = title.toLowerCase();
          let updated_filter = "";
          //check if in tag list
-         const all_tags = this.$page.tags.edges.map((x) =>
-            x.node.title.toLowerCase()
-         );
+         // const all_tags = this.$page.tags.edges.map((x) =>
+         //    x.node.title.toLowerCase()
+         // );
+         const all_tags = ["all"];
          if (all_tags.includes(title)) {
             updated_filter = title;
          } else {
