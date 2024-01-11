@@ -3,13 +3,14 @@
       <h4 class="overview-title-other">other projects</h4>
       <div class="recent-projects">
          <!-- <FilterMenu /> -->
-         <div
-            class="recent-projects-project"
-            v-for="(edge, index) in this.filteredPosts"
-            :key="edge.node.title"
-            :post="edge.node"
-         >
-            <font-awesome
+         <ContentList path="/" v-slot="{ list }">
+            <NuxtLink
+               class="recent-projects-project"
+               v-for="(post, index) in list"
+               :key="post.title"
+               :to="post._path"
+            >
+               <!-- <font-awesome
                v-if="index == 0 && !isFirstProject"
                class="angle"
                :icon="['fas', 'angle-left']"
@@ -20,77 +21,63 @@
                class="angle"
                :icon="['fas', 'angle-right']"
                size="1x"
-            />
-            <div
-               class="recent-projects-project-title"
-               v-if="(index != 0) | !isFirstProject"
-            >
-               {{ edge.node.title }}
-            </div>
-            <img
-               v-if="(index != 0) | !isFirstProject"
-               :src="edge.node.preview_img"
-               class="recent-projects-project-preview-img"
-               alt="post.title"
-               @click="open(edge.node.path)"
-               :style="{ opacity: 0.5 }"
-            />
-         </div>
+            /> -->
+               <div
+                  class="recent-projects-project-title"
+                  v-if="(index != 0) | !isFirstProject"
+               >
+                  {{ post.title }}
+               </div>
+               <img
+                  v-if="(index != 0) | !isFirstProject"
+                  :src="post.preview_img"
+                  class="recent-projects-project-preview-img"
+                  alt="post.title"
+                  :style="{ opacity: 0.5 }"
+               />
+            </NuxtLink>
+         </ContentList>
       </div>
    </div>
 </template>
 
-<script>
-import FilterMenu from "./FilterMenu.vue";
-export default {
-   components: {
-      FilterMenu,
-   },
-   props: {
-      posts: {},
-      currentOpenPost: "",
-   },
-   computed: {
-      currentPost: function () {
-         return this.posts.edges
-            .map((edge) => edge.node.title)
-            .indexOf(this.currentOpenPost);
-      },
-      isFirstProject: function () {
-         if (this.currentPost == 0) return true;
-         else return false;
-      },
-      filteredPosts: function () {
-         //edge cases
-         let lastPost = this.currentPost - 1;
-         if (
-            (lastPost < 0) |
-            (lastPost >= this.posts.edges.length - 1) |
-            (lastPost == undefined)
-         )
-            lastPost = this.posts.edges.length - 1;
+<script setup lang="ts">
+import { reactive, computed } from "vue";
+// import FilterMenu from "./FilterMenu.vue";
 
-         let nextPost = this.currentPost + 1;
-         if (
-            (nextPost < 0) |
-            (nextPost >= this.posts.edges.length - 1) |
-            (nextPost == undefined)
-         )
-            nextPost = 0;
+const { posts } = await useAsyncData("home", () =>
+   queryContent()
+      .only(["title", "preview_img", "year", "tags"])
+      .sort({ year: -1 })
+      .find()
+);
 
-         //get indexes of post before and after
-         let indices = [lastPost, nextPost];
-         let filtered = indices.map((index) => this.posts.edges[index]);
-         return filtered;
-      },
-   },
-   methods: {
-      open: function (path) {
-         console.log(path);
-         window.location.href = path;
-      },
-   },
-};
+const props = defineProps(["currentOpenPost"]);
+
+const currentPost = computed(() => {
+   return posts.map((post) => post.title).indexOf(props.currentOpenPost);
+});
+
+const isFirstProject = computed(() => {
+   return currentPost == 0;
+});
+
+const filteredPosts = computed(() => {
+   //edge cases
+   let lastPost = currentPost - 1;
+   console.log(currentPost);
+   if (lastPost < 0 || lastPost >= posts.length - 1 || lastPost == undefined)
+      lastPost = posts.length - 1;
+
+   let nextPost = currentPost + 1;
+   if (nextPost < 0 || nextPost >= posts.length - 1 || nextPost == undefined)
+      nextPost = 0;
+
+   //get indexes of post before and after
+   let indices = [lastPost, nextPost];
+   let filtered = indices.map((index) => posts[index]);
+   return filtered;
+});
 </script>
 
 <style>

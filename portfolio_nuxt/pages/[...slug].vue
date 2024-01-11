@@ -26,20 +26,18 @@
                         <div v-else>{{ tag }},</div>
                      </div>
                   </div>
-                  <!-- <RecentProjects
+                  <RecentProjects
                      id="recents-below-overview"
-                     :posts="$page.posts"
-                     :currentOpenPost="$page.post.title"
-                  /> -->
+                     :currentOpenPost="doc.title"
+                  />
                </div>
             </div>
+            <RecentProjects
+               id="recents-below-post"
+               :currentOpenPost="doc.title"
+            />
          </ContentRenderer>
       </ContentDoc>
-      <!-- <RecentProjects
-         id="recents-below-post"
-         :posts="$page.posts"
-         :currentOpenPost="$page.post.title"
-      /> -->
    </main>
 </template>
 
