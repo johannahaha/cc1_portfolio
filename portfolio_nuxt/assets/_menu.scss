@@ -1,0 +1,93 @@
+.logo_mobile {
+   @include font(bold);
+   @include gradient-font;
+   font-size: 2rem;
+   //position: relative;
+}
+
+.logo {
+   @extend .logo_mobile;
+}
+
+.navbar {
+   #social {
+      display: none;
+   }
+}
+
+.nav {
+   width: 100vw;
+   transform: none;
+
+   .menu-nav {
+      height: 100%;
+      width: 100%;
+      background: transparent;
+      transform: none;
+      display: flex;
+      flex-direction: column;
+      padding: 0 1rem;
+
+      &-main {
+         display: flex;
+         flex-direction: row;
+         justify-content: flex-end;
+      }
+
+      &-sub {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-end;
+      }
+
+      &_item {
+         //display: inline;
+         padding-right: 1rem;
+         transform: none;
+         list-style-type: none;
+      }
+      &_link {
+         display: inline-block;
+         font-size: 1.2rem;
+         padding: 0.3rem 0;
+         text-transform: lowercase;
+
+         @include font(light);
+         color: $dark-color;
+
+         &:hover {
+            text-decoration: underline;
+         }
+
+         &.manual-active,
+         &.active--exact.active {
+            text-decoration: underline;
+            @include font(medium);
+         }
+
+         &_subpage {
+            text-transform: lowercase;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            display: inline-block;
+            margin-left: 0.5rem;
+            text-decoration: underline;
+            @include font(regular);
+
+            &.portfolio {
+               text-decoration: none;
+
+               &.manual-active {
+                  text-decoration: underline;
+               }
+            }
+         }
+      }
+   }
+}
+
+@for $i from 1 through 3 {
+   .menu-nav_item:nth-child(#{$i}) {
+      transition-delay: ($i * 0.1s) + 0.15s;
+   }
+}
