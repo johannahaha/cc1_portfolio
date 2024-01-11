@@ -5,7 +5,7 @@ preview_img: /img/klimakarten/klimakarten03.jpg
 year: 2023
 phrase: Data Visualization design for constructive journalism
 location: Potsdam, Germany
-link: &nbsp
+link: https://taz.de/klimakarten
 ---
 
 # Klimakarten: Data Visualization design for constructive journalism

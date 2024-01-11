@@ -1,7 +1,7 @@
 @include media-md {
    #app {
       background-attachment: fixed;
-      background-color: rosybrown;
+      //background-color: rosybrown;
    }
 
    .menu-btn {
@@ -172,6 +172,8 @@
 
             &-text {
                padding: 1rem;
+               margin-top: 0.5rem;
+
                &-tags {
                   row-gap: 0.5rem;
                   padding-top: 1rem;
@@ -193,7 +195,6 @@
 
             .overview-title-this {
                display: inline;
-               padding-bottom: 0.5rem;
             }
 
             .overview-title-other {
@@ -290,7 +291,7 @@
 
 @include media-lg {
    #app {
-      background-color: gold;
+      //background-color: gold;
    }
 
    .logo {
@@ -341,7 +342,7 @@
 
 @include media-xl {
    #app {
-      background-color: fuchsia;
+      //background-color: fuchsia;
    }
    .projects_bio-image {
       height: 50vh;

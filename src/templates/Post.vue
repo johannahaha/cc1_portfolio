@@ -17,7 +17,7 @@
             <div class="post-overview-text">
                <a
                   v-if="$page.post.link !== ''"
-                  class="post-overview-link"
+                  class="post-overview-text-link"
                   :href="$page.post.link"
                   target="_blank"
                   title="Project Link"
