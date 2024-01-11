@@ -22,7 +22,6 @@ export default {
    },
    methods: {
       setFilter: function (updated_filter) {
-         console.log("set filter in app.vue");
          this.post_filter = updated_filter;
       },
    },

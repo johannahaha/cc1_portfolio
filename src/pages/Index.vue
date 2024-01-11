@@ -6,7 +6,7 @@
          </div> -->
       <div class="home_infos">
          <div class="home_infos-section">
-            <h4 class="home_infos-section-title">about</h4>
+            <h4 class="home_infos-section-title">about me</h4>
             <div class="about">
                <g-image src="/img/portraet_bw.jpg" id="portraet"></g-image>
                <div>
@@ -93,7 +93,6 @@ export default {
    },
    computed: {
       getFilteredPosts() {
-         console.log("get filtered post:", this.post_filter);
          let filteredPosts = this.$page.posts.edges.filter((post) =>
             this.is_included(post.node.tags)
          );
@@ -102,7 +101,6 @@ export default {
    },
    methods: {
       open: function (path) {
-         console.log(path);
          window.location.href = path;
       },
       is_included: function (tags) {
@@ -121,7 +119,6 @@ export default {
          }
       },
       emitChangeFilter: function (event) {
-         console.log("change filter", event);
          this.$emit("changeFilter", event);
       },
    },

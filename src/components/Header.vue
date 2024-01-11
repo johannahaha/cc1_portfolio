@@ -14,10 +14,7 @@
                      <g-link
                         class="menu-nav_link"
                         v-bind:active-class="
-                           $route.path === '/' &&
-                           $route.path !== '/portfolio/**'
-                              ? 'manual-active'
-                              : ''
+                           $route.path === '/' ? 'manual-active' : ''
                         "
                         to="/"
                         >Home</g-link
@@ -27,9 +24,7 @@
                      <g-link
                         class="menu-nav_link"
                         v-bind:active-class="
-                           $route.path !== '/portfolio/**'
-                              ? 'manual-active'
-                              : ''
+                           $route.path !== '/' ? 'manual-active' : ''
                         "
                         to="/portfolio/post/klimakarten"
                         >Portfolio</g-link

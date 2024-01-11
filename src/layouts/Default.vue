@@ -15,8 +15,5 @@ export default {
       Header,
       //VVanta
    },
-   created() {
-      console.log("hello layoit");
-   },
 };
 </script>

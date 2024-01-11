@@ -57,7 +57,6 @@ export default {
             .indexOf(this.currentOpenPost);
       },
       isFirstProject: function () {
-         console.log(this.currentPost);
          if (this.currentPost == 0) return true;
          else return false;
       },
@@ -79,20 +78,10 @@ export default {
          )
             nextPost = 0;
 
-         let indices = [lastPost, nextPost];
-         console.log(indices);
-
-         let filteredNew = indices.map((index) => this.posts.edges[index]);
-
-         console.log(filteredNew);
-
          //get indexes of post before and after
-         let filtered = this.posts.edges.filter(
-            (edge) => edge.node.title !== this.currentOpenPost
-         );
-
-         console.log(filtered);
-         return filteredNew;
+         let indices = [lastPost, nextPost];
+         let filtered = indices.map((index) => this.posts.edges[index]);
+         return filtered;
       },
    },
    methods: {

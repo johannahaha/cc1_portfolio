@@ -27,7 +27,6 @@ export default {
    emits: ["filterUpdated"],
    methods: {
       check_filter: function (title) {
-         console.log("check:", title);
          title = title.toLowerCase();
          let updated_filter = "";
          //check if in tag list
@@ -39,7 +38,6 @@ export default {
          } else {
             updated_filter = "all";
          }
-         console.log("checked:", updated_filter);
          return updated_filter;
       },
    },
