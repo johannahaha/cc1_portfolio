@@ -1,27 +1,29 @@
 <template>
    <div class="projects_item">
-      <img
-         :src="post.preview_img"
-         class="projects_item-preview-img"
-         alt="post.title"
-         @click="open(post.path)"
-         @mouseover="showDetails = true"
-         @mouseleave="showDetails = true"
-         :style="{ opacity: imgOpacity }"
-      />
-      <div
-         class="projects_item_details"
-         v-show="showDetails"
-         @mouseover="showDetails = true"
-         @mouseleave="showDetails = true"
-         @click="open(post.path)"
-      >
-         <div class="projects_item_details_infos">
-            <p>{{ post.year }}</p>
-            <h4>{{ post.title }}</h4>
-            <p>{{ post.phrase }}</p>
+      <NuxtLink :to="post._path">
+         <img
+            :src="post.preview_img"
+            class="projects_item-preview-img"
+            alt="post.title"
+            @mouseover="showDetails = true"
+            @mouseleave="showDetails = true"
+            :style="{ opacity: imgOpacity }"
+         />
+      </NuxtLink>
+      <NuxtLink :to="post._path">
+         <div
+            class="projects_item_details"
+            v-show="showDetails"
+            @mouseover="showDetails = true"
+            @mouseleave="showDetails = true"
+         >
+            <div class="projects_item_details_infos">
+               <p>{{ post.year }}</p>
+               <h4>{{ post.title }}</h4>
+               <p>{{ post.phrase }}</p>
+            </div>
          </div>
-      </div>
+      </NuxtLink>
    </div>
 </template>
 

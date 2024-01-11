@@ -1,11 +1,7 @@
 <template>
    <section class="projects">
-      <!-- <div class="projects_title">
-          <h1>Portfolio</h1>
-          <p>all projects</p>
-        </div> -->
       <div class="projects_items">
-         <ContentList path="/" v-slot="{ list }">
+         <ContentList v-slot="{ list }" :query="query">
             <ProjectPreview
                v-for="article in list"
                :key="article._path"
@@ -16,18 +12,10 @@
    </section>
 </template>
 
-<script>
-import ProjectPreview from "@/components/ProjectPreview.vue";
+<script setup lang ="ts">
+import ProjectPreview from "./ProjectPreview.vue";
 
-export default {
-   components: {
-      ProjectPreview,
-   },
-   props: {
-      filteredPosts: Array,
-   },
-   // metaInfo: {
-   //    title: "Portfolio",
-   // },
-};
+import type { QueryBuilderParams } from "@nuxt/content/dist/runtime/types";
+
+const query: QueryBuilderParams = { sort: [{ year: -1 }] };
 </script>

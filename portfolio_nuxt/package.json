@@ -16,5 +16,10 @@
     "sass": "^1.69.7",
     "vue": "^3.4.6",
     "vue-router": "^4.2.5"
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-console": "off"
+    }
   }
 }

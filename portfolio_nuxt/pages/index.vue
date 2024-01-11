@@ -26,10 +26,6 @@
                <h4 class="home_infos-section-title projects-section-title">
                   latest projects
                </h4>
-               <!-- <FilterMenu
-                  @filterUpdated="emitChangeFilter"
-                  :post_filter="post_filter"
-               /> -->
                <Portfolio />
             </div>
          </div>
@@ -48,13 +44,13 @@ export default {
    //    title: "Home",
    // },
    async setup() {
-      const { posts } = await useAsyncData("home", () =>
+      const { posts } = await useAsyncData("", () =>
          queryContent()
             .only([
                "id",
                "title",
                "preview_img",
-               "path",
+               "phrase",
                "year",
                "location",
                "tags",
@@ -72,19 +68,6 @@ export default {
       return {
          post_filter: "all",
       };
-   },
-   emits: ["changeFilter"],
-   // props: {
-   //    post_filter: String,
-   // },
-   computed: {
-      // getFilteredPosts() {
-      //    console.log(this.posts);
-      //    let filteredPosts = this.posts.filter((post) =>
-      //       this.is_included(post.tags)
-      //    );
-      //    return filteredPosts;
-      // },
    },
    methods: {
       open: function (path) {
