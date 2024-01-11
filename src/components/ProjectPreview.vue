@@ -16,20 +16,10 @@
          @mouseleave="showDetails = true"
          @click="open(post.path)"
       >
-         <h4>{{ post.title }}</h4>
          <div class="projects_item_details_infos">
             <p>{{ post.year }}</p>
+            <h4>{{ post.title }}</h4>
             <p>{{ post.phrase }}</p>
-            <div class="projects_item_details_tags">
-               <div
-                  class="tag"
-                  v-for="tag in post.tags"
-                  :key="tag.id"
-                  @click.stop="open(tag.path)"
-               >
-                  {{ tag.title }}
-               </div>
-            </div>
          </div>
       </div>
    </div>

@@ -1,6 +1,6 @@
 ---
 title: ScenARy
-tags: [App Development, Coding, UI Design]
+tags: [coding, design]
 preview_img: /img/scenary01.jpeg
 year: 2018
 location: Bremen, Germany

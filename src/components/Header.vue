@@ -14,10 +14,7 @@
                      <g-link
                         class="menu-nav_link"
                         v-bind:active-class="
-                           $route.path === '/' &&
-                           $route.path !== '/portfolio/**'
-                              ? 'manual-active'
-                              : ''
+                           $route.path === '/' ? 'manual-active' : ''
                         "
                         to="/"
                         >Home</g-link
@@ -27,16 +24,14 @@
                      <g-link
                         class="menu-nav_link"
                         v-bind:active-class="
-                           $route.path !== '/portfolio/**'
-                              ? 'manual-active'
-                              : ''
+                           $route.path !== '/' ? 'manual-active' : ''
                         "
-                        to="/portfolio/"
+                        to="/portfolio/post/klimakarten"
                         >Portfolio</g-link
                      >
                   </div>
                </div>
-               <div class="menu-nav-sub">
+               <!-- <div class="menu-nav-sub">
                   <div class="menu-nav_item" :class="{ open: showMenu }">
                      <g-link
                         class="menu-nav_link_subpage portfolio"
@@ -89,12 +84,13 @@
                         >
                      </div>
                   </div>
-               </div>
+               </div> -->
                <!-- <div class="menu-nav_item"
                             :class='{open:showMenu}' > 
                             <g-link class="menu-nav_link" to="/cv/">CV</g-link></div> -->
             </div>
          </nav>
+         <Social></Social>
       </div>
    </header>
 </template>
@@ -129,7 +125,12 @@ query{
 
 
 <script>
+import Social from "./Social.vue";
+
 export default {
+   components: {
+      Social,
+   },
    data: function () {
       return {
          showMenu: false,

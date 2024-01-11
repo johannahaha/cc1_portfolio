@@ -17,28 +17,52 @@
    }
 
    &_infos {
-      margin: 5rem auto 0 auto;
-      width: 95vw;
+      margin: 0 auto 0 auto;
+      width: 100vw;
       //width: 60vw;
       align-items: center;
       text-align: left;
 
+      #social {
+         text-align: right;
+         padding: 2.5vw;
+         padding-top: 2rem;
+         display: flex;
+         flex-direction: row;
+         justify-content: flex-end;
+
+         .icon {
+            padding-left: 2rem;
+         }
+      }
+
       &-section {
          margin-top: 2rem;
          &-title {
+            padding: 2.5vw;
             font-size: 1.5rem;
             border-bottom: 1px solid;
             margin-bottom: 1rem;
+            border-color: black;
+
+            &.projects-section-title {
+               border: none;
+               margin-bottom: 0;
+            }
          }
 
          .about {
-            display: inline-flex;
             padding: 0 1rem;
 
             img {
                display: none;
                object-fit: cover;
                margin-right: 2rem;
+            }
+
+            p {
+               text-transform: none;
+               padding-bottom: 2rem;
             }
          }
 
@@ -68,8 +92,8 @@
          p {
             @include font(regular);
             line-height: 1.5rem;
-            padding-bottom: 1rem;
             font-size: 1rem;
+            text-transform: lowercase;
          }
       }
    }

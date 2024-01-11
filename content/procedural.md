@@ -1,6 +1,6 @@
 ---
 title: Procedural Generation and Simulation
-tags: [Creative Coding, Shaders]
+tags: [coding]
 preview_img: /img/procedural/noise.png
 year: 2021
 phrase: Exploration and experimentation in Houdini

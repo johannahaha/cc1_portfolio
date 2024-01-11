@@ -1,22 +1,23 @@
 <template>
-   <Layout>
-      <div class="outer-post">
-         <!-- <div class="projects_title_post">
+   <div class="outer-post">
+      <!-- <div class="projects_title_post">
                 <g-link to="/portfolio/">Back to all projects</g-link>
             </div> -->
-         <div class="post">
-            <div class="post-content">
-               <g-image
-                  :src="$page.post.preview_img"
-                  class="post-img"
-                  alt="post.title"
-               />
-               <div v-html="$page.post.content"></div>
-            </div>
-            <div class="post-overview">
+      <div class="post">
+         <div class="post-content">
+            <g-image
+               :src="$page.post.preview_img"
+               class="post-img"
+               alt="post.title"
+            />
+            <div v-html="$page.post.content"></div>
+         </div>
+         <div class="post-overview">
+            <h4 class="overview-title-this">this project</h4>
+            <div class="post-overview-text">
                <a
                   v-if="$page.post.link !== ''"
-                  class="post-overview-link"
+                  class="post-overview-text-link"
                   :href="$page.post.link"
                   target="_blank"
                   title="Project Link"
@@ -26,25 +27,34 @@
                </a>
                <p>{{ $page.post.year }}</p>
                <p>{{ $page.post.location }}</p>
-               <p class="post-overview-phrase">{{ $page.post.phrase }}</p>
-               <div class="projects_item_details_tags">
+               <p class="post-overview-text-phrase">{{ $page.post.phrase }}</p>
+               <div class="post-overview-text-tags">
+                  <div class="tag">skills:</div>
                   <div
                      class="tag"
-                     v-for="tag in $page.post.tags"
+                     v-for="(tag, index) in $page.post.tags"
                      :key="tag.id"
-                     @click.stop="open(tag.path)"
                   >
-                     {{ tag.title }}
+                     <div v-if="index == $page.post.tags.length - 1">
+                        {{ tag.title }}
+                     </div>
+                     <div v-else>{{ tag.title }},</div>
                   </div>
                </div>
             </div>
+            <RecentProjects
+               id="recents-below-overview"
+               :posts="$page.posts"
+               :currentOpenPost="$page.post.title"
+            />
          </div>
-         <RecentProjects
-            :posts="$page.posts"
-            :currentOpenPost="$page.post.title"
-         />
       </div>
-   </Layout>
+      <RecentProjects
+         id="recents-below-post"
+         :posts="$page.posts"
+         :currentOpenPost="$page.post.title"
+      />
+   </div>
 </template>
 
 <page-query> 
@@ -63,7 +73,7 @@ query Post ($path: String!){
           path
         }
     }
-    posts: allPost(sortBy: "year", limit:10){
+    posts: allPost(sortBy: "year"){
         edges{
             node{
                id
@@ -71,6 +81,15 @@ query Post ($path: String!){
                preview_img (width: 1000)
                path
                year
+            }
+        }
+    } 
+    tags:allTag(sortBy:"title",order:ASC){
+        edges{
+            node{
+                id
+                title
+                path  
             }
         }
     }   
@@ -87,6 +106,9 @@ export default {
       LinkIcon,
       RecentProjects,
    },
+   props: {
+      post_filter: String,
+   },
    metaInfo() {
       return {
          this: this.$page.post.title,
@@ -96,6 +118,22 @@ export default {
       open: function (path) {
          console.log(path);
          window.location.href = path;
+      },
+      //TODO: this is dupliacted code!!
+      is_included: function (tags) {
+         const tag_titles = tags.map((x) => x.title.toLowerCase());
+         //if all projects, return true for all
+         if (this.post_filter == "all") {
+            return true;
+         }
+         //matches current filter?
+         else if (tag_titles.includes(this.post_filter)) {
+            return true;
+         }
+         //otherwise falls
+         else {
+            return false;
+         }
       },
    },
 };

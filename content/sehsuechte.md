@@ -1,6 +1,6 @@
 ---
 title: Exhibition Management
-tags: [Exhibition]
+tags: [exhibition]
 preview_img: /img/sehsuechte/exhibition3_ae.jpg
 year: 2022
 location: Potsdam, Germany
