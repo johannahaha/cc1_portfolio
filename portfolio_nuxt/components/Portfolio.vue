@@ -24,8 +24,8 @@ export default {
    props: {
       filteredPosts: Array,
    },
-   metaInfo: {
-      title: "Portfolio",
-   },
+   // metaInfo: {
+   //    title: "Portfolio",
+   // },
 };
 </script>

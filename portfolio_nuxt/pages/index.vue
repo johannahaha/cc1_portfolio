@@ -1,14 +1,11 @@
 <template>
-   <!-- <Sketch></Sketch> -->
+ <div>
    <section class="home">
-      <!-- <div class="home_title">
-            <h1 class="home_infos_name">Johanna Hartmann</h1>
-         </div> -->
       <div class="home_infos">
          <div class="home_infos-section">
             <h4 class="home_infos-section-title">about me</h4>
             <div class="about">
-               <img src="/img/portraet_bw.jpg" id="portraet"></img>
+               <img src="/portraet_bw.jpg" id="portraet"></img>
                <div>
                   <p>
                      Hi, I am a freelance Creative Technologist and Data
@@ -37,60 +34,33 @@
          </div>
       </div>
    </section>
+   </div>
 </template>
 
-<page-query> 
-query Posts{
-    posts: allPost(sortBy: "year"){
-      edges{
-         node{
-         id
-         title
-         preview_img (width: 1000)
-         path
-         year
-         phrase
-         location
-         tags{
-            id
-            title
-            path
-         }
-         }
-      }
-   }
-    tags:allTag(sortBy:"title",order:ASC){
-        edges{
-            node{
-                id
-                title
-                path  
-            }
-        }
-    }   
-}
-</page-query>
 
 <script>
-import Sketch from "@/components/Sketch.vue";
 import Social from "@/components/Social.vue";
 import Portfolio from "@/components/Portfolio.vue";
 import FilterMenu from "@/components/FilterMenu.vue";
 
 export default {
-   metaInfo: {
-      title: "Home",
-   },
+   // metaInfo: {
+   //    title: "Home",
+   // },
    components: {
-      Sketch,
       Social,
       Portfolio,
       FilterMenu,
    },
-   emits: ["changeFilter"],
-   props: {
-      post_filter: String,
+   data: function () {
+      return {
+         post_filter: "all",
+      };
    },
+   emits: ["changeFilter"],
+   // props: {
+   //    post_filter: String,
+   // },
    computed: {
       getFilteredPosts() {
          let filteredPosts = this.$page.posts.edges.filter((post) =>
@@ -125,8 +95,4 @@ export default {
 };
 </script>
 
-<style>
-.home-links a {
-   margin-right: 1rem;
-}
-</style>
+
