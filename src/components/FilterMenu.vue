@@ -3,7 +3,7 @@
       <div
          class="tag"
          :class="`${this.post_filter === 'all' ? 'selected' : ''}`"
-         @click.stop="set_filter('all')"
+         @click.stop="$emit('filterUpdated', 'all')"
       >
          all
       </div>
@@ -12,7 +12,7 @@
          v-for="edge in $page.tags.edges"
          :key="edge.node.id"
          :class="`${post_filter === edge.node.title ? 'selected' : ''}`"
-         @click.stop="$emit('changeFilter', check_filter(edge.node.title))"
+         @click.stop="$emit('filterUpdated', check_filter(edge.node.title))"
       >
          {{ edge.node.title }}
       </div>
@@ -24,7 +24,7 @@ export default {
    props: {
       post_filter: String,
    },
-   emits: ["changeFilter"],
+   emits: ["filterUpdated"],
    methods: {
       check_filter: function (title) {
          console.log("check:", title);

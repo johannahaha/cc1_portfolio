@@ -1,44 +1,42 @@
 <template>
-   <Layout>
-      <!-- <Sketch></Sketch> -->
-      <section class="home">
-         <!-- <div class="home_title">
+   <!-- <Sketch></Sketch> -->
+   <section class="home">
+      <!-- <div class="home_title">
             <h1 class="home_infos_name">Johanna Hartmann</h1>
          </div> -->
-         <div class="home_infos">
-            <div class="home_infos-section">
-               <h4 class="home_infos-section-title">about</h4>
-               <div class="about">
-                  <g-image src="/img/portraet_bw.jpg" id="portraet"></g-image>
-                  <div>
-                     <p>
-                        Hi, I am a freelance Creative Technologist and Data
-                        Visualization Designer & Developer based in Berlin.
-                        Currently, I am studying Creative Technologies (M. A.)
-                        at the Filmuniversity Babelsberg Konrad Wolf. I have a
-                        Bachelor in Digital Media (B. Sc.), at University of
-                        Bremen. My main topics of interests are data
-                        visualization, creative web development and the role of
-                        algorithms and tech for society.
-                     </p>
-                     <div>contact: johanna.hartmann@gmx.de</div>
-                  </div>
+      <div class="home_infos">
+         <div class="home_infos-section">
+            <h4 class="home_infos-section-title">about</h4>
+            <div class="about">
+               <g-image src="/img/portraet_bw.jpg" id="portraet"></g-image>
+               <div>
+                  <p>
+                     Hi, I am a freelance Creative Technologist and Data
+                     Visualization Designer & Developer based in Berlin.
+                     Currently, I am studying Creative Technologies (M. A.) at
+                     the Filmuniversity Babelsberg Konrad Wolf. I have a
+                     Bachelor in Digital Media (B. Sc.), at University of
+                     Bremen. My main topics of interests are data visualization,
+                     creative web development and the role of algorithms and
+                     tech for society.
+                  </p>
+                  <div>contact: johanna.hartmann@gmx.de</div>
                </div>
             </div>
-            <Social />
-            <div class="home_infos-section">
-               <h4 class="home_infos-section-title projects-section-title">
-                  latest projects
-               </h4>
-               <FilterMenu
-                  @changeFilter="setFilter"
-                  :post_filter="post_filter"
-               />
-               <Portfolio :filtered-posts="getFilteredPosts" />
-            </div>
          </div>
-      </section>
-   </Layout>
+         <Social />
+         <div class="home_infos-section">
+            <h4 class="home_infos-section-title projects-section-title">
+               latest projects
+            </h4>
+            <FilterMenu
+               @filterUpdated="emitChangeFilter"
+               :post_filter="post_filter"
+            />
+            <Portfolio :filtered-posts="getFilteredPosts" />
+         </div>
+      </div>
+   </section>
 </template>
 
 <page-query> 
@@ -83,16 +81,15 @@ export default {
    metaInfo: {
       title: "Home",
    },
-   data() {
-      return {
-         post_filter: "all",
-      };
-   },
    components: {
       Sketch,
       Social,
       Portfolio,
       FilterMenu,
+   },
+   emits: ["changeFilter"],
+   props: {
+      post_filter: String,
    },
    computed: {
       getFilteredPosts() {
@@ -108,11 +105,7 @@ export default {
          console.log(path);
          window.location.href = path;
       },
-      setFilter: function (updated_filter) {
-         this.post_filter = updated_filter;
-      },
       is_included: function (tags) {
-         console.log("helllo");
          const tag_titles = tags.map((x) => x.title.toLowerCase());
          //if all projects, return true for all
          if (this.post_filter == "all") {
@@ -126,6 +119,10 @@ export default {
          else {
             return false;
          }
+      },
+      emitChangeFilter: function (event) {
+         console.log("change filter", event);
+         this.$emit("changeFilter", event);
       },
    },
 };

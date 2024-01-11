@@ -1,6 +1,6 @@
 <template>
    <div class="recent-projects">
-      <FilterMenu />
+      <!-- <FilterMenu /> -->
       <div
          class="recent-projects-project"
          v-for="edge in this.filteredPosts"
@@ -33,9 +33,10 @@ export default {
    },
    computed: {
       filteredPosts: function () {
-         return this.posts.edges.filter(
+         let filtered = this.posts.edges.filter(
             (edge) => edge.node.title !== this.currentOpenPost
          );
+         return filtered.slice(0, 2);
       },
    },
    methods: {
