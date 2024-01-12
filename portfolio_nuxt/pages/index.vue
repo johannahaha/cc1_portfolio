@@ -26,6 +26,7 @@
                <h4 class="home_infos-section-title projects-section-title">
                   latest projects
                </h4>
+               <!-- <FilterMenu :post-filter="postFilter" /> -->
                <Portfolio />
             </div>
          </div>
@@ -34,65 +35,35 @@
 </template>
 
 
-<script>
-import Social from "@/components/Social.vue";
-import Portfolio from "@/components/Portfolio.vue";
-import FilterMenu from "@/components/FilterMenu.vue";
+<script setup lang="ts">
+import { Social, Portfolio, FilterMenu } from "#components";
 
-export default {
-   // metaInfo: {
-   //    title: "Home",
-   // },
-   async setup() {
-      const { posts } = await useAsyncData("", () =>
-         queryContent()
-            .only([
-               "id",
-               "title",
-               "preview_img",
-               "phrase",
-               "year",
-               "location",
-               "tags",
-            ])
-            .find()
-      );
-      return { posts };
-   },
-   components: {
-      Social,
-      Portfolio,
-      FilterMenu,
-   },
-   data: function () {
-      return {
-         post_filter: "all",
-      };
-   },
-   methods: {
-      open: function (path) {
-         window.location.href = path;
-      },
-      is_included: function (tags) {
-         const tag_titles = tags.map((x) => x.title.toLowerCase());
-         //if all projects, return true for all
-         if (this.post_filter == "all") {
-            return true;
-         }
-         //matches current filter?
-         else if (tag_titles.includes(this.post_filter)) {
-            return true;
-         }
-         //otherwise false
-         else {
-            return false;
-         }
-      },
-      emitChangeFilter: function (event) {
-         this.$emit("changeFilter", event);
-      },
-   },
-};
+//QUERIES
+// const { posts } = await useAsyncData("home", () =>
+//    queryContent()
+//       .only([
+//          "id",
+//          "title",
+//          "preview_img",
+//          "phrase",
+//          "year",
+//          "location",
+//          "tags",
+//       ])
+//       .find()
+// );
+
+//STATE
+const filter = useFilter();
+
+console.log(filter.value)
+console.log(filter.value === "all")
+
+//METHODS
+
+function emitChangeFilter(event) {
+   this.$emit("changeFilter", event);
+}
 </script>
 
 
