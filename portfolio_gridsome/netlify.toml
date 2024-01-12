@@ -1,3 +1,0 @@
-[build]
-    publish = "portfolio/dist"
-    command = "gridsome build"
