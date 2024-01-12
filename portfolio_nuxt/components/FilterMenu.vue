@@ -3,8 +3,8 @@
       <div class="tag" :class="`${filter === 'all' ? 'selected' : ''}`" @click.stop="$emit('filterUpdated', 'all')">
          all
       </div>
-      <div class="tag" v-for="tag in tags" :key="tag" :class="`${filter === tag ? 'selected' : ''}`"
-         @click.stop="$emit('filterUpdated', checkFilter(tag))">
+      <div class="tag" v-for="tag in uniqueTags" :key="tag" :class="`${filter === tag ? 'selected' : ''}`"
+         @click.stop="updateFilter(tag)">
          {{ tag }}
       </div>
    </div>
@@ -13,11 +13,15 @@
 <script setup lang="ts">
 
 //QUERIES
-const { posts } = await useAsyncData("home", () => queryContent().find());
-const { tags } = await useAsyncData("home", () =>
-   queryContent().only("id").find()
+const tags = await useAsyncData("home", () =>
+   queryContent().only("tags").find()
 );
-console.info(tags);
+
+const uniqueTags = tags.data.value.map(tagList => tagList.tags.map(tag => tag))
+   .flat(2)
+   //unique
+   .filter((value, index, array) => array.indexOf(value) === index);
+console.log(uniqueTags)
 
 //STATES
 const filter = useFilter();
@@ -37,6 +41,12 @@ function checkFilter(title) {
       updated_filter = "all";
    }
    return updated_filter;
+}
+
+function updateFilter(tag) {
+   if (checkFilter(tag)) {
+      console.log(tag)
+   }
 }
 
 

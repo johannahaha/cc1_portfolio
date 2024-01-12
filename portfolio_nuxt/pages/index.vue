@@ -26,7 +26,7 @@
                <h4 class="home_infos-section-title projects-section-title">
                   latest projects
                </h4>
-               <!-- <FilterMenu :post-filter="postFilter" /> -->
+               <FilterMenu />
                <Portfolio />
             </div>
          </div>
@@ -36,34 +36,7 @@
 
 
 <script setup lang="ts">
-import { Social, Portfolio, FilterMenu } from "#components";
 
-//QUERIES
-// const { posts } = await useAsyncData("home", () =>
-//    queryContent()
-//       .only([
-//          "id",
-//          "title",
-//          "preview_img",
-//          "phrase",
-//          "year",
-//          "location",
-//          "tags",
-//       ])
-//       .find()
-// );
-
-//STATE
-const filter = useFilter();
-
-console.log(filter.value)
-console.log(filter.value === "all")
-
-//METHODS
-
-function emitChangeFilter(event) {
-   this.$emit("changeFilter", event);
-}
 </script>
 
 
