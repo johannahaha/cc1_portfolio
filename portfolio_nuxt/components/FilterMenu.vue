@@ -18,7 +18,7 @@ const tags = await useAsyncData("home", () =>
 let uniqueTags = ["all"]
 //convert to unique array
 if (tags != null && tags.data != null && tags.data.value !== null) {
-   let uniqueTags = tags.data.value.map(tagList => tagList.tags.map(tag => tag))
+   let uniqueTags = tags.data.value.map(tagList => tagList.tags.map((tag: string) => tag))
       .flat(2)
       //unique
       .filter((value, index, array) => array.indexOf(value) === index)

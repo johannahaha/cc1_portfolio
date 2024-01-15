@@ -3,9 +3,9 @@
       <h4 class="overview-title-other">other projects</h4>
       <div class="recent-projects">
          <!-- <FilterMenu /> -->
-         <ContentList path="/" v-slot="{ list }">
-            <NuxtLink class="recent-projects-project" v-for="(post, index) in list" :key="post.title" :to="post._path">
-               <!-- <font-awesome
+         <NuxtLink class="recent-projects-project" v-for="(post, index) in filteredPosts" :key="post.title"
+            :to="post._path">
+            <!-- <font-awesome
                v-if="index == 0 && !isFirstProject"
                class="angle"
                :icon="['fas', 'angle-left']"
@@ -17,13 +17,12 @@
                :icon="['fas', 'angle-right']"
                size="1x"
             /> -->
-               <div class="recent-projects-project-title" v-if="(index != 0) || !isFirstProject">
-                  {{ post.title }}
-               </div>
-               <img v-if="(index != 0) || !isFirstProject" :src="post.preview_img"
-                  class="recent-projects-project-preview-img" alt="post.title" :style="{ opacity: 0.5 }" />
-            </NuxtLink>
-         </ContentList>
+            <div class="recent-projects-project-title" v-if="(index != 0) || !isFirstProject">
+               {{ post.title }}
+            </div>
+            <img v-if="(index != 0) || !isFirstProject" :src="post.preview_img" class="recent-projects-project-preview-img"
+               alt="post.title" :style="{ opacity: 0.5 }" />
+         </NuxtLink>
       </div>
    </div>
 </template>
@@ -35,7 +34,7 @@ import { reactive, computed } from "vue";
 
 const { data: posts } = await useAsyncData('posts', async () => {
    const posts = await queryContent()
-      .only(["title", "preview_img", "year", "tags", "date", "published", "path"])
+      .only(["title", "preview_img", "year", "tags", "date", "published", "_path"])
       .sort({ date: -1 })
       .where({ published: true })
       .find()
@@ -57,9 +56,9 @@ const isFirstProject = computed(() => {
 });
 
 const filteredPosts = computed(() => {
-   if (currentPost.value !== null && posts.value !== null && currentPost.value !== undefined) {
+
+   if (currentPost.value !== undefined && posts.value !== undefined && posts.value !== null) {
       let lastPost = currentPost.value - 1;
-      console.log(currentPost);
       let nextPost = currentPost.value + 1;
 
       //edge cases
@@ -73,9 +72,8 @@ const filteredPosts = computed(() => {
       let filtered = indices.map((index) => posts.value[index]);
       return filtered;
    }
-   else {
-      return false
-   }
+
+
 });
 </script>
 
