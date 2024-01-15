@@ -36,15 +36,13 @@ function checkFilter(title) {
    } else {
       updated_filter = "all";
    }
-   console.log(updated_filter)
    return updated_filter;
 }
 
 function updateFilter(tag) {
-   if (checkFilter(tag)) {
-      filterStore.setFilter(checkFilter(tag));
-   }
+   filterStore.setFilter(checkFilter(tag));
 }
+
 
 
 </script>
