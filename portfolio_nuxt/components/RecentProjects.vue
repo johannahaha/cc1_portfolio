@@ -4,12 +4,7 @@
       <div class="recent-projects">
          <!-- <FilterMenu /> -->
          <ContentList path="/" v-slot="{ list }">
-            <NuxtLink
-               class="recent-projects-project"
-               v-for="(post, index) in list"
-               :key="post.title"
-               :to="post._path"
-            >
+            <NuxtLink class="recent-projects-project" v-for="(post, index) in list" :key="post.title" :to="post._path">
                <!-- <font-awesome
                v-if="index == 0 && !isFirstProject"
                class="angle"
@@ -22,19 +17,11 @@
                :icon="['fas', 'angle-right']"
                size="1x"
             /> -->
-               <div
-                  class="recent-projects-project-title"
-                  v-if="(index != 0) | !isFirstProject"
-               >
+               <div class="recent-projects-project-title" v-if="(index != 0) | !isFirstProject">
                   {{ post.title }}
                </div>
-               <img
-                  v-if="(index != 0) | !isFirstProject"
-                  :src="post.preview_img"
-                  class="recent-projects-project-preview-img"
-                  alt="post.title"
-                  :style="{ opacity: 0.5 }"
-               />
+               <img v-if="(index != 0) | !isFirstProject" :src="post.preview_img"
+                  class="recent-projects-project-preview-img" alt="post.title" :style="{ opacity: 0.5 }" />
             </NuxtLink>
          </ContentList>
       </div>
@@ -51,6 +38,8 @@ const { posts } = await useAsyncData("home", () =>
       .sort({ year: -1 })
       .find()
 );
+
+console.log(posts)
 
 const props = defineProps(["currentOpenPost"]);
 
@@ -80,5 +69,4 @@ const filteredPosts = computed(() => {
 });
 </script>
 
-<style>
-</style>
+<style></style>
