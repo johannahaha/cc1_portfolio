@@ -3,6 +3,8 @@ title: Experimentations with Shaders
 tags: [coding]
 preview_img: /img/procedural/preview.png
 year: 2021
+date: 2021-10
+published: true
 phrase: Shader programming with GLSL
 location: Potsdam, Germany
 link: &nbsp

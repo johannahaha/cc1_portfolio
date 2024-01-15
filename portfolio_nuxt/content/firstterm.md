@@ -3,6 +3,8 @@ title: Stories about Algorithm Ethics
 tags: [web, datavis, design, coding]
 preview_img: /img/bamf/preview.png
 year: 2021
+date: 2021-12
+published: true
 location: Potsdam, Germany
 phrase: Interactive web visualisation of a case of algorithmic bias
 link: https://www.stories-algorithmethics.de

@@ -4,14 +4,14 @@
          <strong>
             <NuxtLink to="/" class="logo"> Johanna Hartmann </NuxtLink>
          </strong>
-         <nav class="nav" :class="{ open: showMenu }">
-            <div class="menu-nav" :class="{ open: showMenu }">
+         <nav class="nav">
+            <div class="menu-nav">
                <div class="menu-nav-main">
-                  <div class="menu-nav_item" :class="{ open: showMenu }">
+                  <div class="menu-nav_item">
                      <NuxtLink class="menu-nav_link" v-bind:active-class="$route.path === '/' ? 'manual-active' : ''
                         " to="/">Home</NuxtLink>
                   </div>
-                  <div class="menu-nav_item" :class="{ open: showMenu }">
+                  <div class="menu-nav_item">
                      <NuxtLink class="menu-nav_link" v-bind:active-class="$route.path !== '/' ? 'manual-active' : ''
                         " to="/klimakarten">Portfolio</NuxtLink>
                   </div>

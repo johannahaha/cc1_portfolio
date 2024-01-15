@@ -3,6 +3,8 @@ title: Bachelor Thesis
 tags: [research, datavis, coding]
 preview_img: /img/bachelor_preview.png
 year: 2020
+date: 2020-06
+published: true
 phrase: Cluster analysis of student click data
 location: Bremen, Germany
 link: &nbsp

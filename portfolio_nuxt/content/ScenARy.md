@@ -3,6 +3,8 @@ title: ScenARy
 tags: [coding, design]
 preview_img: /img/scenary01.jpeg
 year: 2018
+date: 2018-04
+published: true
 location: Bremen, Germany
 phrase: Previsualisation app of sceneries for theaters with AR
 link: https://youtu.be/fTFNuT1Fz-c

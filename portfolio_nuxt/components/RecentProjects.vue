@@ -17,10 +17,10 @@
                :icon="['fas', 'angle-right']"
                size="1x"
             /> -->
-               <div class="recent-projects-project-title" v-if="(index != 0) | !isFirstProject">
+               <div class="recent-projects-project-title" v-if="(index != 0) || !isFirstProject">
                   {{ post.title }}
                </div>
-               <img v-if="(index != 0) | !isFirstProject" :src="post.preview_img"
+               <img v-if="(index != 0) || !isFirstProject" :src="post.preview_img"
                   class="recent-projects-project-preview-img" alt="post.title" :style="{ opacity: 0.5 }" />
             </NuxtLink>
          </ContentList>
@@ -32,40 +32,50 @@
 import { reactive, computed } from "vue";
 // import FilterMenu from "./FilterMenu.vue";
 
-const { posts } = await useAsyncData("home", () =>
-   queryContent()
-      .only(["title", "preview_img", "year", "tags"])
-      .sort({ year: -1 })
-      .find()
-);
 
-console.log(posts)
+const { data: posts } = await useAsyncData('posts', async () => {
+   const posts = await queryContent()
+      .only(["title", "preview_img", "year", "tags", "date", "published", "path"])
+      .sort({ date: -1 })
+      .where({ published: true })
+      .find()
+
+   return posts
+})
 
 const props = defineProps(["currentOpenPost"]);
 
+//get index of current post
 const currentPost = computed(() => {
-   return posts.map((post) => post.title).indexOf(props.currentOpenPost);
+   if (posts != null && posts.value !== null) {
+      return posts.value.map((post) => post.title).indexOf(props.currentOpenPost);
+   }
 });
 
 const isFirstProject = computed(() => {
-   return currentPost == 0;
+   return currentPost.value === 0;
 });
 
 const filteredPosts = computed(() => {
-   //edge cases
-   let lastPost = currentPost - 1;
-   console.log(currentPost);
-   if (lastPost < 0 || lastPost >= posts.length - 1 || lastPost == undefined)
-      lastPost = posts.length - 1;
+   if (currentPost.value !== null && posts.value !== null && currentPost.value !== undefined) {
+      let lastPost = currentPost.value - 1;
+      console.log(currentPost);
+      let nextPost = currentPost.value + 1;
 
-   let nextPost = currentPost + 1;
-   if (nextPost < 0 || nextPost >= posts.length - 1 || nextPost == undefined)
-      nextPost = 0;
+      //edge cases
+      if (lastPost < 0 || lastPost >= posts.value.length - 1 || lastPost == undefined)
+         lastPost = posts.value.length - 1;
+      if (nextPost < 0 || nextPost >= posts.value.length - 1 || nextPost == undefined)
+         nextPost = 0;
 
-   //get indexes of post before and after
-   let indices = [lastPost, nextPost];
-   let filtered = indices.map((index) => posts[index]);
-   return filtered;
+      //get indexes of post before and after
+      let indices = [lastPost, nextPost];
+      let filtered = indices.map((index) => posts.value[index]);
+      return filtered;
+   }
+   else {
+      return false
+   }
 });
 </script>
 

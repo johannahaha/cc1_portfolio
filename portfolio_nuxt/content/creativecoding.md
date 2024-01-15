@@ -3,6 +3,8 @@ title: Creative Coding
 tags: [coding, web]
 preview_img: /img/creative_coding/hope05.png
 year: 2020
+date: 2020-12
+published: true
 phrase: Creative coding exercises and sketches
 location: Potsdam, Germany
 link: &nbsp

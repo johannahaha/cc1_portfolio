@@ -3,6 +3,8 @@ title: realVirtuality
 tags: [exhibition]
 preview_img: /img/realvirtuality.jpg
 year: 2017
+date: 2017-07
+published: true
 location: Bremen, Germany
 phrase: VR installation with robotics
 link: &nbsp

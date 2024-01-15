@@ -3,6 +3,8 @@ title: Instavis
 tags: [design, datavis]
 preview_img: /img/instaviz/instaviz_preview.png
 year: 2021
+date: 2021-07
+published: true
 phrase: Climate crisis visualisations for klima.taz on Instagram
 location: Berlin, Germany
 link: https://www.instagram.com/klima.taz

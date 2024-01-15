@@ -3,6 +3,8 @@ title: Klimakarten
 tags: [research, datavis, web, coding, design]
 preview_img: /img/klimakarten/klimakarten03.jpg
 year: 2023
+date: 2023-01
+published: true
 phrase: Data Visualization design for constructive journalism
 location: Potsdam, Germany
 link: https://taz.de/klimakarten

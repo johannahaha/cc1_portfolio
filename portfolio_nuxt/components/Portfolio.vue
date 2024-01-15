@@ -3,7 +3,7 @@
       <div class="projects_items">
          <ContentList v-slot="{ list }" :query="query">
             <div v-for="article in list" :key="article._path">
-               <ProjectPreview v-if="isIncluded(article.tags)" :post="article" />
+               <ProjectPreview v-if="isIncluded(article.tags) && article.published" :post="article" />
             </div>
          </ContentList>
       </div>
@@ -16,13 +16,13 @@ import { useFilterStore } from '@/stores/filters'
 
 //QUERY PARAM
 import type { QueryBuilderParams } from "@nuxt/content/dist/runtime/types";
-const query: QueryBuilderParams = { sort: [{ year: -1 }] };
+const query: QueryBuilderParams = { sort: [{ date: -1 }] };
 
 //STATE
 const filterStore = useFilterStore();
 
 //METHODS
-function isIncluded(tags) {
+function isIncluded(tags: Array<string>) {
    const tag_titles = tags.map((x: any) => x.toLowerCase());
    //if all projects, return true for all
    if (filterStore.getFilter === "all") {

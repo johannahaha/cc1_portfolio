@@ -3,6 +3,8 @@ title: Air Pollution Light Bulb
 tags: [datavis, coding]
 preview_img: /img/airpollution/aqi1.png
 year: 2021
+date: 2021-07
+published: true
 phrase: Visualizing real-time air pollution with a smart home light bulb
 location: Berlin, Germany
 link: https://www.youtube.com/watch?v=EYrlpDQTe8c

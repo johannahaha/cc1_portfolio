@@ -3,6 +3,7 @@ title: distance
 tags: [exhibition]
 preview_img: /img/distance01.jpg
 year: 2019
+date: 2019-01
 phrase: Visualizing real-time air pollution with a smart home light bulb
 location: Mae Cham, Thailand
 link: https://youtu.be/_CpfiUSN6OM

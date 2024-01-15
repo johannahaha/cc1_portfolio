@@ -15,20 +15,24 @@ const tags = await useAsyncData("home", () =>
    queryContent().only("tags").find()
 );
 
-let uniqueTags = tags.data.value.map(tagList => tagList.tags.map(tag => tag))
-   .flat(2)
-   //unique
-   .filter((value, index, array) => array.indexOf(value) === index)
+let uniqueTags = ["all"]
+//convert to unique array
+if (tags != null && tags.data != null && tags.data.value !== null) {
+   let uniqueTags = tags.data.value.map(tagList => tagList.tags.map(tag => tag))
+      .flat(2)
+      //unique
+      .filter((value, index, array) => array.indexOf(value) === index)
 
-//add "all" to the front
-uniqueTags.unshift("all");
+   //add "all" to the front
+   uniqueTags.unshift("all");
+}
 
 
 //STATES 
 const filterStore = useFilterStore();
 //METHODS
 
-function checkFilter(title) {
+function checkFilter(title: string) {
    title = title.toLowerCase();
    let updated_filter = "";
    if (uniqueTags.includes(title)) {
@@ -39,7 +43,7 @@ function checkFilter(title) {
    return updated_filter;
 }
 
-function updateFilter(tag) {
+function updateFilter(tag: string) {
    filterStore.setFilter(checkFilter(tag));
 }
 
