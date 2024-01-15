@@ -1,9 +1,6 @@
 <template>
    <div class="projects_filter">
-      <div class="tag" :class="`${filter === 'all' ? 'selected' : ''}`" @click.stop="$emit('filterUpdated', 'all')">
-         all
-      </div>
-      <div class="tag" v-for="tag in uniqueTags" :key="tag" :class="`${filter === tag ? 'selected' : ''}`"
+      <div class="tag" v-for="tag in uniqueTags" :key="tag" :class="`${filterStore.getFilter === tag ? 'selected' : ''}`"
          @click.stop="updateFilter(tag)">
          {{ tag }}
       </div>
@@ -11,41 +8,41 @@
 </template>
 
 <script setup lang="ts">
+import { useFilterStore } from '@/stores/filters'
 
 //QUERIES
 const tags = await useAsyncData("home", () =>
    queryContent().only("tags").find()
 );
 
-const uniqueTags = tags.data.value.map(tagList => tagList.tags.map(tag => tag))
+let uniqueTags = tags.data.value.map(tagList => tagList.tags.map(tag => tag))
    .flat(2)
    //unique
-   .filter((value, index, array) => array.indexOf(value) === index);
-console.log(uniqueTags)
+   .filter((value, index, array) => array.indexOf(value) === index)
 
-//STATES
-const filter = useFilter();
+//add "all" to the front
+uniqueTags.unshift("all");
+
+
+//STATES 
+const filterStore = useFilterStore();
 //METHODS
 
 function checkFilter(title) {
    title = title.toLowerCase();
    let updated_filter = "";
-   //check if in tag list
-   // const all_tags = this.$page.tags.edges.map((x) =>
-   //    x.node.title.toLowerCase()
-   // );
-   const all_tags = ["all"];
-   if (all_tags.includes(title)) {
+   if (uniqueTags.includes(title)) {
       updated_filter = title;
    } else {
       updated_filter = "all";
    }
+   console.log(updated_filter)
    return updated_filter;
 }
 
 function updateFilter(tag) {
    if (checkFilter(tag)) {
-      console.log(tag)
+      filterStore.setFilter(checkFilter(tag));
    }
 }
 

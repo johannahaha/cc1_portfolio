@@ -12,23 +12,24 @@
 
 <script setup lang ="ts">
 import ProjectPreview from "./ProjectPreview.vue";
+import { useFilterStore } from '@/stores/filters'
 
 //QUERY PARAM
 import type { QueryBuilderParams } from "@nuxt/content/dist/runtime/types";
 const query: QueryBuilderParams = { sort: [{ year: -1 }] };
 
 //STATE
-const filter = useFilter();
+const filterStore = useFilterStore();
 
 //METHODS
 function isIncluded(tags) {
    const tag_titles = tags.map((x: any) => x.toLowerCase());
    //if all projects, return true for all
-   if (filter.value === "all") {
+   if (filterStore.getFilter === "all") {
       return true;
    }
    //matches current filter?
-   else if (tag_titles.includes(filter.value)) {
+   else if (tag_titles.includes(filterStore.getFilter)) {
       return true;
    }
    //otherwise false

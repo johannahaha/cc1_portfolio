@@ -1,1 +1,0 @@
-export const useFilter = () => useState<string>('filter', () => 'all')
