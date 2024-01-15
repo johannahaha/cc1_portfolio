@@ -10,7 +10,6 @@ export default defineNuxtConfig({
             families: {
                Archivo: true,
                ArchivoVariable: true,
-               "Noto+Sans": true,
             },
          },
       ],
