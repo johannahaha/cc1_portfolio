@@ -262,11 +262,15 @@
                display: inline-flex;
                img {
                   width: 100%;
-                  display: inline-block;
+                  width: 30vw;
+                  height: auto;
+                  display: block;
+                  object-fit: contain;
+                  align-self: baseline;
                }
 
                p {
-                  width: 50%;
+                  width: 40vw;
                }
             }
 
