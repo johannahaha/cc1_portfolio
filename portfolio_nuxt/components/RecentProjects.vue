@@ -5,18 +5,9 @@
       <div class="recent-projects">
          <NuxtLink class="recent-projects-project" v-for="(post, index) in filteredPosts" :key="post.title"
             :to="post._path">
-            <!-- <font-awesome
-               v-if="index == 0 && !isFirstProject"
-               class="angle"
-               :icon="['fas', 'angle-left']"
-               size="1x"
-            />
-            <font-awesome
-               v-if="index != 0"
-               class="angle"
-               :icon="['fas', 'angle-right']"
-               size="1x"
-            /> -->
+            <font-awesome-icon v-if="index == 0 && !isFirstProject" class="angle" icon="fa-solid fa-angle-left"
+               size="xl" />
+            <font-awesome-icon v-if="index != 0" class="angle" icon="fa-solid fa-angle-right" size="xl" />
             <div class="recent-projects-project-title" v-if="(index != 0) || !isFirstProject">
                {{ post.title }}
             </div>
@@ -29,7 +20,6 @@
 
 <script setup lang="ts">
 import { reactive, computed } from "vue";
-// import FilterMenu from "./FilterMenu.vue";
 
 
 const { data: posts } = await useAsyncData('posts', async () => {
