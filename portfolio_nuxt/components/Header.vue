@@ -8,12 +8,13 @@
             <div class="menu-nav">
                <div class="menu-nav-main">
                   <div class="menu-nav_item">
-                     <NuxtLink class="menu-nav_link" v-bind:active-class="$route.path === '/' ? 'manual-active' : ''
-                        " to="/">Home</NuxtLink>
+                     <NuxtLink class="menu-nav_link" activeClass="manual-active" to="/">Home</NuxtLink>
                   </div>
                   <div class="menu-nav_item">
-                     <NuxtLink class="menu-nav_link" v-bind:active-class="$route.path !== '/' ? 'manual-active' : ''
-                        " to="/klimakarten">Portfolio</NuxtLink>
+                     <NuxtLink class="menu-nav_link" :class="{ 'manual-active': isRouteActive }"
+                        to="/portfolio/klimakarten">
+                        Portfolio
+                     </NuxtLink>
                   </div>
                </div>
             </div>
@@ -27,12 +28,18 @@
 
 
 <script>
-import Social from "./Social.vue";
 
 export default {
-   setup() {
-      const route = useRoute();
-      return { route }
+   computed: {
+      isRouteActive: function () {
+         if (this.$route.path.includes("portfolio")) {
+            console.log(this.$route.path)
+            return true
+         } else {
+            return false
+         }
+      },
    }
-};
+}
+
 </script>

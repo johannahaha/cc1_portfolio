@@ -11,14 +11,15 @@
 import { useFilterStore } from '@/stores/filters'
 
 //QUERIES
-const tags = await useAsyncData("home", () =>
-   queryContent().only("tags").find()
-);
+const { data: tags } = await useAsyncData('posts', async () => {
+   const tags = await queryContent().only("tags").find()
+   return tags
+})
 
 let uniqueTags = ["all"]
 //convert to unique array
-if (tags != null && tags.data != null && tags.data.value !== null) {
-   let uniqueTags = tags.data.value.map(tagList => tagList.tags.map((tag: string) => tag))
+if (tags != null && tags.value !== null) {
+   let uniqueTags = tags.value.map(tagList => tagList.tags.map((tag: string) => tag))
       .flat(2)
       //unique
       .filter((value, index, array) => array.indexOf(value) === index)

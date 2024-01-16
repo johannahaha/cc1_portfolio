@@ -1,8 +1,8 @@
 <template>
    <div>
       <h4 class="overview-title-other">other projects</h4>
+      <!-- <FilterMenu /> -->
       <div class="recent-projects">
-         <!-- <FilterMenu /> -->
          <NuxtLink class="recent-projects-project" v-for="(post, index) in filteredPosts" :key="post.title"
             :to="post._path">
             <!-- <font-awesome
@@ -33,7 +33,7 @@ import { reactive, computed } from "vue";
 
 
 const { data: posts } = await useAsyncData('posts', async () => {
-   const posts = await queryContent()
+   const posts = await queryContent("portfolio")
       .only(["title", "preview_img", "year", "tags", "date", "published", "_path"])
       .sort({ date: -1 })
       .where({ published: true })

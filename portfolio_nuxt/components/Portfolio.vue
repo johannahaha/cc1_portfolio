@@ -1,7 +1,7 @@
 <template>
    <section class="projects">
       <div class="projects_items">
-         <ContentList v-slot="{ list }" :query="query">
+         <ContentList path="/portfolio" v-slot="{ list }" :query="query">
             <div v-for="article in list" :key="article._path">
                <ProjectPreview v-if="isIncluded(article.tags) && article.published" :post="article" />
             </div>
