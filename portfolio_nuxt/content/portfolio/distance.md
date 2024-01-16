@@ -14,7 +14,7 @@ link: https://youtu.be/_CpfiUSN6OM
 The audiovisual documentary tells the story of a workshop held by a selected group of aspiring industrial designers in cooperation with three universities. We lived for a week in Mae Jam, a remote area in the north of Thailand. The design students explored the challenges and opportunities of living at a distance from the perspective of their distance and the traditional craftsmanship of the villagers. From this experience, they designed products for and with the people who live there.
 Together with Lisa Marie Liu I filmed the workshop and published and exhibited it as a documentary. We filmed together, I edited and post-produced the film.
 
-`youtube: https://youtu.be/_CpfiUSN6OM`
+:youtube{id="CpfiUSN6OM"}
 
 ![distance03](/img/distance03.jpg)
 

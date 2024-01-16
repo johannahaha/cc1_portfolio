@@ -23,6 +23,6 @@ With ScenARy, users can draw their stage objects, scan real objects or select th
 
 Unity Development, Realization of the drawing of own objects (frontend and backend), conversion of the drawing to Augmented Reality objects, C# programming, UX research: evaluation at the theatre, conception of the object library, scientific documentation.
 
-`youtube:https://youtu.be/fTFNuT1Fz-c`
+:youtube{id="fTFNuT1Fz-c"}
 
 ![scenary03](/img/scenary03.jpg)

@@ -26,6 +26,7 @@
   "dependencies": {
     "@fontsource/archivo-black": "^5.0.18",
     "@pinia/nuxt": "^0.5.1",
+    "lite-youtube-embed": "^0.3.0",
     "pinia": "^2.1.7"
   }
 }

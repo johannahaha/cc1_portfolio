@@ -30,7 +30,7 @@ For creating this documentation, I also used very high values.
 
 Here is a link to the [visual documentation](https://www.youtube.com/watch?v=EYrlpDQTe8c)
 
-`youtube: https://www.youtube.com/watch?v=EYrlpDQTe8c`
+:youtube{id="EYrlpDQTe8c"}
 
 ## Interface
 

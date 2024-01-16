@@ -21,4 +21,12 @@ export default defineNuxtConfig({
          anchorLinks: false,
       },
    },
+   build: {
+      transpile: ["lite-youtube"],
+   },
+   vue: {
+      compilerOptions: {
+         isCustomElement: (tag) => ["lite-youtube"].includes(tag),
+      },
+   },
 });
