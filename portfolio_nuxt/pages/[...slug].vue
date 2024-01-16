@@ -5,7 +5,10 @@
       <ContentDoc v-slot="{ doc }">
          <ContentRenderer :value="doc">
             <div class="post">
-               <ContentRendererMarkdown class="post-content" :value="doc" />
+               <div class="post-content">
+                  <img :src="doc.preview_img" class="post-img" alt="post.title" />
+                  <ContentRendererMarkdown :value="doc" />
+               </div>
                <div class="post-overview">
                   <h4 class="overview-title-this">this project</h4>
                   <div class="post-overview-text">
