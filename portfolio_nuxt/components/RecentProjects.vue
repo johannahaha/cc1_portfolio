@@ -1,9 +1,9 @@
 <template>
    <div>
       <h4 class="overview-title-other">other projects</h4>
-      <!-- <FilterMenu /> -->
+      <FilterMenu />
       <div class="recent-projects">
-         <NuxtLink class="recent-projects-project" v-for="(post, index) in filteredPosts" :key="post.title"
+         <NuxtLink class="recent-projects-project" v-for="(post, index) in neighborPosts" :key="post.title"
             :to="post._path">
             <font-awesome-icon v-if="index == 0 && !isFirstProject" class="angle" icon="fa-solid fa-angle-left"
                size="xl" />
@@ -21,7 +21,14 @@
 <script setup lang="ts">
 import { reactive, computed } from "vue";
 
+//STATE
+import { useFilterStore } from '@/stores/filters'
+const filterStore = useFilterStore();
 
+//PROPS
+const props = defineProps(["currentOpenPost"]);
+
+//QUERIES
 const { data: posts } = await useAsyncData('posts', async () => {
    const posts = await queryContent("portfolio")
       .only(["title", "preview_img", "year", "tags", "date", "published", "_path"])
@@ -32,35 +39,42 @@ const { data: posts } = await useAsyncData('posts', async () => {
    return posts
 })
 
-const props = defineProps(["currentOpenPost"]);
+//COMPUTED
+const filteredPosts = computed(() => {
+   return posts.value.filter((post) =>
+      useCheckProjectTag(post.tags, filterStore.getFilter))
+})
 
 //get index of current post
 const currentPost = computed(() => {
-   if (posts != null && posts.value !== null) {
-      return posts.value.map((post) => post.title).indexOf(props.currentOpenPost);
-   }
+   console.log("hallo filter")
+   console.log(filteredPosts.value)
+   console.log(filteredPosts.value.map((post) => post.title))
+
+   return filteredPosts.value.map((post) => post.title).indexOf(props.currentOpenPost);
 });
 
 const isFirstProject = computed(() => {
    return currentPost.value === 0;
 });
 
-const filteredPosts = computed(() => {
-
-   if (currentPost.value !== undefined && posts.value !== undefined && posts.value !== null) {
+const neighborPosts = computed(() => {
+   if (currentPost.value !== undefined && filteredPosts !== undefined && filteredPosts !== null) {
       let lastPost = currentPost.value - 1;
       let nextPost = currentPost.value + 1;
 
       //edge cases
-      if (lastPost < 0 || lastPost >= posts.value.length - 1 || lastPost == undefined)
-         lastPost = posts.value.length - 1;
-      if (nextPost < 0 || nextPost >= posts.value.length - 1 || nextPost == undefined)
+      if (lastPost < 0 || lastPost >= filteredPosts.length - 1 || lastPost == undefined)
+         lastPost = filteredPosts.value.length - 1;
+      if (nextPost < 0 || nextPost >= filteredPosts.length - 1 || nextPost == undefined)
          nextPost = 0;
 
       //get indexes of post before and after
       let indices = [lastPost, nextPost];
-      let filtered = indices.map((index) => posts.value[index]);
-      return filtered;
+      console.log(indices)
+      let neighbors = indices.map((index) => filteredPosts.value[index]);
+      console.log(neighbors)
+      return neighbors;
    }
 
 

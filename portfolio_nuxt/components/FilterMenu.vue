@@ -11,7 +11,7 @@
 import { useFilterStore } from '@/stores/filters'
 
 //QUERIES
-const { data: tags } = await useAsyncData('posts', async () => {
+const { data: tags } = await useAsyncData('tags', async () => {
    const tags = await queryContent().only("tags").find()
    return tags
 })

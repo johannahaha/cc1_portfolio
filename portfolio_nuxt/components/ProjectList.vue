@@ -2,7 +2,7 @@
    <section class="projects">
       <div class="projects_items">
          <div v-for="post in filteredPosts" :key="post.title">
-            <ProjectPreview v-if="isIncluded(post.tags) && post.published" :post="post" />
+            <ProjectPreview v-if="post.published" :post="post" />
          </div>
       </div>
    </section>
@@ -25,24 +25,9 @@ const { data: posts } = await useAsyncData('posts', async () => {
    return posts
 })
 
-const filteredPosts = posts.value.filter((post) =>
-   isIncluded(post.tags))
+const filteredPosts = computed(() => {
+   return posts.value.filter((post) =>
+      useCheckProjectTag(post.tags, filterStore.getFilter))
+})
 
-
-//METHODS
-function isIncluded(tags: Array<string>) {
-   const tag_titles = tags.map((x: any) => x.toLowerCase());
-   //if all projects, return true for all
-   if (filterStore.getFilter === "all") {
-      return true;
-   }
-   //matches current filter?
-   else if (tag_titles.includes(filterStore.getFilter)) {
-      return true;
-   }
-   //otherwise false
-   else {
-      return false;
-   }
-}
 </script>
