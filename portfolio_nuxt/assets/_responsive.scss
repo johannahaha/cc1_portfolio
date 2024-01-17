@@ -203,6 +203,13 @@
                padding-bottom: 0.5rem;
             }
 
+            .projects_filter {
+               padding: 0 1rem;
+               .tag {
+                  flex-basis: 4rem;
+               }
+            }
+
             .recent-projects {
                padding: 2rem 0 0 0;
                border-bottom: none;
@@ -317,9 +324,19 @@
    }
 
    .outer-post {
-      .post-content {
-         width: 50vw;
-         padding-right: 5vw;
+      .post {
+         .post-content {
+            width: 50vw;
+            padding-right: 5vw;
+         }
+
+         .post-overview {
+            .projects_filter {
+               .tag {
+                  flex-basis: 0;
+               }
+            }
+         }
       }
    }
 
@@ -369,5 +386,15 @@
 
    .post-content {
       width: 50vw;
+   }
+
+   .outer-post {
+      .post {
+         .post-overview {
+            .projects_filter {
+               flex-wrap: nowrap;
+            }
+         }
+      }
    }
 }

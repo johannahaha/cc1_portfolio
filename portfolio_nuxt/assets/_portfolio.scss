@@ -205,6 +205,34 @@
          }
       }
    }
+
+   #recents-below-post {
+      padding: 1rem;
+
+      .projects_filter {
+         align-items: flex-start;
+         .tag {
+            margin: 0;
+            padding: 1rem;
+         }
+      }
+
+      h4 {
+         @include font(medium);
+         font-size: 1.5rem;
+         padding: 2rem 0;
+      }
+
+      .recent-projects {
+         margin-top: 0;
+         border-top: none;
+
+         &-project-title {
+            padding: 0.5rem;
+            width: 40vw;
+         }
+      }
+   }
 }
 
 #recents-below-overview {
