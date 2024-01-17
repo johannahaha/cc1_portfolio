@@ -33,7 +33,6 @@ export default {
    computed: {
       isRouteActive: function () {
          if (this.$route.path.includes("portfolio")) {
-            console.log(this.$route.path)
             return true
          } else {
             return false

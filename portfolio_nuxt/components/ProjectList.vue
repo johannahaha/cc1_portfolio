@@ -1,25 +1,33 @@
 <template>
    <section class="projects">
       <div class="projects_items">
-         <ContentList path="/portfolio" v-slot="{ list }" :query="query">
-            <div v-for="article in list" :key="article._path">
-               <ProjectPreview v-if="isIncluded(article.tags) && article.published" :post="article" />
-            </div>
-         </ContentList>
+         <div v-for="post in filteredPosts" :key="post.title">
+            <ProjectPreview v-if="isIncluded(post.tags) && post.published" :post="post" />
+         </div>
       </div>
    </section>
 </template>
 
 <script setup lang ="ts">
 import ProjectPreview from "./ProjectPreview.vue";
-import { useFilterStore } from '@/stores/filters'
-
-//QUERY PARAM
-import type { QueryBuilderParams } from "@nuxt/content/dist/runtime/types";
-const query: QueryBuilderParams = { sort: [{ date: -1 }] };
 
 //STATE
+import { useFilterStore } from '@/stores/filters'
 const filterStore = useFilterStore();
+
+//QUERIES
+const { data: posts } = await useAsyncData('posts', async () => {
+   const posts = await queryContent("portfolio")
+      .only(["title", "preview_img", "year", "tags", "date", "published", "_path", "phrase"])
+      .sort({ date: -1 })
+      .where({ published: true })
+      .find()
+   return posts
+})
+
+const filteredPosts = posts.value.filter((post) =>
+   isIncluded(post.tags))
+
 
 //METHODS
 function isIncluded(tags: Array<string>) {

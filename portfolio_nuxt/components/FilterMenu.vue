@@ -19,7 +19,7 @@ const { data: tags } = await useAsyncData('posts', async () => {
 let uniqueTags = ["all"]
 //convert to unique array
 if (tags != null && tags.value !== null) {
-   let uniqueTags = tags.value.map(tagList => tagList.tags.map((tag: string) => tag))
+   uniqueTags = tags.value.map(tagList => tagList.tags.map((tag: string) => tag))
       .flat(2)
       //unique
       .filter((value, index, array) => array.indexOf(value) === index)

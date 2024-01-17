@@ -27,7 +27,7 @@
                   latest projects
                </h4>
                <FilterMenu />
-               <Portfolio />
+               <ProjectList />
             </div>
          </div>
       </section>

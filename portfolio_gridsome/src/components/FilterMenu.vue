@@ -1,19 +1,12 @@
 <template>
    <div class="projects_filter">
-      <div
-         class="tag"
-         :class="`${this.post_filter === 'all' ? 'selected' : ''}`"
-         @click.stop="$emit('filterUpdated', 'all')"
-      >
+      <div class="tag" :class="`${this.post_filter === 'all' ? 'selected' : ''}`"
+         @click.stop="$emit('filterUpdated', 'all')">
          all
       </div>
-      <div
-         class="tag"
-         v-for="edge in $page.tags.edges"
-         :key="edge.node.id"
+      <div class="tag" v-for="edge in $page.tags.edges" :key="edge.node.id"
          :class="`${post_filter === edge.node.title ? 'selected' : ''}`"
-         @click.stop="$emit('filterUpdated', check_filter(edge.node.title))"
-      >
+         @click.stop="$emit('filterUpdated', check_filter(edge.node.title))">
          {{ edge.node.title }}
       </div>
    </div>
@@ -44,5 +37,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
