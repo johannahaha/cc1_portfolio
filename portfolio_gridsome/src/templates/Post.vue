@@ -5,23 +5,14 @@
             </div> -->
       <div class="post">
          <div class="post-content">
-            <g-image
-               :src="$page.post.preview_img"
-               class="post-img"
-               alt="post.title"
-            />
+            <g-image :src="$page.post.preview_img" class="post-img" alt="post.title" />
             <div v-html="$page.post.content"></div>
          </div>
          <div class="post-overview">
             <h4 class="overview-title-this">this project</h4>
             <div class="post-overview-text">
-               <a
-                  v-if="$page.post.link !== ''"
-                  class="post-overview-text-link"
-                  :href="$page.post.link"
-                  target="_blank"
-                  title="Project Link"
-               >
+               <a v-if="$page.post.link !== ''" class="post-overview-text-link" :href="$page.post.link" target="_blank"
+                  title="Project Link">
                   <LinkIcon />
                   <p>{{ $page.post.link }}</p>
                </a>
@@ -30,11 +21,7 @@
                <p class="post-overview-text-phrase">{{ $page.post.phrase }}</p>
                <div class="post-overview-text-tags">
                   <div class="tag">skills:</div>
-                  <div
-                     class="tag"
-                     v-for="(tag, index) in $page.post.tags"
-                     :key="tag.id"
-                  >
+                  <div class="tag" v-for="(tag, index) in $page.post.tags" :key="tag.id">
                      <div v-if="index == $page.post.tags.length - 1">
                         {{ tag.title }}
                      </div>
@@ -42,18 +29,10 @@
                   </div>
                </div>
             </div>
-            <RecentProjects
-               id="recents-below-overview"
-               :posts="$page.posts"
-               :currentOpenPost="$page.post.title"
-            />
+            <RecentProjects id="recents-below-overview" :posts="$page.posts" :currentOpenPost="$page.post.title" />
          </div>
       </div>
-      <RecentProjects
-         id="recents-below-post"
-         :posts="$page.posts"
-         :currentOpenPost="$page.post.title"
-      />
+      <RecentProjects id="recents-below-post" :posts="$page.posts" :currentOpenPost="$page.post.title" />
    </div>
 </template>
 
@@ -115,10 +94,6 @@ export default {
       };
    },
    methods: {
-      open: function (path) {
-         console.log(path);
-         window.location.href = path;
-      },
       //TODO: this is dupliacted code!!
       is_included: function (tags) {
          const tag_titles = tags.map((x) => x.title.toLowerCase());
