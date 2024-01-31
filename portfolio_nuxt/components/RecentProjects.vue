@@ -67,9 +67,7 @@ const neighborPosts = computed(() => {
 
       //get indexes of post before and after
       let indices = [lastPost, nextPost];
-      console.log(indices)
       let neighbors = indices.map((index) => filteredPosts.value[index]);
-      console.log(neighbors)
       return neighbors;
    }
 

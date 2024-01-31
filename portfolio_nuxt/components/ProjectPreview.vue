@@ -1,22 +1,12 @@
 <template>
    <div class="projects_item">
       <NuxtLink :to="post._path">
-         <img
-            :src="post.preview_img"
-            class="projects_item-preview-img"
-            alt="post.title"
-            @mouseover="showDetails = true"
-            @mouseleave="showDetails = true"
-            :style="{ opacity: imgOpacity }"
-         />
+         <img :src="post.preview_img" class="projects_item-preview-img" alt="post.title" @mouseover="showDetails = true"
+            @mouseleave="showDetails = true" :style="{ opacity: imgOpacity }" />
       </NuxtLink>
       <NuxtLink :to="post._path">
-         <div
-            class="projects_item_details"
-            v-show="showDetails"
-            @mouseover="showDetails = true"
-            @mouseleave="showDetails = true"
-         >
+         <div class="projects_item_details" v-show="showDetails" @mouseover="showDetails = true"
+            @mouseleave="showDetails = true">
             <div class="projects_item_details_infos">
                <p>{{ post.year }}</p>
                <h4>{{ post.title }}</h4>
@@ -45,7 +35,6 @@ export default {
    },
    methods: {
       open: function (path) {
-         console.log(path);
          window.location.href = path;
       },
    },
