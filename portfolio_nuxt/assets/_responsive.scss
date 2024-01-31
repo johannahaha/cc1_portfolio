@@ -240,6 +240,20 @@
                line-height: 2rem;
             }
             //@include section-not-mobile;
+
+            .gallery {
+               padding: 0.25rem 0;
+            }
+
+            .portraet {
+               img {
+                  width: calc((50vw / 2) - 1.5rem);
+               }
+            }
+
+            img {
+               padding: 0.25rem 0;
+            }
          }
       }
    }
@@ -328,6 +342,12 @@
          .post-content {
             width: 50vw;
             padding-right: 5vw;
+
+            .portraet {
+               img {
+                  width: calc(((45vw - 1rem) / 2) - 0.5rem);
+               }
+            }
          }
 
          .post-overview {
