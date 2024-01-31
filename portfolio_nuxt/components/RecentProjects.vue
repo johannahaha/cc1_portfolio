@@ -47,10 +47,6 @@ const filteredPosts = computed(() => {
 
 //get index of current post
 const currentPost = computed(() => {
-   console.log("hallo filter")
-   console.log(filteredPosts.value)
-   console.log(filteredPosts.value.map((post) => post.title))
-
    return filteredPosts.value.map((post) => post.title).indexOf(props.currentOpenPost);
 });
 

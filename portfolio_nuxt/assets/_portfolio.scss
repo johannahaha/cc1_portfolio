@@ -143,6 +143,7 @@
 
             &-link {
                display: inline-flex;
+               align-items: baseline;
                p,
                svg {
                   color: $dark-blue;

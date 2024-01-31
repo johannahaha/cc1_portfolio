@@ -12,6 +12,10 @@
                <div class="post-overview">
                   <h4 class="overview-title-this">this project</h4>
                   <div class="post-overview-text">
+                     <NuxtLink v-if="doc.link !== ''" class="post-overview-text-link" to="doc.link" title="Project Link">
+                        <font-awesome-icon icon="fa-solid fa-link" size="l" />
+                        <p>{{ doc.link }}</p>
+                     </NuxtLink>
                      <p>{{ doc.year }}</p>
                      <p>{{ doc.location }}</p>
                      <p class="post-overview-text-phrase">{{ doc.phrase }}</p>

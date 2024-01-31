@@ -8,6 +8,7 @@ import {
    faEnvelope,
    faAngleLeft,
    faAngleRight,
+   faLink,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -20,6 +21,7 @@ library.add(
    faGithub,
    faTwitter,
    faEye,
+   faLink,
    faLinkedin,
    faEnvelope,
    faAngleLeft,
