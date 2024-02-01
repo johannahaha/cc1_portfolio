@@ -1,6 +1,6 @@
 ---
 title: Our Mobility in Knots
-tags: [web, datavis, design, coding]
+tags: [web, datavis, coding]
 preview_img: /img/mobility/mobility02.png
 year: 2022
 date: 2022-07
