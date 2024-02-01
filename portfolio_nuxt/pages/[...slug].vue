@@ -30,12 +30,18 @@
                         </div>
                      </div>
                   </div>
-                  <RecentProjects id="recents-below-overview" :currentOpenPost="doc.title" />
+                  <RecentProjects id="recents-below-overview" :openPostTitle="doc.title" />
                </div>
             </div>
-            <RecentProjects id="recents-below-post" :currentOpenPost="doc.title" />
+            <RecentProjects id="recents-below-post" :openPostTitle="doc.title" />
          </ContentRenderer>
       </ContentDoc>
    </main>
 </template>
+
+<script>
+export default {
+   scrollToTop: true
+}
+</script>
 

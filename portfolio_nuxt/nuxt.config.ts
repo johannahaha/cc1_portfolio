@@ -22,7 +22,14 @@ export default defineNuxtConfig({
       },
    },
    build: {
-      transpile: ["lite-youtube"],
+      transpile: [
+         "lite-youtube",
+         "@fortawesome/fontawesome-svg-core",
+         "@fortawesome/fontawesome-svg-core",
+         "@fortawesome/pro-solid-svg-icons",
+         "@fortawesome/free-brands-svg-icons",
+         "@fortawesome/vue-fontawesome",
+      ],
    },
    vue: {
       compilerOptions: {
