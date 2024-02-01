@@ -4,7 +4,7 @@
       <FilterMenu />
       <div class="recent-projects" id="scroll-element" ref="scrollElement">
          <NuxtLink class="recent-projects-project" v-for="(post, index) in filteredPosts" :key="post.title"
-            :to="{ path: post._path, hash: '#' + (index + 1) }" :id="index">
+            :to="{ path: post._path }">
             <div class="recent-projects-project-title" :class="{ 'active': post.title == openPostTitle }">
                {{ post.title }}
             </div>

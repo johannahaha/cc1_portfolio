@@ -125,6 +125,7 @@
       }
 
       &-overview {
+         border-top: solid 1px;
          border-bottom: solid 1px;
          padding: 1rem;
          width: 100vw;
@@ -134,7 +135,6 @@
          }
 
          &-text {
-            border-top: solid 1px;
             &-tags {
                flex-direction: row;
                display: flex;
@@ -231,9 +231,8 @@
    }
 
    #recents-below-post {
-      padding: 1rem;
-
       .projects_filter {
+         padding: 1rem;
          align-items: flex-start;
          .tag {
             margin: 0;
@@ -244,7 +243,7 @@
       h4 {
          @include font(medium);
          font-size: 1.5rem;
-         padding: 2rem 0;
+         padding: 2rem 1rem 0 1rem;
       }
 
       .recent-projects {

@@ -7,6 +7,20 @@ $dark-blue: #073bc0;
 $light-blue: #75a3bf;
 //$highlight-color: #D9A404;
 
+$md-section-width: (
+   "navbar": 15vw,
+   "content": 85vw,
+   "overview": 35vw,
+   "text": 50vw,
+);
+
+$lg-section-width: (
+   "navbar": 17vw,
+   "content": 83vw,
+   "overview": 33vw,
+   "text": 50vw,
+);
+
 $font-weigths: (
    "light": 100,
    "regular": 400,
@@ -41,6 +55,18 @@ $variable-font-weights: (
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+}
+
+@function get-section-width-md($section-name) {
+   @return map-get($md-section-width, $section-name);
+}
+
+@function get-section-width-lg($section-name) {
+   @return map-get($lg-section-width, $section-name);
+}
+
+@function get-section-width-xl($section-name) {
+   @return map-get($xl-section-width, $section-name);
 }
 
 @function get-font-weight($weight-name) {
@@ -146,9 +172,14 @@ $variable-font-weights: (
    overflow-x: scroll;
    overflow-y: hidden;
 
+   &:hover,
+   &:focus {
+      scrollbar-color: initial;
+   }
+
    &-project {
-      width: 50%;
-      max-width: 50%;
+      width: 55%;
+      max-width: 55%;
       //height: calc(#{width} * 0.4 * 8);
       padding: 1rem;
       position: relative;

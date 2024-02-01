@@ -14,8 +14,8 @@
                <div class="post-overview">
                   <h4 class="overview-title-this">this project</h4>
                   <div class="post-overview-text">
-                     <NuxtLink v-if="doc.link !== '' && doc.link !== null" class="post-overview-text-link" to="doc.link"
-                        title="Project Link">
+                     <NuxtLink v-if="doc.link !== '' && doc.link !== null" class="post-overview-text-link" :to="doc.link"
+                        title="Project Link" :external="true">
                         <font-awesome-icon icon="fa-solid fa-link" size="l" />
                         <p>{{ doc.link }}</p>
                      </NuxtLink>
