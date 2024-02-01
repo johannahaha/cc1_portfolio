@@ -21,7 +21,6 @@
                      </NuxtLink>
                      <p>{{ doc.year }}</p>
                      <p>{{ doc.location }}</p>
-                     <p class="post-overview-text-phrase">{{ doc.phrase }}</p>
                      <div class="post-overview-text-tags">
                         <div class="tag">skills: </div>
                         <div class="tag" v-for="(tag, index) in doc.tags" :key="index">
