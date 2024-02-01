@@ -38,3 +38,26 @@ export const useLeftPostStore = defineStore("leftPostStore", {
       getLeftPost: (state) => state.left,
    },
 });
+
+export const useScrollPosStore = defineStore("scrollPosStore", {
+   state: () => {
+      return {
+         top: 0,
+         left: 0,
+      };
+   },
+   actions: {
+      setScroll(y: number, x: number) {
+         this.top = y;
+         this.left = x;
+      },
+      reset() {
+         this.left = 0;
+         this.top = 0;
+      },
+   },
+   getters: {
+      getTop: (state) => state.top,
+      getLeft: (state) => state.left,
+   },
+});

@@ -3,6 +3,7 @@ export default defineNuxtConfig({
    devtools: { enabled: true },
    modules: [
       "@nuxt/content",
+      "@hypernym/nuxt-gsap",
       "@pinia/nuxt",
       [
          "@nuxtjs/google-fonts",

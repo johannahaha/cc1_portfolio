@@ -2,7 +2,7 @@
    <div>
       <h4 class="overview-title-other">other projects</h4>
       <FilterMenu />
-      <div class="recent-projects">
+      <div class="recent-projects" id="scroll-element" ref="scrollElement">
          <NuxtLink class="recent-projects-project" v-for="(post, index) in filteredPosts" :key="post.title"
             :to="{ path: post._path, hash: '#' + (index + 1) }" :id="index">
             <div class="recent-projects-project-title" :class="{ 'active': post.title == openPostTitle }">
@@ -12,8 +12,6 @@
                :class="{ 'active': post.title == openPostTitle }" />
          </NuxtLink>
       </div>
-      <NuxtLink to="#7"> <font-awesome-icon class="angle" icon="fa-solid fa-angle-left" size="xl" /></NuxtLink>
-
       <!-- <div class="arrows">
          <div class="arrows-icon" @click="previousPost">
             <font-awesome-icon v-show="!rightIsFirstProject" class="angle" icon="fa-solid fa-angle-left" size="xl" />
@@ -29,9 +27,10 @@
 import { reactive, computed } from "vue";
 
 //STATE
-import { useFilterStore, useLeftPostStore } from '@/stores/filters'
+import { useFilterStore, useLeftPostStore, useScrollPosStore } from '@/stores/filters'
 const filterStore = useFilterStore();
 const leftPostStore = useLeftPostStore();
+const scrollPosStore = useScrollPosStore();
 
 
 //PROPS
@@ -47,6 +46,21 @@ const { data: posts } = await useAsyncData('posts', async () => {
 
    return posts
 })
+
+//REFS
+const scrollElement = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+   //scroll in bar to correct posisition
+   if (scrollElement && scrollElement.value) {
+      scrollElement.value.scrollTo
+         (
+            scrollPosStore.getLeft,
+            scrollPosStore.getTop
+         );
+   }
+});
+
 
 //METHODS
 const nextPost = function () {

@@ -39,3 +39,26 @@
    </main>
 </template>
 
+<script setup lang="ts">
+
+import { useScrollPosStore } from "@/stores/filters";
+
+
+definePageMeta({
+   middleware: [
+      function (to, from) {
+         // Custom inline middleware   
+         if (document) {
+            const el = document.querySelector("#scroll-element");
+            if (el) {
+               const scrollPosStore = useScrollPosStore();
+               scrollPosStore.setScroll(el.scrollTop, el.scrollLeft);
+            }
+
+         }
+      },
+      'storescroll',
+   ],
+});
+</script>
+
