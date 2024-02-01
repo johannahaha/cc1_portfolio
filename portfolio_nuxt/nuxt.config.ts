@@ -25,7 +25,6 @@ export default defineNuxtConfig({
       transpile: [
          "lite-youtube",
          "@fortawesome/fontawesome-svg-core",
-         "@fortawesome/fontawesome-svg-core",
          "@fortawesome/pro-solid-svg-icons",
          "@fortawesome/free-brands-svg-icons",
          "@fortawesome/vue-fontawesome",
@@ -34,6 +33,11 @@ export default defineNuxtConfig({
    vue: {
       compilerOptions: {
          isCustomElement: (tag) => ["lite-youtube"].includes(tag),
+      },
+   },
+   router: {
+      options: {
+         scrollBehaviorType: "smooth",
       },
    },
 });

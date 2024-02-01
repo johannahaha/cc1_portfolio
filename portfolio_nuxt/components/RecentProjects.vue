@@ -4,7 +4,7 @@
       <FilterMenu />
       <div class="recent-projects">
          <NuxtLink class="recent-projects-project" v-for="(post, index) in filteredPosts" :key="post.title"
-            :to="post._path">
+            :to="{ path: post._path, hash: '#' + (index + 1) }" :id="index">
             <div class="recent-projects-project-title" :class="{ 'active': post.title == openPostTitle }">
                {{ post.title }}
             </div>
@@ -12,6 +12,8 @@
                :class="{ 'active': post.title == openPostTitle }" />
          </NuxtLink>
       </div>
+      <NuxtLink to="#7"> <font-awesome-icon class="angle" icon="fa-solid fa-angle-left" size="xl" /></NuxtLink>
+
       <!-- <div class="arrows">
          <div class="arrows-icon" @click="previousPost">
             <font-awesome-icon v-show="!rightIsFirstProject" class="angle" icon="fa-solid fa-angle-left" size="xl" />
@@ -48,14 +50,14 @@ const { data: posts } = await useAsyncData('posts', async () => {
 
 //METHODS
 const nextPost = function () {
-   console.log("click next")
+   //console.log("click next")
    if (!leftIsLastProject.value) {
       leftPostStore.increment();
    }
 }
 
 const previousPost = function () {
-   console.log("click prev")
+   //console.log("click prev")
    if (!rightIsFirstProject.value) {
       leftPostStore.decrement();
    }
@@ -69,8 +71,6 @@ const filteredPosts = computed(() => {
 
 //get index of current post
 const openPostID = computed(() => {
-   console.log(props.openPostTitle)
-   console.log("current", filteredPosts.value.map((post) => post.title).indexOf(props.openPostTitle))
    return filteredPosts.value.map((post) => post.title).indexOf(props.openPostTitle);
 });
 
@@ -86,14 +86,12 @@ const leftIsLastProject = computed(() => {
 
 
 const rightPostID = computed(() => {
-   console.log("left", leftPostStore.getLeftPost)
-   console.log("right", leftPostStore.getLeftPost + 1)
    return leftPostStore.getLeftPost + 1;
 });
 
 const previewPosts = computed(() => {
    let indices = [leftPostStore.getLeftPost, rightPostID.value]
-   console.log(indices)
+   //console.log(indices)
    if (filteredPosts !== undefined && filteredPosts !== null) {
       console.log(indices.map((index) => filteredPosts.value[index]))
       return indices.map((index) => filteredPosts.value[index]);
