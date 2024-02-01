@@ -1,5 +1,5 @@
 ---
-title: realVirtuality
+title: Real Virtuality
 tags: [exhibition]
 preview_img: /img/realvirtuality.jpg
 year: 2017

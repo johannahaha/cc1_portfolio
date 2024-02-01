@@ -47,11 +47,16 @@ const filteredPosts = computed(() => {
 
 //get index of current post
 const currentPost = computed(() => {
+   console.log("current", filteredPosts.value.map((post) => post.title).indexOf(props.currentOpenPost))
    return filteredPosts.value.map((post) => post.title).indexOf(props.currentOpenPost);
 });
 
 const isFirstProject = computed(() => {
    return currentPost.value === 0;
+});
+
+const isLastProject = computed(() => {
+   return currentPost.value === filteredPosts.value.length - 1;
 });
 
 const neighborPosts = computed(() => {
@@ -60,14 +65,18 @@ const neighborPosts = computed(() => {
       let nextPost = currentPost.value + 1;
 
       //edge cases
-      if (lastPost < 0 || lastPost >= filteredPosts.length - 1 || lastPost == undefined)
+      if (lastPost < 0 || lastPost >= filteredPosts.value.length || lastPost == undefined)
          lastPost = filteredPosts.value.length - 1;
-      if (nextPost < 0 || nextPost >= filteredPosts.length - 1 || nextPost == undefined)
+      if (nextPost < 0 || nextPost >= filteredPosts.value.length - 1 || nextPost == undefined)
          nextPost = 0;
+
+      console.log("left", lastPost)
+      console.log("right", nextPost)
 
       //get indexes of post before and after
       let indices = [lastPost, nextPost];
       let neighbors = indices.map((index) => filteredPosts.value[index]);
+      console.log(neighbors)
       return neighbors;
    }
 

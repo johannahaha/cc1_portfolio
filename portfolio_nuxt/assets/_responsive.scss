@@ -271,6 +271,7 @@
 
          @include section-not-mobile;
          margin-left: 20vw;
+         width: 80vw;
 
          &-section {
             &-title {
@@ -293,6 +294,12 @@
 
                p {
                   width: 40vw;
+               }
+            }
+
+            .publications {
+               p {
+                  padding-right: 2.5vw;
                }
             }
 
@@ -392,6 +399,9 @@
                img {
                   width: 20vw;
                }
+            }
+            .publications {
+               width: 67vw;
             }
          }
       }

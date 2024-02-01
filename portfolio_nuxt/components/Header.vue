@@ -8,12 +8,12 @@
             <div class="menu-nav">
                <div class="menu-nav-main">
                   <div class="menu-nav_item">
-                     <NuxtLink class="menu-nav_link" activeClass="manual-active" to="/">Home</NuxtLink>
+                     <NuxtLink class="menu-nav_link" activeClass="manual-active"
+                        :class="{ 'manual-active': isRouteActive }" to="/">portfolio</NuxtLink>
                   </div>
                   <div class="menu-nav_item">
-                     <NuxtLink class="menu-nav_link" :class="{ 'manual-active': isRouteActive }"
-                        to="/portfolio/klimakarten">
-                        Portfolio
+                     <NuxtLink class="menu-nav_link" activeClass="manual-active" to="/about">
+                        about
                      </NuxtLink>
                   </div>
                </div>
