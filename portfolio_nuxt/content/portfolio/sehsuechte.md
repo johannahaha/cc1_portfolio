@@ -6,11 +6,9 @@ year: 2022
 date: 2022-04
 published: true
 location: Potsdam, Germany
-phrase: Exhibition managment of media art exhibition at international student film festival Sehsüchte
+phrase: Exhibition managment and curation of media art exhibition at international student film festival Sehsüchte
 link: https://sehsuechte.de/en/
 ---
-
-# Exhibition Management and Curation at Sehsuechte Film Festival
 
 The Exhibition "Beyond the Frame" is part of the [International Student Film Festival Sehsüchte](https://sehsuechte.de/en/). In 2021, Sehsüchte had its 50th anniversary. The exhibition aims to present new forms of storytelling, interactive media, installations, immersive experiences, and digital art.
 

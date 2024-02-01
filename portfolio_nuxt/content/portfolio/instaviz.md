@@ -10,8 +10,6 @@ location: Berlin, Germany
 link: https://www.instagram.com/klima.taz
 ---
 
-# Instavis: Inequality in the Climate Crisis
-
 The course Instavis was about how complex climate data can be visualized in Instagram Infographics. It was a collaboration of the [Urban Complexity Lab](https://uclab.fh-potsdam.de/) of the University of Applied Science Potsdam and the climate journalism Instagram channel [klima.taz](https://www.instagram.com/klima.taz) of the German newspaper taz.
 
 I worked in a team together with Anna Eschenbacher and Lutricia Valentin. We investigated the topic of inequality in the climate crisis. From two different papers, we extracted data and information, out of which we then developed a design and communication concept for Instagram Feed Posts.

@@ -10,8 +10,6 @@ link: www.forarex.de
 location: Bremen,Germany
 ---
 
-# Forarex
-
 FORAREX is an interdisciplinary student research project. Students from Bremen have conducted an experiment with foraminifera (a small marine organism with a calcareous shell). The aim is to investigate the effect of weightlessness on foraminifera. The experiment has so far been implemented within the European research program REXUS 26, where a research rocket was a research rocket with our experiment onboard was launched into space. After two years of preparation, the rocket flight took place in spring 2019.
 
 Since 2017, I have been the manager for public relations and Communications. I developed the design and oversee

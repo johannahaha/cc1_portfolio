@@ -10,8 +10,6 @@ location: Potsdam, Germany
 link: https://taz.de/klimakarten
 ---
 
-# Klimakarten: Data Visualization design for constructive journalism
-
 In this research project, the UCLAB (FH Potsdam) collaborated with the newspaper taz to design data visualizations for newspaper readers. We designed, developed and produced digital and analog postcards, which communicate climate protection data on a local level for Germany. The tasks were mainly data preprocessing, web development and design. The research about this paper was published in an IEEE paper.
 
 This work was a collaboration with [Francesca Morini](https://www.morini.design), [Anna Eschenbacher](https://annaeschenbacher.com), [Marian Dörk](https://mariandoerk.de) and the taz journalists Luise Strothmann, Lalon Sander, Jean-Philipp Baeck, Jelene Malkowski.

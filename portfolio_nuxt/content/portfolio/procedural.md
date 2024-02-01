@@ -10,8 +10,6 @@ location: Potsdam, Germany
 link: &nbsp
 ---
 
-# Procedural Generation & Simulation in Houdini
-
 In the class procedural generation and simulation, we learned about procedural workflows with Houdini. We explored and experimented with the concept. Here are some of my results.
 
 ## Extrusion

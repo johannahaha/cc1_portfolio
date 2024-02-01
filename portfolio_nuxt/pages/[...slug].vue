@@ -7,6 +7,8 @@
             <div class="post">
                <div class="post-content">
                   <img :src="doc.preview_img" class="post-img" alt="post.title" />
+                  <h1>{{ doc.title }}</h1>
+                  <h4>{{ doc.phrase }}</h4>
                   <ContentRendererMarkdown :value="doc" />
                </div>
                <div class="post-overview">

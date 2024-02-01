@@ -10,11 +10,9 @@ location: Berlin, Germany
 link: https://www.youtube.com/watch?v=EYrlpDQTe8c
 ---
 
-# Air Pollution in Berlin: Make the invisible visible
-
 ## Abstract
 
-Do you know the quality of the air you breathe? Air Pollution is invisible. And it is always around us in Berlin. This project makes the invisible visible and colors the light around you according to the quality of the air. How does it work? With a smart light bulb, you connect to the app.
+Make the invisible visible - Do you know the quality of the air you breathe? Air Pollution is invisible. And it is always around us in Berlin. This project makes the invisible visible and colors the light around you according to the quality of the air. How does it work? With a smart light bulb, you connect to the app.
 
 This project was the small-scale project of the class "Creative Coding 2" with OpenFrameworks with the topic of Interfaces.
 
