@@ -3,7 +3,7 @@
       <h4 class="overview-title-other">other projects</h4>
       <FilterMenu />
       <div class="recent-projects">
-         <NuxtLink class="recent-projects-project" v-for="(post, index) in neighborPosts" :key="post.title">
+         <NuxtLink class="recent-projects-project" v-for="(post, index) in previewPosts" :key="post.title">
             <div class="recent-projects-project-title">
                {{ post.title }}
             </div>
@@ -22,8 +22,10 @@
 import { reactive, computed } from "vue";
 
 //STATE
-import { useFilterStore } from '@/stores/filters'
+import { useFilterStore, useLeftPostStore } from '@/stores/filters'
 const filterStore = useFilterStore();
+const leftPostStore = useLeftPostStore();
+
 
 //PROPS
 const props = defineProps(["openPostTitle"]);
@@ -43,18 +45,15 @@ const { data: posts } = await useAsyncData('posts', async () => {
 const nextPost = function () {
    console.log("Next?", !leftIsLastProject.value)
    if (!leftIsLastProject.value) {
-      leftPostID.value++;
+      leftPostStore.increment();
    }
 }
 
 const previousPost = function () {
    if (!rightIsFirstProject.value) {
-      leftPostID.value--;
+      leftPostStore.decrement();
    }
 }
-
-//STATE
-const leftPostID = useState('leftPostID', () => 0)
 
 //COMPUTED
 const filteredPosts = computed(() => {
@@ -72,25 +71,28 @@ const openPostID = computed(() => {
 // const leftPostID = computed(() => { return 0 })
 
 const rightIsFirstProject = computed(() => {
-   return rightPostID.value <= 0;
+   return leftPostStore.getLeftPost <= 0;
 });
 
 const leftIsLastProject = computed(() => {
-   console.log(leftPostID.value === filteredPosts.value.length - 1)
-   return leftPostID.value >= filteredPosts.value.length - 1;
+   console.log(filteredPosts.value.length - 1)
+   return leftPostStore.getLeftPost >= filteredPosts.value.length - 2;
 });
 
 
 const rightPostID = computed(() => {
-   console.log("left", leftPostID.value)
-   console.log("right", leftPostID.value + 1)
-   return leftPostID.value + 1;
+   console.log("left", leftPostStore.getLeftPost)
+   console.log("right", leftPostStore.getLeftPost + 1)
+   return leftPostStore.getLeftPost + 1;
 });
 
 const previewPosts = computed(() => {
-   let indices = [leftPostID, rightPostID]
+   let indices = [leftPostStore.getLeftPost, rightPostID.value]
    console.log(indices)
-   return indices.map((index) => filteredPosts.value[index]);
+   if (filteredPosts !== undefined && filteredPosts !== null) {
+      console.log(indices.map((index) => filteredPosts.value[index]))
+      return indices.map((index) => filteredPosts.value[index]);
+   }
 
 })
 

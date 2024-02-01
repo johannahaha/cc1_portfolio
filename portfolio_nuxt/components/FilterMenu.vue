@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { useFilterStore } from '@/stores/filters'
+import { useFilterStore, useLeftPostStore } from '@/stores/filters'
 
 //QUERIES
 const { data: tags } = await useAsyncData('tags', async () => {
@@ -31,6 +31,7 @@ if (tags != null && tags.value !== null) {
 
 //STATES 
 const filterStore = useFilterStore();
+const leftPostStore = useLeftPostStore();
 //METHODS
 
 function checkFilter(title: string) {
@@ -45,6 +46,7 @@ function checkFilter(title: string) {
 }
 
 function updateFilter(tag: string) {
+   leftPostStore.reset()
    filterStore.setFilter(checkFilter(tag));
 }
 
