@@ -3,18 +3,23 @@
       <h4 class="overview-title-other">other projects</h4>
       <FilterMenu />
       <div class="recent-projects">
-         <NuxtLink class="recent-projects-project" v-for="(post, index) in previewPosts" :key="post.title">
-            <div class="recent-projects-project-title">
+         <NuxtLink class="recent-projects-project" v-for="(post, index) in filteredPosts" :key="post.title"
+            :to="post._path">
+            <div class="recent-projects-project-title" :class="{ 'active': post.title == openPostTitle }">
                {{ post.title }}
             </div>
             <img :src="post.preview_img" class="recent-projects-project-preview-img" alt="post.title"
-               :style="{ opacity: 0.5 }" />
+               :class="{ 'active': post.title == openPostTitle }" />
          </NuxtLink>
       </div>
-      <font-awesome-icon v-show="!rightIsFirstProject" class="angle" icon="fa-solid fa-angle-left" size="xl"
-         @click="previousPost" />
-      <font-awesome-icon v-show="!leftIsLastProject" class="angle" icon="fa-solid fa-angle-right" size="xl"
-         @click="nextPost" />
+      <!-- <div class="arrows">
+         <div class="arrows-icon" @click="previousPost">
+            <font-awesome-icon v-show="!rightIsFirstProject" class="angle" icon="fa-solid fa-angle-left" size="xl" />
+         </div>
+         <div class="arrows-icon " @click="nextPost">
+            <font-awesome-icon v-show="!leftIsLastProject" class="angle" icon="fa-solid fa-angle-right" size="xl" />
+         </div>
+      </div> -->
    </div>
 </template>
 
@@ -43,13 +48,14 @@ const { data: posts } = await useAsyncData('posts', async () => {
 
 //METHODS
 const nextPost = function () {
-   console.log("Next?", !leftIsLastProject.value)
+   console.log("click next")
    if (!leftIsLastProject.value) {
       leftPostStore.increment();
    }
 }
 
 const previousPost = function () {
+   console.log("click prev")
    if (!rightIsFirstProject.value) {
       leftPostStore.decrement();
    }
@@ -75,7 +81,6 @@ const rightIsFirstProject = computed(() => {
 });
 
 const leftIsLastProject = computed(() => {
-   console.log(filteredPosts.value.length - 1)
    return leftPostStore.getLeftPost >= filteredPosts.value.length - 2;
 });
 

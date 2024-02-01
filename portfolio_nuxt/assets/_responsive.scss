@@ -228,6 +228,16 @@
                   &-title {
                      display: none;
                   }
+
+                  &:hover {
+                     &-title {
+                        //display: inline-block;
+                     }
+                     img {
+                        -webkit-filter: grayscale(0);
+                        filter: none;
+                     }
+                  }
                }
             }
          }

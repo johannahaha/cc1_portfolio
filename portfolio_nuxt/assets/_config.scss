@@ -143,6 +143,8 @@ $variable-font-weights: (
 @mixin recent-project-vertical {
    display: flex;
    justify-content: space-between;
+   overflow-x: scroll;
+   overflow-y: hidden;
 
    &-project {
       width: 50%;
@@ -151,6 +153,10 @@ $variable-font-weights: (
       padding: 1rem;
       position: relative;
       flex: 0 0 100%;
+
+      a {
+         cursor: pointer;
+      }
 
       &:after {
          //https://stackoverflow.com/questions/12121090/responsively-change-div-size-keeping-aspect-ratio/12121309#12121309
@@ -161,6 +167,7 @@ $variable-font-weights: (
       }
 
       &-preview-img {
+         opacity: 0.5;
          z-index: 1;
          cursor: pointer;
          height: 100%;
@@ -187,6 +194,12 @@ $variable-font-weights: (
          left: 50%;
          top: 50%;
          transform: translate(-50%, -50%);
+      }
+
+      .active {
+         -webkit-filter: grayscale(0);
+         filter: none;
+         opacity: 0.75;
       }
    }
 }

@@ -243,6 +243,7 @@
       .recent-projects {
          margin-top: 0;
          border-top: none;
+         overflow-x: scroll;
 
          &-project-title {
             padding: 0.5rem;
