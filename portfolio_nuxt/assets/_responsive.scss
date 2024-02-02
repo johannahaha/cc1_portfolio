@@ -16,7 +16,7 @@
    .navbar {
       z-index: 3;
       position: fixed;
-      width: 20vw;
+      width: get-section-width-md(navbar);
       height: 100vh;
 
       #social {
@@ -158,22 +158,24 @@
    }
 
    .outer-post {
-      margin-left: 20vw;
+      margin-left: get-section-width-md(navbar);
       margin-top: 0;
+      width: get-section-width-md(content);
       .post {
          display: flex;
          flex-direction: row;
          &-overview {
-            width: 30vw;
-            margin-top: 1rem;
-            padding: 0;
+            width: get-section-width-md(overview);
+            padding: 2rem 0 0 0;
             position: sticky;
             align-self: flex-start;
             top: 0;
+            border-top: none;
 
             &-text {
                padding: 1rem;
                margin-top: 0.5rem;
+               border-top: solid 1px;
 
                &-tags {
                   row-gap: 0.5rem;
@@ -214,27 +216,42 @@
             .recent-projects {
                padding: 2rem 0 0 0;
                border-bottom: none;
-               width: 30vw;
+               width: get-section-width-md(overview);
                overflow: hidden;
                margin-top: 0;
 
                @include recent-project-vertical;
                &-project {
+                  width: 55%;
+                  max-width: 55%;
                   //    max-width: 30vw;
                   //    height: calc(30vw / 1.5);
                   padding: 0.5rem;
+                  padding-right: 1rem;
+                  padding-left: 0;
                   margin: 0;
 
                   &-title {
                      display: none;
+                  }
+
+                  &:hover {
+                     &-title {
+                        //display: inline-block;
+                     }
+                     img {
+                        -webkit-filter: grayscale(0);
+                        filter: none;
+                     }
                   }
                }
             }
          }
 
          &-content {
-            width: 50vw;
+            width: get-section-width-md(text);
             font-size: 1.2rem;
+            margin-top: 2.5rem;
 
             h1 {
                font-size: 1.5rem;
@@ -262,7 +279,7 @@
    header {
       background: none !important;
       z-index: 3;
-      position: relative;
+      position: absolute;
    }
 
    .home {
@@ -271,12 +288,13 @@
 
          @include section-not-mobile;
          margin-left: 20vw;
+         width: 80vw;
 
          &-section {
             &-title {
                padding-left: 0;
                padding-bottom: 0.5rem;
-               padding-top: 2rem;
+               padding-top: 3.5rem;
             }
 
             .about {
@@ -293,6 +311,12 @@
 
                p {
                   width: 40vw;
+               }
+            }
+
+            .publications {
+               p {
+                  padding-right: 2.5vw;
                }
             }
 
@@ -335,13 +359,15 @@
    }
 
    .navbar {
-      width: 15vw;
+      width: get-section-width-lg(navbar);
    }
 
    .outer-post {
+      margin-left: get-section-width-lg(navbar);
+      width: get-section-width-lg(content);
       .post {
          .post-content {
-            width: 50vw;
+            width: get-section-width-lg(text);
             padding-right: 5vw;
 
             .portraet {
@@ -352,10 +378,18 @@
          }
 
          .post-overview {
+            width: get-section-width-lg(overview);
             .projects_filter {
                width: 25vw;
                .tag {
                   flex-basis: 0;
+               }
+            }
+            .recent-projects {
+               width: get-section-width-lg(overview);
+               &-project {
+                  width: 45%;
+                  max-width: 45%;
                }
             }
          }
@@ -393,6 +427,9 @@
                   width: 20vw;
                }
             }
+            .publications {
+               width: 67vw;
+            }
          }
       }
    }
@@ -416,6 +453,12 @@
             .projects_filter {
                width: 30vw;
                flex-wrap: nowrap;
+            }
+            .recent-projects {
+               &-project {
+                  width: 33%;
+                  max-width: 33%;
+               }
             }
          }
       }

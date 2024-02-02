@@ -7,6 +7,20 @@ $dark-blue: #073bc0;
 $light-blue: #75a3bf;
 //$highlight-color: #D9A404;
 
+$md-section-width: (
+   "navbar": 15vw,
+   "content": 85vw,
+   "overview": 35vw,
+   "text": 50vw,
+);
+
+$lg-section-width: (
+   "navbar": 17vw,
+   "content": 83vw,
+   "overview": 33vw,
+   "text": 50vw,
+);
+
 $font-weigths: (
    "light": 100,
    "regular": 400,
@@ -41,6 +55,18 @@ $variable-font-weights: (
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+}
+
+@function get-section-width-md($section-name) {
+   @return map-get($md-section-width, $section-name);
+}
+
+@function get-section-width-lg($section-name) {
+   @return map-get($lg-section-width, $section-name);
+}
+
+@function get-section-width-xl($section-name) {
+   @return map-get($xl-section-width, $section-name);
 }
 
 @function get-font-weight($weight-name) {
@@ -143,14 +169,25 @@ $variable-font-weights: (
 @mixin recent-project-vertical {
    display: flex;
    justify-content: space-between;
+   overflow-x: scroll;
+   overflow-y: hidden;
+
+   &:hover,
+   &:focus {
+      scrollbar-color: initial;
+   }
 
    &-project {
-      width: 50%;
-      max-width: 50%;
+      width: 55%;
+      max-width: 55%;
       //height: calc(#{width} * 0.4 * 8);
       padding: 1rem;
       position: relative;
       flex: 0 0 100%;
+
+      a {
+         cursor: pointer;
+      }
 
       &:after {
          //https://stackoverflow.com/questions/12121090/responsively-change-div-size-keeping-aspect-ratio/12121309#12121309
@@ -161,6 +198,7 @@ $variable-font-weights: (
       }
 
       &-preview-img {
+         opacity: 0.5;
          z-index: 1;
          cursor: pointer;
          height: 100%;
@@ -187,6 +225,12 @@ $variable-font-weights: (
          left: 50%;
          top: 50%;
          transform: translate(-50%, -50%);
+      }
+
+      .active {
+         -webkit-filter: grayscale(0);
+         filter: none;
+         opacity: 0.75;
       }
    }
 }

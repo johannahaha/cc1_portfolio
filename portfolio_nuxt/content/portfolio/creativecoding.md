@@ -10,8 +10,6 @@ location: Potsdam, Germany
 link: &nbsp
 ---
 
-# Creative Coding and Procedural Generation
-
 In the class Creative Coding in the first term of my master we started by using Processing and P5 to generate art work and patterns. Later, we moved on to web developmement principles. As a final project, I implemented a portfolio website with Gridsome, a Static Side Generator for Vue. In the class procedural generation and simulation, we learned about procedural workflows with Houdini. We explored and experimented with the concept. Here are some of my results.
 
 ## Procedural Generation and Simulation in Houdini

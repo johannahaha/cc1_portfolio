@@ -37,7 +37,6 @@
       }
 
       &-section {
-         margin-top: 2rem;
          &-title {
             padding: 2.5vw;
             font-size: 1.5rem;
@@ -51,7 +50,8 @@
             }
          }
 
-         .about {
+         .about,
+         .publications {
             padding: 0 1rem;
 
             img {
@@ -63,6 +63,10 @@
             p {
                text-transform: none;
                padding-bottom: 2rem;
+            }
+
+            a {
+               text-decoration: underline;
             }
          }
 

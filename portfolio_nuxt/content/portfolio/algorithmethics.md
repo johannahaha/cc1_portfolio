@@ -10,8 +10,6 @@ phrase: Interactive web visualisation of a case of algorithmic bias
 link: https://www.stories-algorithmethics.de
 ---
 
-# Stories about Algorithm Ethics: The BAMF Case
-
 https://www.stories-algorithmethics.de
 
 This project is a website, that is an interactive visualization of a case of algorithmic bias in Germany. I did this project as the final project of the first term of my master's study program.

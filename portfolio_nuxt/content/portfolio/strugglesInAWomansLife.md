@@ -6,11 +6,9 @@ year: 2018
 date: 2018-12
 published: true
 location: Bangkok, Thailand
-phrase: Art installations with textiles
+phrase: Art installation with textiles
 link: &nbsp
 ---
-
-# struggles in a woman's life
 
 My work takes up the meaning of traditional Thai weaving patterns on women's skirts. The patterns symbolize a woman's life and the obstacles that make it up. The installation artistically explores the interaction of symbolism with external influences and circumstances, such as wind and sun. It was exhibited at Chiang Mai Design Week 2019 at TCDC Design Center.
 

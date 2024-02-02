@@ -8,7 +8,11 @@
 </template>
 
 <script setup lang="ts">
-import { useFilterStore } from '@/stores/filters'
+import { useFilterStore, useLeftPostStore, useScrollPosStore } from '@/stores/filters'
+//STATES 
+const filterStore = useFilterStore();
+const leftPostStore = useLeftPostStore();
+const scrollPosStore = useScrollPosStore();
 
 //QUERIES
 const { data: tags } = await useAsyncData('tags', async () => {
@@ -29,10 +33,7 @@ if (tags != null && tags.value !== null) {
 }
 
 
-//STATES 
-const filterStore = useFilterStore();
 //METHODS
-
 function checkFilter(title: string) {
    title = title.toLowerCase();
    let updated_filter = "";
@@ -45,6 +46,8 @@ function checkFilter(title: string) {
 }
 
 function updateFilter(tag: string) {
+   leftPostStore.reset();
+   scrollPosStore.reset(); //todo: rerender scrollto element position (watch pinia state)
    filterStore.setFilter(checkFilter(tag));
 }
 

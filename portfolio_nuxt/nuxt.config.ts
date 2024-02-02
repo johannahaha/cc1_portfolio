@@ -3,6 +3,7 @@ export default defineNuxtConfig({
    devtools: { enabled: true },
    modules: [
       "@nuxt/content",
+      "@hypernym/nuxt-gsap",
       "@pinia/nuxt",
       [
          "@nuxtjs/google-fonts",
@@ -10,7 +11,7 @@ export default defineNuxtConfig({
             families: {
                Archivo: true,
                ArchivoVariable: true,
-               "Noto + Sans": true,
+               "Noto Sans": true,
             },
          },
       ],
@@ -22,11 +23,22 @@ export default defineNuxtConfig({
       },
    },
    build: {
-      transpile: ["lite-youtube"],
+      transpile: [
+         "lite-youtube",
+         "@fortawesome/fontawesome-svg-core",
+         "@fortawesome/pro-solid-svg-icons",
+         "@fortawesome/free-brands-svg-icons",
+         "@fortawesome/vue-fontawesome",
+      ],
    },
    vue: {
       compilerOptions: {
          isCustomElement: (tag) => ["lite-youtube"].includes(tag),
+      },
+   },
+   router: {
+      options: {
+         scrollBehaviorType: "smooth",
       },
    },
 });

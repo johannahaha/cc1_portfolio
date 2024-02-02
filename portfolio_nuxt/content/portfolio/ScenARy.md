@@ -10,8 +10,6 @@ phrase: Previsualisation app of sceneries for theaters with AR
 link: https://youtu.be/fTFNuT1Fz-c
 ---
 
-# ScenARy
-
 ScenARy is a previsualization tool to facilitate and support communication about the stage set between different actors in the theatre.
 I developed the augmented reality (AR) app with a team of eight students in cooperation with the Landestheater Linz and first.stage. Part of the project was UX Research and Evaluations of our Prototypes. At the Landestheater, we evaluated and further developed the app scientifically with theatre staff.
 

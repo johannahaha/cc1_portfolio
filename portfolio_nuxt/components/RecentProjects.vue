@@ -2,19 +2,24 @@
    <div>
       <h4 class="overview-title-other">other projects</h4>
       <FilterMenu />
-      <div class="recent-projects">
-         <NuxtLink class="recent-projects-project" v-for="(post, index) in neighborPosts" :key="post.title"
-            :to="post._path">
-            <font-awesome-icon v-if="index == 0 && !isFirstProject" class="angle" icon="fa-solid fa-angle-left"
-               size="xl" />
-            <font-awesome-icon v-if="index != 0" class="angle" icon="fa-solid fa-angle-right" size="xl" />
-            <div class="recent-projects-project-title" v-if="(index != 0) || !isFirstProject">
+      <div class="recent-projects" id="scroll-element" ref="scrollElement">
+         <NuxtLink class="recent-projects-project" v-for="(post, index) in filteredPosts" :key="post.title"
+            :to="{ path: post._path }">
+            <div class="recent-projects-project-title" :class="{ 'active': post.title == openPostTitle }">
                {{ post.title }}
             </div>
-            <img v-if="(index != 0) || !isFirstProject" :src="post.preview_img" class="recent-projects-project-preview-img"
-               alt="post.title" :style="{ opacity: 0.5 }" />
+            <img :src="post.preview_img" class="recent-projects-project-preview-img" alt="post.title"
+               :class="{ 'active': post.title == openPostTitle }" />
          </NuxtLink>
       </div>
+      <!-- <div class="arrows">
+         <div class="arrows-icon" @click="previousPost">
+            <font-awesome-icon v-show="!rightIsFirstProject" class="angle" icon="fa-solid fa-angle-left" size="xl" />
+         </div>
+         <div class="arrows-icon " @click="nextPost">
+            <font-awesome-icon v-show="!leftIsLastProject" class="angle" icon="fa-solid fa-angle-right" size="xl" />
+         </div>
+      </div> -->
    </div>
 </template>
 
@@ -22,11 +27,14 @@
 import { reactive, computed } from "vue";
 
 //STATE
-import { useFilterStore } from '@/stores/filters'
+import { useFilterStore, useLeftPostStore, useScrollPosStore } from '@/stores/filters'
 const filterStore = useFilterStore();
+const leftPostStore = useLeftPostStore();
+const scrollPosStore = useScrollPosStore();
+
 
 //PROPS
-const props = defineProps(["currentOpenPost"]);
+const props = defineProps(["openPostTitle"]);
 
 //QUERIES
 const { data: posts } = await useAsyncData('posts', async () => {
@@ -39,6 +47,36 @@ const { data: posts } = await useAsyncData('posts', async () => {
    return posts
 })
 
+//REFS
+const scrollElement = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+   //scroll in bar to correct posisition
+   if (scrollElement && scrollElement.value) {
+      scrollElement.value.scrollTo
+         (
+            scrollPosStore.getLeft,
+            scrollPosStore.getTop
+         );
+   }
+});
+
+
+//METHODS
+const nextPost = function () {
+   //console.log("click next")
+   if (!leftIsLastProject.value) {
+      leftPostStore.increment();
+   }
+}
+
+const previousPost = function () {
+   //console.log("click prev")
+   if (!rightIsFirstProject.value) {
+      leftPostStore.decrement();
+   }
+}
+
 //COMPUTED
 const filteredPosts = computed(() => {
    return posts.value.filter((post) =>
@@ -46,28 +84,53 @@ const filteredPosts = computed(() => {
 })
 
 //get index of current post
-const currentPost = computed(() => {
-   return filteredPosts.value.map((post) => post.title).indexOf(props.currentOpenPost);
+const openPostID = computed(() => {
+   return filteredPosts.value.map((post) => post.title).indexOf(props.openPostTitle);
 });
 
-const isFirstProject = computed(() => {
-   return currentPost.value === 0;
+// const leftPostID = computed(() => { return 0 })
+
+const rightIsFirstProject = computed(() => {
+   return leftPostStore.getLeftPost <= 0;
 });
+
+const leftIsLastProject = computed(() => {
+   return leftPostStore.getLeftPost >= filteredPosts.value.length - 2;
+});
+
+
+const rightPostID = computed(() => {
+   return leftPostStore.getLeftPost + 1;
+});
+
+const previewPosts = computed(() => {
+   let indices = [leftPostStore.getLeftPost, rightPostID.value]
+   //console.log(indices)
+   if (filteredPosts !== undefined && filteredPosts !== null) {
+      console.log(indices.map((index) => filteredPosts.value[index]))
+      return indices.map((index) => filteredPosts.value[index]);
+   }
+
+})
 
 const neighborPosts = computed(() => {
-   if (currentPost.value !== undefined && filteredPosts !== undefined && filteredPosts !== null) {
-      let lastPost = currentPost.value - 1;
-      let nextPost = currentPost.value + 1;
+   if (openPostID.value !== undefined && filteredPosts !== undefined && filteredPosts !== null) {
+      let lastPost = openPostID.value - 1;
+      let nextPost = openPostID.value + 1;
 
       //edge cases
-      if (lastPost < 0 || lastPost >= filteredPosts.length - 1 || lastPost == undefined)
+      if (lastPost < 0 || lastPost >= filteredPosts.value.length || lastPost == undefined)
          lastPost = filteredPosts.value.length - 1;
-      if (nextPost < 0 || nextPost >= filteredPosts.length - 1 || nextPost == undefined)
+      if (nextPost < 0 || nextPost >= filteredPosts.value.length - 1 || nextPost == undefined)
          nextPost = 0;
+
+      // console.log("left", lastPost)
+      // console.log("right", nextPost)
 
       //get indexes of post before and after
       let indices = [lastPost, nextPost];
       let neighbors = indices.map((index) => filteredPosts.value[index]);
+      // console.log(neighbors)
       return neighbors;
    }
 

@@ -5,12 +5,10 @@ preview_img: /img/bachelor_preview.png
 year: 2020
 date: 2020-06
 published: true
-phrase: Cluster analysis of student click data
+phrase: Cluster Analysis and Characterisation of Students in Virtual Learning Environments.
 location: Bremen, Germany
 link: &nbsp
 ---
-
-# Bachelor Thesis: Cluster Analysis and Characterisation of Students in Virtual Learning Environments
 
 Awarded as the [Best Bachelor Thesis 2020](https://fg-bildungstechnologien.gi.de/nachwuchsfoerderung/beste-abschlussarbeit/) in the field of educational technologies by the Educational Technologies Division of the German Informatics Society.
 

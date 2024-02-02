@@ -18,7 +18,7 @@ const filterStore = useFilterStore();
 //QUERIES
 const { data: posts } = await useAsyncData('posts', async () => {
    const posts = await queryContent("portfolio")
-      .only(["title", "preview_img", "year", "tags", "date", "published", "_path", "phrase"])
+      .only(["title", "preview_img", "year", "tags", "date", "published", "_path", "phrase", "link"])
       .sort({ date: -1 })
       .where({ published: true })
       .find()

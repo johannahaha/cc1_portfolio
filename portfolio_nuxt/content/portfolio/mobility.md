@@ -1,6 +1,6 @@
 ---
 title: Our Mobility in Knots
-tags: [web, datavis, design, coding]
+tags: [web, datavis, coding]
 preview_img: /img/mobility/mobility02.png
 year: 2022
 date: 2022-07
@@ -9,10 +9,6 @@ phrase: Visualising mobility networks - Mapping Cities, Making Cities
 location: Potsdam, Germany
 link: https://ourmobilityinknots.netlify.app
 ---
-
-# Mapping Cities - Making Cities
-
-## Our Mobility in Knots
 
 This projects takes an unusual look at mobility data of Potsdam citizens. We developed a way to show mobility in a network format. This allows a focus on the mode of transportations and interconnectedness, instead of focussing on paths and distances.
 
