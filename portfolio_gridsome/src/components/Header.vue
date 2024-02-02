@@ -7,87 +7,18 @@
          <strong>
             <g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
          </strong>
-         <nav class="nav" :class="{ open: showMenu }">
-            <div class="menu-nav" :class="{ open: showMenu }">
+         <nav class="nav">
+            <div class="menu-nav">
                <div class="menu-nav-main">
-                  <div class="menu-nav_item" :class="{ open: showMenu }">
-                     <g-link
-                        class="menu-nav_link"
-                        v-bind:active-class="
-                           $route.path === '/' ? 'manual-active' : ''
-                        "
-                        to="/"
-                        >Home</g-link
-                     >
+                  <div class="menu-nav_item">
+                     <g-link class="menu-nav_link" v-bind:active-class="$route.path === '/' ? 'manual-active' : ''
+                        " to="/">Home</g-link>
                   </div>
-                  <div class="menu-nav_item" :class="{ open: showMenu }">
-                     <g-link
-                        class="menu-nav_link"
-                        v-bind:active-class="
-                           $route.path !== '/' ? 'manual-active' : ''
-                        "
-                        to="/portfolio/post/klimakarten"
-                        >Portfolio</g-link
-                     >
+                  <div class="menu-nav_item">
+                     <g-link class="menu-nav_link" v-bind:active-class="$route.path !== '/' ? 'manual-active' : ''
+                        " to="/portfolio/post/klimakarten">Portfolio</g-link>
                   </div>
                </div>
-               <!-- <div class="menu-nav-sub">
-                  <div class="menu-nav_item" :class="{ open: showMenu }">
-                     <g-link
-                        class="menu-nav_link_subpage portfolio"
-                        to="/portfolio/"
-                        :class="[
-                           $route.path == '/portfolio/' ? 'manual-active' : '',
-                        ]"
-                        >all projects</g-link
-                     >
-                  </div>
-                  <div v-if="$static.posts !== undefined">
-                     <div
-                        class="menu-nav_item"
-                        :class="{ open: showMenu }"
-                        v-for="edge in $static.posts.edges"
-                        :key="edge.node.title"
-                        :post="edge.node"
-                     >
-                        <g-link
-                           class="menu-nav_link_subpage"
-                           v-if="$route.path === edge.node.path"
-                           v-bind:active-class="
-                              $route.path === edge.node.path
-                                 ? 'manual-active'
-                                 : ''
-                           "
-                           to="/portfolio/"
-                           >{{ edge.node.title }}</g-link
-                        >
-                     </div>
-                  </div>
-                  <div v-if="$static.tags !== undefined">
-                     <div
-                        class="menu-nav_item"
-                        :class="{ open: showMenu }"
-                        v-for="edge in $static.tags.edges"
-                        :key="edge.node.title"
-                        :post="edge.node"
-                     >
-                        <g-link
-                           class="menu-nav_link_subpage"
-                           v-if="$route.path === edge.node.path"
-                           v-bind:active-class="
-                              $route.path === edge.node.path
-                                 ? 'manual-active'
-                                 : ''
-                           "
-                           to="/portfolio/"
-                           >{{ edge.node.title }} projects</g-link
-                        >
-                     </div>
-                  </div>
-               </div> -->
-               <!-- <div class="menu-nav_item"
-                            :class='{open:showMenu}' > 
-                            <g-link class="menu-nav_link" to="/cv/">CV</g-link></div> -->
             </div>
          </nav>
          <Social></Social>
