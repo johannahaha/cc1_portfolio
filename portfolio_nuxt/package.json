@@ -31,6 +31,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.5",
     "@pinia/nuxt": "^0.5.1",
     "lite-youtube-embed": "^0.3.0",
-    "pinia": "^2.1.7"
+    "pinia": "^2.1.7",
+    "vue-dragscroll": "^4.0.5"
   }
 }
