@@ -256,6 +256,10 @@
             width: 40vw;
          }
       }
+
+      .arrows {
+         display: none;
+      }
    }
 }
 
@@ -265,6 +269,7 @@
 
 .recent-projects {
    margin: 2rem 0;
+   margin-bottom: 0;
    width: 100%;
    position: relative;
    border-bottom: solid 1px;

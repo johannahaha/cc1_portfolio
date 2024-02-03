@@ -246,6 +246,15 @@
                   }
                }
             }
+
+            .arrows {
+               display: flex;
+               justify-content: space-evenly;
+               svg {
+                  padding: 2rem 3rem;
+                  cursor: pointer;
+               }
+            }
          }
 
          &-content {
