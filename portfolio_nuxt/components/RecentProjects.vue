@@ -23,26 +23,22 @@
             />
          </NuxtLink>
       </div>
-      <!-- <div class="arrows" @click.prevent>
-         <button
-            class="arrows-icon"
-            @click.prevent="previousPost"
-            v-show="!isFirst"
-         >
+      <div class="arrows" @click.prevent>
+         <button class="arrows-icon" @click.prevent="previousPost">
             <font-awesome-icon
                class="angle"
                icon="fa-solid fa-angle-left"
                size="xl"
             />
          </button>
-         <button class="arrows-icon" @click.prevent="nextPost" v-show="!isLast">
+         <button class="arrows-icon" @click.prevent="nextPost">
             <font-awesome-icon
                class="angle"
                icon="fa-solid fa-angle-right"
                size="xl"
             />
          </button>
-      </div> -->
+      </div>
    </div>
 </template>
 

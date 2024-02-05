@@ -126,7 +126,6 @@
 
       &-overview {
          border-top: solid 1px;
-         //border-bottom: solid 1px;
          padding: 1rem;
          width: 100vw;
 
@@ -248,9 +247,11 @@
       }
 
       .recent-projects {
-         //margin-top: 0;
+         margin-top: 0;
          border-top: none;
          overflow-x: scroll;
+         border-bottom: solid 1px;
+         margin-bottom: 2rem;
 
          &-project-title {
             padding: 0.5rem;
