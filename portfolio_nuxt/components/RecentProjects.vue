@@ -1,5 +1,5 @@
 <template>
-   <div @click.prevent.self>
+   <div @click.prevent.self="">
       <h4 class="overview-title-other">other projects</h4>
       <FilterMenu />
       <div class="recent-projects" id="scroll-element" ref="scrollElement">
@@ -23,22 +23,26 @@
             />
          </NuxtLink>
       </div>
-      <div class="arrows" @click.prevent>
-         <div class="arrows-icon" @click.prevent="previousPost">
+      <!-- <div class="arrows" @click.prevent>
+         <button
+            class="arrows-icon"
+            @click.prevent="previousPost"
+            v-show="!isFirst"
+         >
             <font-awesome-icon
                class="angle"
                icon="fa-solid fa-angle-left"
                size="xl"
             />
-         </div>
-         <div class="arrows-icon" @click.prevent="nextPost">
+         </button>
+         <button class="arrows-icon" @click.prevent="nextPost" v-show="!isLast">
             <font-awesome-icon
                class="angle"
                icon="fa-solid fa-angle-right"
                size="xl"
             />
-         </div>
-      </div>
+         </button>
+      </div> -->
    </div>
 </template>
 
@@ -54,6 +58,9 @@ import {
 const filterStore = useFilterStore();
 const leftPostStore = useLeftPostStore();
 const scrollPosStore = useScrollPosStore();
+
+const isLast = useState("isLast", () => false);
+const isFirst = useState("isFirst", () => false);
 
 //PROPS
 const props = defineProps(["openPostTitle"]);
@@ -87,6 +94,8 @@ onMounted(() => {
          scrollPosStore.getLeft,
          scrollPosStore.getTop
       );
+
+      checkScrollPosition(scrollPosStore.getLeft);
    }
 });
 
@@ -105,6 +114,8 @@ const nextPost = function () {
          left: currentScroll + width,
          behavior: "smooth",
       });
+
+      checkScrollPosition(currentScroll + width);
    }
 };
 
@@ -122,6 +133,27 @@ const previousPost = function () {
          left: currentScroll - width,
          behavior: "smooth",
       });
+      checkScrollPosition(currentScroll - width);
+   }
+};
+
+const checkScrollPosition = function (scroll: number) {
+   if (scrollElement && scrollElement.value) {
+      console.log("scroll:", scroll);
+      console.log("width:", scrollElement.value.scrollLeftMax);
+      if (scroll >= scrollElement.value.scrollLeftMax) {
+         console.log("first:", scroll);
+         isLast.value = true;
+      } else {
+         isLast.value = false;
+      }
+   }
+   if (scroll <= 0) {
+      console.log("first:", scroll);
+      isFirst.value = true;
+   } else {
+      console.log("not first:", scroll);
+      isFirst.value = false;
    }
 };
 
@@ -146,7 +178,10 @@ const rightIsFirstProject = computed(() => {
 });
 
 const leftIsLastProject = computed(() => {
-   return leftPostStore.getLeftPost >= filteredPosts.value.length - 2;
+   if (scrollElement && scrollElement.value) {
+      const width = scrollElement.value.offsetWidth;
+      const currentScroll = scrollElement.value.scrollLeft;
+   }
 });
 
 const rightPostID = computed(() => {

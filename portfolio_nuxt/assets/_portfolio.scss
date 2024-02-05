@@ -126,9 +126,10 @@
 
       &-overview {
          border-top: solid 1px;
-         border-bottom: solid 1px;
+         //border-bottom: solid 1px;
          padding: 1rem;
          width: 100vw;
+         height: 100vh;
 
          .overview-title-this {
             display: none;
@@ -152,6 +153,7 @@
                }
 
                p {
+                  word-break: break-all;
                   padding-left: 0.5rem;
                }
             }
@@ -247,7 +249,7 @@
       }
 
       .recent-projects {
-         margin-top: 0;
+         //margin-top: 0;
          border-top: none;
          overflow-x: scroll;
 
