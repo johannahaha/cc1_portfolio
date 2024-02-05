@@ -1,6 +1,6 @@
 ---
 title: Creative Coding
-tags: [coding, web]
+tags: [coding]
 preview_img: /img/procedural/noise.png
 year: 2020
 date: 2020-12
