@@ -10,7 +10,7 @@ location: Potsdam, Germany
 link: &nbsp
 ---
 
-In the class Creative Coding in the first term of my master we started by using Processing and P5 to generate art work and patterns. Later, we moved on to web developmement principles. As a final project, I implemented a portfolio website with Gridsome, a Static Side Generator for Vue. In the class procedural generation and simulation, we learned about procedural workflows with Houdini. We explored and experimented with the concept. Here are some of my results.
+In the class Creative Coding in the first term of my master, we started by using Processing and P5 to generate artwork and patterns. Later, we moved on to web development principles. As a final project, I implemented a portfolio website with Gridsome, a Static Site Generator for Vue. In the class Procedural Generation and Simulation, we learned about procedural workflows with Houdini. We explored and experimented with the concept. Here are some of my results.
 
 ## Procedural Generation and Simulation in Houdini
 
@@ -42,7 +42,7 @@ In the class Creative Coding in the first term of my master we started by using 
 
 ### Fragment Shader: Islamic Pattern
 
-In our course procedural generation and simulation, we had the task to create different fragment shaders with concepts of Islamic patterns. Here are my results.
+In our course Procedural Generation and Simulation, we had the task to create different fragment shaders with concepts of Islamic patterns. Here are my results.
 
 ![procedural09](/img/procedural/pattern.gif)
 ![procedural10](/img/procedural/pattern01.png)
@@ -80,17 +80,17 @@ We also had a workshop about Shader Programming, where we experimented with Sphe
 
 ## Web GL
 
-This class was also the first time I used three.js and WebGL by doing this Christmas Tree (it was december...).
+This class was also the first time I used three.js and WebGL by doing this Christmas Tree (it was December...).
 
 ![christmas.png](/img/creative_coding/christmas.png)
 
-In the class Theoretical Background of Audio and Graphics I experimented with generating meshes from vertices, faces and normals.
+In the class Theoretical Background of Audio and Graphics, I experimented with generating meshes from vertices, faces, and normals.
 
 ![/img/creative_coding/origamiclouds.png](/img/creative_coding/origamiclouds.png)
 
 ## Portfolio Website
 
-This was my portfolio website, which I did as a final project. I implemented it with Gridsome, a Static Side Generator for Vue. I redesigned the website in the meantime with the version you can currently see, but the back-end stayed the same.
+This was my portfolio website, which I did as a final project. I implemented it with Gridsome, a Static Side Generator for Vue. I redesigned the website in the meantime with the version you can currently see, but the backend stayed the same.
 
 ![website01.png](/img/creative_coding/website01.png)
 ![website02.png](/img/creative_coding/website02.png)

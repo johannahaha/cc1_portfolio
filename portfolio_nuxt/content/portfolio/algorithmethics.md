@@ -12,8 +12,8 @@ link: https://www.stories-algorithmethics.de
 
 https://www.stories-algorithmethics.de
 
-This project is a website, that is an interactive visualization of a case of algorithmic bias in Germany. I did this project as the final project of the first term of my master's study program.
-The case is the Arabic dialect recognition algorithm for refugees, which is part of the identity management system of the BAMF and used to verify region of origin for refugees (Biselli, 2018; Bundesamt für Migration und Flüchtlinge, 2019; Bundesamt für Migration und Flüchtlinge, 2020, Chiusi et al. 2020). The decision for the case was made in an intensive research process. I chose this particular case because it is a case of a machine learning algorithm used by the German government, which has been used nationwide in Germany for three years (Bundestag-Drucksache 19/6647, 2018). Moreover, the BAMF announced briefly that there are planning a pilot project for using this algorithm in the EU.
+This project is an interactive web visualization of a case of possible algorithmic bias in Germany. I did this project as the final project of the first term of my master's study program.
+The case is the Arabic dialect recognition algorithm for refugees, which is part of the identity management system of the BAMF and used to verify the region of origin for refugees (Biselli, 2018; Bundesamt für Migration und Flüchtlinge, 2019; Bundesamt für Migration und Flüchtlinge, 2020, Chiusi et al. 2020). The decision for the case was made in an intensive research process. I chose this particular case because it is a case of a machine learning algorithm used by the German government, which has been used nationwide in Germany for three years (Bundestag-Drucksache 19/6647, 2018). Below, you can find all the references I used for the content.
 
 :youtube{id="gkxiXipAsgY" thumbnail="/img/bamf/first_term2.png"}
 

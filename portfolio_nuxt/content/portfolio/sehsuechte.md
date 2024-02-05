@@ -12,9 +12,9 @@ link: https://sehsuechte.de/en/
 
 The Exhibition "Beyond the Frame" is part of the [International Student Film Festival Sehsüchte](https://sehsuechte.de/en/). In 2021, Sehsüchte had its 50th anniversary. The exhibition aims to present new forms of storytelling, interactive media, installations, immersive experiences, and digital art.
 
-In 2021, I was part of the Exhibition Management Team. We curated the art pieces and organized the exhibition and exhibition space.
+In 2021, I was part of the Exhibition Team. We curated the art pieces and organized the exhibition and exhibition space.
 
-In 2022, I was one of two Lead Managers for Exhibition and managed the team, application and curation process, and the setup and design of the exhibition.
+In 2022, I was one of two Lead Managers for the Exhibition and managed the team, application, and curation process, and the setup and design of the exhibition together with [India Aparicio](https://indiaaparicio.de).
 
 ## Impressions of the exhibition 2022
 

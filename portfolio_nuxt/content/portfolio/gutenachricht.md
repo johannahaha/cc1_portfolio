@@ -9,7 +9,7 @@ location: Berlin, Germany
 link: &nbsp
 ---
 
-Since November 2022, we -- that is [Anna Eschenbacher](https://annaeschenbacher.com), [Francesca Morini](https://www.morini.design) and me -- design a weekly data illustration about a good news topic for the German newspaper taz, introducing a playful take on data journalism. Each week, the visualization is the cover of the "zukunft" section of the Wochentaz. Our concept always includes a photographic and metaphoric element that emphasizes the data topic.
+Since November 2022, we - that is [Anna Eschenbacher](https://annaeschenbacher.com), [Francesca Morini](https://www.morini.design) and me - design a weekly data illustration about a good news topic for the German newspaper taz, introducing a playful take on data journalism. Each week, the visualization is the cover of the "zukunft" section of the Wochentaz. Our concept always includes a photographic and metaphoric element emphasizing the data topic.
 
 ![gutenachricht11](/img/gutenachricht/gutenachricht-11.jpg)
 ![gutenachricht05](/img/gutenachricht/gutenachricht-05.jpg)

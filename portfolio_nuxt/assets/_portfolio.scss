@@ -126,7 +126,6 @@
 
       &-overview {
          border-top: solid 1px;
-         border-bottom: solid 1px;
          padding: 1rem;
          width: 100vw;
 
@@ -152,6 +151,7 @@
                }
 
                p {
+                  word-break: break-all;
                   padding-left: 0.5rem;
                }
             }
@@ -250,11 +250,17 @@
          margin-top: 0;
          border-top: none;
          overflow-x: scroll;
+         border-bottom: solid 1px;
+         margin-bottom: 2rem;
 
          &-project-title {
             padding: 0.5rem;
             width: 40vw;
          }
+      }
+
+      .arrows {
+         display: none;
       }
    }
 }
@@ -265,6 +271,7 @@
 
 .recent-projects {
    margin: 2rem 0;
+   margin-bottom: 0;
    width: 100%;
    position: relative;
    border-bottom: solid 1px;

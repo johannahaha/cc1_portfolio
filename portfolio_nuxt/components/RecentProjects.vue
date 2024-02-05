@@ -1,25 +1,44 @@
 <template>
-   <div>
+   <div @click.prevent.self="">
       <h4 class="overview-title-other">other projects</h4>
       <FilterMenu />
       <div class="recent-projects" id="scroll-element" ref="scrollElement">
-         <NuxtLink class="recent-projects-project" v-for="(post, index) in filteredPosts" :key="post.title"
-            :to="{ path: post._path }">
-            <div class="recent-projects-project-title" :class="{ 'active': post.title == openPostTitle }">
+         <NuxtLink
+            class="recent-projects-project"
+            v-for="(post, index) in filteredPosts"
+            :key="post.title"
+            :to="{ path: post._path }"
+         >
+            <div
+               class="recent-projects-project-title"
+               :class="{ active: post.title == openPostTitle }"
+            >
                {{ post.title }}
             </div>
-            <img :src="post.preview_img" class="recent-projects-project-preview-img" alt="post.title"
-               :class="{ 'active': post.title == openPostTitle }" />
+            <img
+               :src="post.preview_img"
+               class="recent-projects-project-preview-img"
+               alt="post.title"
+               :class="{ active: post.title == openPostTitle }"
+            />
          </NuxtLink>
       </div>
-      <!-- <div class="arrows">
-         <div class="arrows-icon" @click="previousPost">
-            <font-awesome-icon v-show="!rightIsFirstProject" class="angle" icon="fa-solid fa-angle-left" size="xl" />
-         </div>
-         <div class="arrows-icon " @click="nextPost">
-            <font-awesome-icon v-show="!leftIsLastProject" class="angle" icon="fa-solid fa-angle-right" size="xl" />
-         </div>
-      </div> -->
+      <div class="arrows" @click.prevent>
+         <button class="arrows-icon" @click.prevent="previousPost">
+            <font-awesome-icon
+               class="angle"
+               icon="fa-solid fa-angle-left"
+               size="xl"
+            />
+         </button>
+         <button class="arrows-icon" @click.prevent="nextPost">
+            <font-awesome-icon
+               class="angle"
+               icon="fa-solid fa-angle-right"
+               size="xl"
+            />
+         </button>
+      </div>
    </div>
 </template>
 
@@ -27,65 +46,125 @@
 import { reactive, computed } from "vue";
 
 //STATE
-import { useFilterStore, useLeftPostStore, useScrollPosStore } from '@/stores/filters'
+import {
+   useFilterStore,
+   useLeftPostStore,
+   useScrollPosStore,
+} from "@/stores/filters";
 const filterStore = useFilterStore();
 const leftPostStore = useLeftPostStore();
 const scrollPosStore = useScrollPosStore();
 
+const isLast = useState("isLast", () => false);
+const isFirst = useState("isFirst", () => false);
 
 //PROPS
 const props = defineProps(["openPostTitle"]);
 
 //QUERIES
-const { data: posts } = await useAsyncData('posts', async () => {
+const { data: posts } = await useAsyncData("posts", async () => {
    const posts = await queryContent("portfolio")
-      .only(["title", "preview_img", "year", "tags", "date", "published", "_path"])
+      .only([
+         "title",
+         "preview_img",
+         "year",
+         "tags",
+         "date",
+         "published",
+         "_path",
+      ])
       .sort({ date: -1 })
       .where({ published: true })
-      .find()
+      .find();
 
-   return posts
-})
+   return posts;
+});
 
 //REFS
-const scrollElement = ref<HTMLElement | null>(null)
+const scrollElement = ref<HTMLElement | null>(null);
 
 onMounted(() => {
    //scroll in bar to correct posisition
    if (scrollElement && scrollElement.value) {
-      scrollElement.value.scrollTo
-         (
-            scrollPosStore.getLeft,
-            scrollPosStore.getTop
-         );
+      scrollElement.value.scrollTo(
+         scrollPosStore.getLeft,
+         scrollPosStore.getTop
+      );
+
+      checkScrollPosition(scrollPosStore.getLeft);
    }
 });
 
-
 //METHODS
 const nextPost = function () {
-   //console.log("click next")
-   if (!leftIsLastProject.value) {
-      leftPostStore.increment();
+   if (
+      scrollElement &&
+      scrollElement.value &&
+      scrollElement.value.firstElementChild &&
+      scrollElement.value.firstElementChild
+   ) {
+      const width = scrollElement.value.firstElementChild.offsetWidth * 2;
+      const currentScroll = scrollElement.value.scrollLeft;
+      scrollElement.value.scrollTo({
+         top: 0,
+         left: currentScroll + width,
+         behavior: "smooth",
+      });
+
+      checkScrollPosition(currentScroll + width);
    }
-}
+};
 
 const previousPost = function () {
-   //console.log("click prev")
-   if (!rightIsFirstProject.value) {
-      leftPostStore.decrement();
+   if (
+      scrollElement &&
+      scrollElement.value &&
+      scrollElement.value.firstElementChild &&
+      scrollElement.value.firstElementChild
+   ) {
+      const width = scrollElement.value.firstElementChild.offsetWidth * 2;
+      const currentScroll = scrollElement.value.scrollLeft;
+      scrollElement.value.scrollTo({
+         top: 0,
+         left: currentScroll - width,
+         behavior: "smooth",
+      });
+      checkScrollPosition(currentScroll - width);
    }
-}
+};
+
+const checkScrollPosition = function (scroll: number) {
+   if (scrollElement && scrollElement.value) {
+      console.log("scroll:", scroll);
+      console.log("width:", scrollElement.value.scrollLeftMax);
+      if (scroll >= scrollElement.value.scrollLeftMax) {
+         console.log("first:", scroll);
+         isLast.value = true;
+      } else {
+         isLast.value = false;
+      }
+   }
+   if (scroll <= 0) {
+      console.log("first:", scroll);
+      isFirst.value = true;
+   } else {
+      console.log("not first:", scroll);
+      isFirst.value = false;
+   }
+};
 
 //COMPUTED
 const filteredPosts = computed(() => {
    return posts.value.filter((post) =>
-      useCheckProjectTag(post.tags, filterStore.getFilter))
-})
+      useCheckProjectTag(post.tags, filterStore.getFilter)
+   );
+});
 
 //get index of current post
 const openPostID = computed(() => {
-   return filteredPosts.value.map((post) => post.title).indexOf(props.openPostTitle);
+   return filteredPosts.value
+      .map((post) => post.title)
+      .indexOf(props.openPostTitle);
 });
 
 // const leftPostID = computed(() => { return 0 })
@@ -95,33 +174,46 @@ const rightIsFirstProject = computed(() => {
 });
 
 const leftIsLastProject = computed(() => {
-   return leftPostStore.getLeftPost >= filteredPosts.value.length - 2;
+   if (scrollElement && scrollElement.value) {
+      const width = scrollElement.value.offsetWidth;
+      const currentScroll = scrollElement.value.scrollLeft;
+   }
 });
-
 
 const rightPostID = computed(() => {
    return leftPostStore.getLeftPost + 1;
 });
 
 const previewPosts = computed(() => {
-   let indices = [leftPostStore.getLeftPost, rightPostID.value]
+   let indices = [leftPostStore.getLeftPost, rightPostID.value];
    //console.log(indices)
    if (filteredPosts !== undefined && filteredPosts !== null) {
-      console.log(indices.map((index) => filteredPosts.value[index]))
+      console.log(indices.map((index) => filteredPosts.value[index]));
       return indices.map((index) => filteredPosts.value[index]);
    }
-
-})
+});
 
 const neighborPosts = computed(() => {
-   if (openPostID.value !== undefined && filteredPosts !== undefined && filteredPosts !== null) {
+   if (
+      openPostID.value !== undefined &&
+      filteredPosts !== undefined &&
+      filteredPosts !== null
+   ) {
       let lastPost = openPostID.value - 1;
       let nextPost = openPostID.value + 1;
 
       //edge cases
-      if (lastPost < 0 || lastPost >= filteredPosts.value.length || lastPost == undefined)
+      if (
+         lastPost < 0 ||
+         lastPost >= filteredPosts.value.length ||
+         lastPost == undefined
+      )
          lastPost = filteredPosts.value.length - 1;
-      if (nextPost < 0 || nextPost >= filteredPosts.value.length - 1 || nextPost == undefined)
+      if (
+         nextPost < 0 ||
+         nextPost >= filteredPosts.value.length - 1 ||
+         nextPost == undefined
+      )
          nextPost = 0;
 
       // console.log("left", lastPost)
@@ -133,8 +225,6 @@ const neighborPosts = computed(() => {
       // console.log(neighbors)
       return neighbors;
    }
-
-
 });
 </script>
 
