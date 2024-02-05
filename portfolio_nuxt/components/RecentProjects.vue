@@ -1,5 +1,5 @@
 <template>
-   <div>
+   <div @click.prevent.self>
       <h4 class="overview-title-other">other projects</h4>
       <FilterMenu />
       <div class="recent-projects" id="scroll-element" ref="scrollElement">
@@ -23,15 +23,15 @@
             />
          </NuxtLink>
       </div>
-      <div class="arrows">
-         <div class="arrows-icon" @click="previousPost">
+      <div class="arrows" @click.prevent>
+         <div class="arrows-icon" @click.prevent="previousPost">
             <font-awesome-icon
                class="angle"
                icon="fa-solid fa-angle-left"
                size="xl"
             />
          </div>
-         <div class="arrows-icon" @click="nextPost">
+         <div class="arrows-icon" @click.prevent="nextPost">
             <font-awesome-icon
                class="angle"
                icon="fa-solid fa-angle-right"
