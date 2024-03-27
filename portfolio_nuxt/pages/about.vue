@@ -15,7 +15,9 @@
                         Bachelor in Digital Media (B. Sc.) at the University of
                         Bremen. My main topics of interests are data
                         visualization, creative web development and the role of
-                        algorithms and tech for society.
+                        algorithms and tech for society. Currently, I am also working as
+                        a research associate at the project WIM at Fachhochschule
+                        Potsdam with a focus on science communication and gender equality.
                      </p>
                      <div>contact: johanna.hartmann@gmx.de</div>
                   </div>
