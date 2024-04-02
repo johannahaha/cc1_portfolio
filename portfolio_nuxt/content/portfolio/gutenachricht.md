@@ -3,6 +3,7 @@ title: Die gute Nachricht
 tags: [datavis, design]
 preview_img: /img/gutenachricht/gutenachricht-08.jpg
 year: 2023
+date: 2023-12
 phrase: Weekly data illustrations for the newspaper taz
 published: true
 location: Berlin, Germany
